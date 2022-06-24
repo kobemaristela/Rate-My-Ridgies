@@ -145,7 +145,11 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::215957796486:role/cdk-hnb659fds-deploy-role-215957796486-us-west-2",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::215957796486:role/cdk-hnb659fds-cfn-exec-role-215957796486-us-west-2",
+<<<<<<< HEAD
         "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-215957796486-us-west-2/fc7af0fbf56c8aebf16df999d24fdfe98ff993d263068eccd2cc25e3e4ed3c80.json",
+=======
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-215957796486-us-west-2/2645f646e0fdcc9c129e99449da07beace56387cd44f2b12bd609ac263cf770e.json",
+>>>>>>> 55678ac (deal with dynamo keywords)
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -243,6 +247,7 @@
             "data": "ProfilesApiRoutePOSTprofiles9323EE43"
           }
         ],
+<<<<<<< HEAD
         "/dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -325,6 +330,132 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "ProfilesApiRouteGETprofilesidB307DFEA"
+=======
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaGETprofilesidServiceRoleDefaultPolicyC55E7D45"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaGETprofilesidD4146CB6"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaGETprofilesidEventInvokeConfig8416267C"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Integration_GET_--profiles--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidED893D9B"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Integration_GET_--profiles--{id}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidPermission2FE44392"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiRouteGETprofilesidB307DFEA"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaPUTprofilesidServiceRoleE02CF388"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaPUTprofilesidServiceRoleDefaultPolicy17DECB62"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaPUTprofilesid2024A88A"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaPUTprofilesidEventInvokeConfigC5B65705"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Integration_PUT_--profiles--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiRoutePUTprofilesidIntegrationPUTprofilesidE1E40722"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Integration_PUT_--profiles--{id}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiRoutePUTprofilesidIntegrationPUTprofilesidPermissionB745E0E1"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiRoutePUTprofilesid36F542CB"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaDELETEprofilesidServiceRole05F0F7CC"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaDELETEprofilesidServiceRoleDefaultPolicy4A6E74DB"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaDELETEprofilesidD07786D7"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaDELETEprofilesidEventInvokeConfig85E01C37"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Integration_DELETE_--profiles--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiRouteDELETEprofilesidIntegrationDELETEprofilesidCAE5CC8B"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Integration_DELETE_--profiles--{id}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiRouteDELETEprofilesidIntegrationDELETEprofilesidPermission6AC5C91F"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiRouteDELETEprofilesid004DFD19"
+>>>>>>> 55678ac (deal with dynamo keywords)
           }
         ],
         "/dev-RMR-ApiStack/ProfilesApiEndpoint": [

@@ -9,8 +9,8 @@ export function StorageStack({ stack }) {
     fields: {
       profileId: "string",
       profileName: "string",
-      role: "string",
-      // photo: "string",
+      profileRole: "string",
+      photo: "string",
       likes: "number",
     },
     primaryIndex: { partitionKey: "profileId" },
