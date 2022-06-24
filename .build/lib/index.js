@@ -13,8 +13,8 @@ function StorageStack({ stack }) {
   const profiles = new Table(stack, "Profiles", {
     fields: {
       profileId: "string",
+      profileName: "string",
       role: "string",
-      photo: "string",
       likes: "number"
     },
     primaryIndex: { partitionKey: "profileId" }
@@ -43,25 +43,13 @@ function ApiStack({ stack, app }) {
       function: {
         permissions: [profiles],
         environment: {
-          PROFILES_NAME: profiles.tableName
+          TABLE_NAME: profiles.tableName
         }
       }
     },
     routes: {
-      "POST /profiles": "backend/profiles/functions/create.main"
-    }
-  });
-  const reviewsApi = new Api(stack, "ReviewsApi", {
-    defaults: {
-      function: {
-        permissions: [reviews],
-        environment: {
-          REVIEWS_NAME: reviews.tableName
-        }
-      }
-    },
-    routes: {
-      "POST /reviews": "backend/reviews/functions/create.main"
+      "POST /profiles": "profiles/functions/create.main",
+      "GET /profiles/{id}": "profiles/functions/get.main"
     }
   });
   stack.addOutputs({

@@ -5,11 +5,12 @@ import dynamoDb from "../../util/dynamodb";
 export const main = handler(async (event) => {
   const data = JSON.parse(event.body);
   const params = {
-    TableName: process.env.PROFILES_NAME,
+    TableName: process.env.TABLE_NAME,
     Item: {
       profileId: uuid.v1(),
       role: data.role,
-      photo: data.photo,
+      profileName: data.name,
+      // photo: data.photo,
       likes: 0,
       createdAt: Date.now(), // Current Unix timestamp
     },

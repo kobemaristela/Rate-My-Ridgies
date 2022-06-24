@@ -160,25 +160,6 @@
    "Export": {
     "Name": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
    }
-  },
-  "ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2": {
-   "Value": {
-    "Fn::GetAtt": [
-     "ReviewsTable854B2DAD",
-     "Arn"
-    ]
-   },
-   "Export": {
-    "Name": "dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2"
-   }
-  },
-  "ExportsOutputRefReviewsTable854B2DAD5D6B8FD5": {
-   "Value": {
-    "Ref": "ReviewsTable854B2DAD"
-   },
-   "Export": {
-    "Name": "dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5"
-   }
   }
  },
  "Parameters": {

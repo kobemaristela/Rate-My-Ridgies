@@ -1,1 +1,1 @@
-[{"bundle":{"format":"esm"},"handler":"backend/profiles/functions/create.main","runtime":"nodejs16.x","srcPath":"backend"},{"bundle":{"format":"esm"},"handler":"backend/reviews/functions/create.main","runtime":"nodejs16.x","srcPath":"backend"}]
+[{"bundle":{"format":"esm"},"handler":"profiles/functions/create.main","runtime":"nodejs16.x","srcPath":"backend"},{"bundle":{"format":"esm"},"handler":"profiles/functions/get.main","runtime":"nodejs16.x","srcPath":"backend"}]
