@@ -48,10 +48,9 @@ function ApiStack({ stack, app }) {
       }
     },
     routes: {
-      "POST /profiles": "profiles/create.main",
-      "GET /profiles/{id}": "profiles/getProfile.main",
-      "DELETE /profiles/{id}": "profiles/deleteProfile.main",
-      "PUT /profiles/{id}": "profiles/updateProfile.main"
+      "POST /profiles": "profiles/createProfile.main",
+      "GET /profiles": "profiles/getProfileList.main",
+      "GET /profiles/{id}": "profiles/getProfile.main"
     }
   });
   stack.addOutputs({
