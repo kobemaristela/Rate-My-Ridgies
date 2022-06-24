@@ -7,7 +7,7 @@ export const main = handler(async (event) => {
         // 'Key' defines the partition key and sort key of the item to be removed
         Key: {
             // userId: "123", // The id of the author
-            profileId: event.pathParameters.id,
+            reviewId: event.pathParameters.id,
         },
     };
 
