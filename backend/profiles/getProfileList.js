@@ -6,7 +6,7 @@ export const main = handler(async () => {
     TableName: process.env.TABLE_NAME,
   };
 
-  const result = await dynamoDb.query(params);
+  const result = await dynamoDb.scan(params);
 
   // Return the matching list of items in response body
   return result.Items;

@@ -1,36 +1,38 @@
-[2022-06-24T14:47:38.281] [DEBUG] default - SST: 1.2.20
-[2022-06-24T14:47:38.282] [DEBUG] default - CDK: 2.24.0
-[2022-06-24T14:47:38.320] [INFO] default - Using stage: dev
-[2022-06-24T14:47:38.322] [INFO] default - [90mPreparing your SST app[39m
-[2022-06-24T14:47:38.349] [INFO] default - 
-[2022-06-24T14:47:38.350] [INFO] default - =======================
-[2022-06-24T14:47:38.350] [INFO] default -  Deploying debug stack
-[2022-06-24T14:47:38.350] [INFO] default - =======================
-[2022-06-24T14:47:38.350] [INFO] default - 
-[2022-06-24T14:47:38.351] [DEBUG] default - synth {
-  app: 'node bin/index.mjs RMR dev us-west-2 "/Users/michael.moschitto/Desktop/RateMyRidgeliners"',
+[2022-06-24T16:13:22.183] [DEBUG] default - SST: 1.2.20
+[2022-06-24T16:13:22.185] [DEBUG] default - CDK: 2.24.0
+[2022-06-24T16:13:22.196] [DEBUG] aws-auth - Determining if we're on an EC2 instance.
+[2022-06-24T16:13:22.197] [DEBUG] aws-auth - Does not look like an EC2 instance.
+[2022-06-24T16:13:22.234] [INFO] default - Using stage: dev
+[2022-06-24T16:13:22.236] [INFO] default - [90mPreparing your SST app[39m
+[2022-06-24T16:13:22.259] [INFO] default - 
+[2022-06-24T16:13:22.260] [INFO] default - =======================
+[2022-06-24T16:13:22.260] [INFO] default -  Deploying debug stack
+[2022-06-24T16:13:22.260] [INFO] default - =======================
+[2022-06-24T16:13:22.260] [INFO] default - 
+[2022-06-24T16:13:22.261] [DEBUG] default - synth {
+  app: 'node bin/index.mjs RMR dev us-west-2 "/Users/kobe.maristela/Desktop/RMR"',
   output: 'cdk.out',
   rollback: true,
   roleArn: undefined,
   verbose: 0,
   noColor: false
 }
-[2022-06-24T14:47:42.486] [TRACE] cdk - 
+[2022-06-24T16:13:25.965] [TRACE] cdk - 
 
-[2022-06-24T14:47:42.524] [INFO] default - [90mDeploying stacks[39m
-[2022-06-24T14:47:42.525] [DEBUG] default - checkInReviewBootstrapStacks
-[2022-06-24T14:47:42.525] [DEBUG] default - checkInReviewBootstrapStackInRegion us-west-2
-[2022-06-24T14:47:42.984] [TRACE] default - Initial stack states: [{"id":"dev-RMR-debug-stack","name":"dev-RMR-debug-stack","status":"pending","dependencies":[],"region":"us-west-2","events":[]}]
-[2022-06-24T14:47:42.984] [TRACE] default - After update deploy statuses: [{"id":"dev-RMR-debug-stack","name":"dev-RMR-debug-stack","status":"pending","dependencies":[],"region":"us-west-2","events":[]}]
-[2022-06-24T14:47:42.985] [DEBUG] default - deploy stack: started dev-RMR-debug-stack
-[2022-06-24T14:47:42.985] [DEBUG] default - deploy stack: get pre-deploy status
-[2022-06-24T14:47:43.385] [DEBUG] default - deploy stack: get pre-deploy status: {
+[2022-06-24T16:13:25.999] [INFO] default - [90mDeploying stacks[39m
+[2022-06-24T16:13:26.000] [DEBUG] default - checkInReviewBootstrapStacks
+[2022-06-24T16:13:26.000] [DEBUG] default - checkInReviewBootstrapStackInRegion us-west-2
+[2022-06-24T16:13:26.450] [TRACE] default - Initial stack states: [{"id":"dev-RMR-debug-stack","name":"dev-RMR-debug-stack","status":"pending","dependencies":[],"region":"us-west-2","events":[]}]
+[2022-06-24T16:13:26.450] [TRACE] default - After update deploy statuses: [{"id":"dev-RMR-debug-stack","name":"dev-RMR-debug-stack","status":"pending","dependencies":[],"region":"us-west-2","events":[]}]
+[2022-06-24T16:13:26.451] [DEBUG] default - deploy stack: started dev-RMR-debug-stack
+[2022-06-24T16:13:26.452] [DEBUG] default - deploy stack: get pre-deploy status
+[2022-06-24T16:13:26.816] [DEBUG] default - deploy stack: get pre-deploy status: {
   StackStatus: 'CREATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T19:56:54.604Z
+  LastUpdatedTime: 2022-06-24T22:57:27.646Z
 }
-[2022-06-24T14:47:43.386] [DEBUG] default - deploy stack: addInUseExports
-[2022-06-24T14:47:43.387] [DEBUG] default - deploy stack: isTemplateChanged
-[2022-06-24T14:47:43.885] [DEBUG] default - Resources:
+[2022-06-24T16:13:26.817] [DEBUG] default - deploy stack: addInUseExports
+[2022-06-24T16:13:26.819] [DEBUG] default - deploy stack: isTemplateChanged
+[2022-06-24T16:13:27.374] [DEBUG] default - Resources:
   TableCD117FA1:
     Type: AWS::DynamoDB::Table
     Properties:
@@ -630,7 +632,7 @@ Rules:
           CDK bootstrap stack version 6 required. Please run 'cdk bootstrap'
           with a recent version of the CDK CLI.
 
-[2022-06-24T14:47:43.887] [DEBUG] default - Resources:
+[2022-06-24T16:13:27.375] [DEBUG] default - Resources:
   TableCD117FA1:
     Type: AWS::DynamoDB::Table
     Properties:
@@ -1230,32 +1232,32 @@ Rules:
           CDK bootstrap stack version 6 required. Please run 'cdk bootstrap'
           with a recent version of the CDK CLI.
 
-[2022-06-24T14:47:43.887] [DEBUG] default - deploy stack: isTemplateChanged: unchanged
-[2022-06-24T14:47:43.888] [DEBUG] default - deploy stack: done dev-RMR-debug-stack {
+[2022-06-24T16:13:27.375] [DEBUG] default - deploy stack: isTemplateChanged: unchanged
+[2022-06-24T16:13:27.375] [DEBUG] default - deploy stack: done dev-RMR-debug-stack {
   status: 'unchanged',
   statusReason: undefined,
   account: '215957796486',
   outputs: {
-    BucketArn: 'arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92',
-    BucketName: 'dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92',
-    Endpoint: 'wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev'
+    BucketArn: 'arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80',
+    BucketName: 'dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80',
+    Endpoint: 'wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev'
   },
   exports: {}
 }
-[2022-06-24T14:47:43.888] [INFO] default - [32m[39m
+[2022-06-24T16:13:27.376] [INFO] default - [32m[39m
 [32m ✅  dev-RMR-debug-stack (no changes)[39m
 [32m[39m
-[2022-06-24T14:47:43.888] [DEBUG] default - At least 1 stack successfully deployed, call deployStacks() again
-[2022-06-24T14:47:43.888] [TRACE] default - After deploy stacks: [{"id":"dev-RMR-debug-stack","name":"dev-RMR-debug-stack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107263888,"endedAt":1656107263888,"events":[],"outputs":{"BucketArn":"arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92","BucketName":"dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92","Endpoint":"wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev"},"exports":{}}]
-[2022-06-24T14:47:43.889] [INFO] default - 
+[2022-06-24T16:13:27.376] [DEBUG] default - At least 1 stack successfully deployed, call deployStacks() again
+[2022-06-24T16:13:27.376] [TRACE] default - After deploy stacks: [{"id":"dev-RMR-debug-stack","name":"dev-RMR-debug-stack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656112407376,"endedAt":1656112407376,"events":[],"outputs":{"BucketArn":"arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80","BucketName":"dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80","Endpoint":"wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev"},"exports":{}}]
+[2022-06-24T16:13:27.377] [INFO] default - 
 Stack dev-RMR-debug-stack
-[2022-06-24T14:47:43.890] [INFO] default -   Status: no changes
-[2022-06-24T14:47:43.890] [INFO] default -   Outputs:
-[2022-06-24T14:47:43.890] [INFO] default -     BucketArn: arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
-[2022-06-24T14:47:43.891] [INFO] default -     BucketName: dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
-[2022-06-24T14:47:43.891] [INFO] default -     Endpoint: wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev
-[2022-06-24T14:47:43.891] [INFO] default - 
-[2022-06-24T14:47:43.892] [DEBUG] default - deployRet [
+[2022-06-24T16:13:27.377] [INFO] default -   Status: no changes
+[2022-06-24T16:13:27.378] [INFO] default -   Outputs:
+[2022-06-24T16:13:27.378] [INFO] default -     BucketArn: arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+[2022-06-24T16:13:27.378] [INFO] default -     BucketName: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+[2022-06-24T16:13:27.378] [INFO] default -     Endpoint: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+[2022-06-24T16:13:27.379] [INFO] default - 
+[2022-06-24T16:13:27.379] [DEBUG] default - deployRet [
   {
     id: 'dev-RMR-debug-stack',
     name: 'dev-RMR-debug-stack',
@@ -1263,19 +1265,19 @@ Stack dev-RMR-debug-stack
     status: 'unchanged',
     errorMessage: undefined,
     outputs: {
-      BucketArn: 'arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92',
-      BucketName: 'dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92',
-      Endpoint: 'wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev'
+      BucketArn: 'arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80',
+      BucketName: 'dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80',
+      Endpoint: 'wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev'
     },
     exports: {}
   }
 ]
-[2022-06-24T14:47:43.892] [INFO] default - 
-[2022-06-24T14:47:43.893] [INFO] default - ===============
-[2022-06-24T14:47:43.893] [INFO] default -  Deploying app
-[2022-06-24T14:47:43.893] [INFO] default - ===============
-[2022-06-24T14:47:43.893] [INFO] default - 
-[2022-06-24T14:47:43.899] [DEBUG] default - synth {
+[2022-06-24T16:13:27.380] [INFO] default - 
+[2022-06-24T16:13:27.380] [INFO] default - ===============
+[2022-06-24T16:13:27.380] [INFO] default -  Deploying app
+[2022-06-24T16:13:27.380] [INFO] default - ===============
+[2022-06-24T16:13:27.380] [INFO] default - 
+[2022-06-24T16:13:27.381] [DEBUG] default - synth {
   app: 'node .build/run.mjs',
   output: '.build/cdk.out',
   rollback: true,
@@ -1283,26 +1285,28 @@ Stack dev-RMR-debug-stack
   verbose: 0,
   noColor: false
 }
-[2022-06-24T14:47:47.971] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/michael.moschitto/Desktop/RateMyRidgeliners/.build/cdk.out[39m[32m[39m
+[2022-06-24T16:13:31.094] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/kobe.maristela/Desktop/RMR/.build/cdk.out[39m[32m[39m
 
-[2022-06-24T14:47:47.972] [TRACE] cdk - Supply a stack id ([32mdev-RMR-StorageStack[39m, [32mdev-RMR-ApiStack[39m) to display its template.
+[2022-06-24T16:13:31.095] [TRACE] cdk - Supply a stack id ([32mdev-RMR-StorageStack[39m, [32mdev-RMR-ApiStack[39m) to display its template.
 
-[2022-06-24T14:47:47.979] [TRACE] cdk - 
+[2022-06-24T16:13:31.104] [TRACE] cdk - 
 
-[2022-06-24T14:47:51.838] [INFO] default - [90mDeploying stacks[39m
-[2022-06-24T14:47:51.840] [DEBUG] default - checkInReviewBootstrapStacks
-[2022-06-24T14:47:51.840] [DEBUG] default - checkInReviewBootstrapStackInRegion us-west-2
-[2022-06-24T14:47:52.247] [TRACE] default - Initial stack states: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"pending","dependencies":[],"region":"us-west-2","events":[]},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"pending","dependencies":["dev-RMR-StorageStack"],"region":"us-west-2","events":[]}]
-[2022-06-24T14:47:52.247] [TRACE] default - After update deploy statuses: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"pending","dependencies":[],"region":"us-west-2","events":[]},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"pending","dependencies":["dev-RMR-StorageStack"],"region":"us-west-2","events":[]}]
-[2022-06-24T14:47:52.247] [DEBUG] default - deploy stack: started dev-RMR-StorageStack
-[2022-06-24T14:47:52.248] [DEBUG] default - deploy stack: get pre-deploy status
-[2022-06-24T14:47:52.598] [DEBUG] default - deploy stack: get pre-deploy status: {
+[2022-06-24T16:13:33.704] [INFO] default - [90mDeploying stacks[39m
+[2022-06-24T16:13:33.705] [DEBUG] default - checkInReviewBootstrapStacks
+[2022-06-24T16:13:33.706] [DEBUG] default - checkInReviewBootstrapStackInRegion us-west-2
+[2022-06-24T16:13:34.083] [TRACE] default - Initial stack states: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"pending","dependencies":[],"region":"us-west-2","events":[]},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"pending","dependencies":["dev-RMR-StorageStack"],"region":"us-west-2","events":[]}]
+[2022-06-24T16:13:34.084] [TRACE] default - After update deploy statuses: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"pending","dependencies":[],"region":"us-west-2","events":[]},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"pending","dependencies":["dev-RMR-StorageStack"],"region":"us-west-2","events":[]}]
+[2022-06-24T16:13:34.084] [DEBUG] default - deploy stack: started dev-RMR-StorageStack
+[2022-06-24T16:13:34.084] [DEBUG] default - deploy stack: get pre-deploy status
+[2022-06-24T16:13:34.432] [DEBUG] default - deploy stack: get pre-deploy status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T20:06:37.828Z
+  LastUpdatedTime: 2022-06-24T23:08:15.892Z
 }
-[2022-06-24T14:47:52.600] [DEBUG] default - deploy stack: addInUseExports
-[2022-06-24T14:47:52.943] [DEBUG] default - deploy stack: isTemplateChanged
-[2022-06-24T14:47:53.331] [DEBUG] default - Resources:
+[2022-06-24T16:13:34.434] [DEBUG] default - deploy stack: addInUseExports
+[2022-06-24T16:13:34.756] [DEBUG] default - deploy stack: addInUseExports: export dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5 used in dev-RMR-ApiStack
+[2022-06-24T16:13:34.768] [DEBUG] default - deploy stack: addInUseExports: export dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2 used in dev-RMR-ApiStack
+[2022-06-24T16:13:34.771] [DEBUG] default - deploy stack: isTemplateChanged
+[2022-06-24T16:13:35.113] [DEBUG] default - Resources:
   SSTMetadata:
     Type: AWS::CDK::Metadata
     Metadata:
@@ -1405,14 +1409,16 @@ Outputs:
     Export:
       Name: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
   ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2:
-    Description: Output added by SST b/c exported value still used in dev-RMR-ApiStack
-    Value: arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews
+    Value:
+      Fn::GetAtt:
+        - ReviewsTable854B2DAD
+        - Arn
     Export:
       Name: >-
         dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2
   ExportsOutputRefReviewsTable854B2DAD5D6B8FD5:
-    Description: Output added by SST b/c exported value still used in dev-RMR-ApiStack
-    Value: dev-RMR-Reviews
+    Value:
+      Ref: ReviewsTable854B2DAD
     Export:
       Name: dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5
 Parameters:
@@ -1438,7 +1444,7 @@ Rules:
           CDK bootstrap stack version 6 required. Please run 'cdk bootstrap'
           with a recent version of the CDK CLI.
 
-[2022-06-24T14:47:53.331] [DEBUG] default - Resources:
+[2022-06-24T16:13:35.113] [DEBUG] default - Resources:
   SSTMetadata:
     Type: AWS::CDK::Metadata
     Metadata:
@@ -1540,6 +1546,17 @@ Outputs:
       Ref: ProfilesTable43079065
     Export:
       Name: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
+  ExportsOutputRefReviewsTable854B2DAD5D6B8FD5:
+    Description: Output added by SST b/c exported value still used in dev-RMR-ApiStack
+    Value: dev-RMR-Reviews
+    Export:
+      Name: dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5
+  ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2:
+    Description: Output added by SST b/c exported value still used in dev-RMR-ApiStack
+    Value: arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews
+    Export:
+      Name: >-
+        dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2
 Parameters:
   BootstrapVersion:
     Type: AWS::SSM::Parameter::Value<String>
@@ -1563,58 +1580,47 @@ Rules:
           CDK bootstrap stack version 6 required. Please run 'cdk bootstrap'
           with a recent version of the CDK CLI.
 
-[2022-06-24T14:47:53.332] [DEBUG] default - deploy stack: run cdk deploy
-[2022-06-24T14:47:53.347] [DEBUG] default - deploy stack: poll stack status
-[2022-06-24T14:47:53.698] [DEBUG] default - deploy stack: poll stack status: {
+[2022-06-24T16:13:35.114] [DEBUG] default - deploy stack: run cdk deploy
+[2022-06-24T16:13:35.131] [DEBUG] default - deploy stack: poll stack status
+[2022-06-24T16:13:35.480] [DEBUG] default - deploy stack: poll stack status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T20:06:37.828Z
+  LastUpdatedTime: 2022-06-24T23:08:15.892Z
 }
-[2022-06-24T14:47:53.698] [DEBUG] default - deploy stack: poll stack status: unknown
-[2022-06-24T14:47:54.802] [TRACE] default - deploy stack: run cdk deploy: stderr: 
+[2022-06-24T16:13:35.481] [DEBUG] default - deploy stack: poll stack status: unknown
+[2022-06-24T16:13:36.406] [TRACE] default - deploy stack: run cdk deploy: stderr: 
 ✨  Synthesis time: 0.02s
 
 
-[2022-06-24T14:47:54.802] [TRACE] default - deploy stack: run cdk deploy: stderr: [1mdev-RMR-StorageStack[22m: deploying...
+[2022-06-24T16:13:36.407] [TRACE] default - deploy stack: run cdk deploy: stderr: [1mdev-RMR-StorageStack[22m: deploying...
 
-[2022-06-24T14:47:56.354] [TRACE] default - deploy stack: run cdk deploy: stderr: [0%] start: Publishing 7150e2e4535c564bc21583afd8dde3500cf58b91f67c279c8314ee32e1fc9b61:215957796486-us-west-2
+[2022-06-24T16:13:38.001] [TRACE] default - deploy stack: run cdk deploy: stderr: [0%] start: Publishing 7150e2e4535c564bc21583afd8dde3500cf58b91f67c279c8314ee32e1fc9b61:215957796486-us-west-2
 
-[2022-06-24T14:47:57.072] [DEBUG] default - deploy stack: poll stack status: {
+[2022-06-24T16:13:38.843] [DEBUG] default - deploy stack: poll stack status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T20:06:37.828Z
+  LastUpdatedTime: 2022-06-24T23:08:15.892Z
 }
-[2022-06-24T14:47:57.072] [DEBUG] default - deploy stack: poll stack status: unknown
-[2022-06-24T14:47:57.708] [TRACE] default - deploy stack: run cdk deploy: stderr: [100%] success: Published 7150e2e4535c564bc21583afd8dde3500cf58b91f67c279c8314ee32e1fc9b61:215957796486-us-west-2
+[2022-06-24T16:13:38.843] [DEBUG] default - deploy stack: poll stack status: unknown
+[2022-06-24T16:13:39.520] [TRACE] default - deploy stack: run cdk deploy: stderr: [100%] success: Published 7150e2e4535c564bc21583afd8dde3500cf58b91f67c279c8314ee32e1fc9b61:215957796486-us-west-2
 
-[2022-06-24T14:47:58.829] [TRACE] default - deploy stack: run cdk deploy: stderr: [1mdev-RMR-StorageStack[22m: creating CloudFormation changeset...
+[2022-06-24T16:13:40.744] [TRACE] default - deploy stack: run cdk deploy: stderr: [1mdev-RMR-StorageStack[22m: creating CloudFormation changeset...
 
-[2022-06-24T14:48:00.267] [TRACE] default - deploy stack: run cdk deploy: stderr: [32m[39m
-[32m ✅  dev-RMR-StorageStack (no changes)[39m
-
-[2022-06-24T14:48:00.268] [TRACE] default - deploy stack: run cdk deploy: stderr: 
-✨  Deployment time: 5.47s
-
-Outputs:
-[36mdev-RMR-StorageStack[39m.[36mExportsOutputFnGetAttProfilesTable43079065Arn0EE96850[39m = [4m[36marn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles[39m[24m
-[36mdev-RMR-StorageStack[39m.[36mExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2[39m = [4m[36marn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews[39m[24m
-[36mdev-RMR-StorageStack[39m.[36mExportsOutputRefProfilesTable43079065AF0BFE3F[39m = [4m[36mdev-RMR-Profiles[39m[24m
-[36mdev-RMR-StorageStack[39m.[36mExportsOutputRefReviewsTable854B2DAD5D6B8FD5[39m = [4m[36mdev-RMR-Reviews[39m[24m
-Stack ARN:
-
-✨  Total time: 5.49s
-
-
-[2022-06-24T14:48:00.268] [TRACE] default - deploy stack: run cdk deploy: stdout: arn:aws:cloudformation:us-west-2:215957796486:stack/dev-RMR-StorageStack/345816f0-f3f8-11ec-94eb-0276d4128f05
-
-[2022-06-24T14:48:00.271] [TRACE] default - deploy stack: run cdk deploy: stderr: 
-
-[2022-06-24T14:48:00.311] [DEBUG] default - deploy stack: run cdk deploy: exited with code 0
-[2022-06-24T14:48:00.433] [DEBUG] default - deploy stack: poll stack status: {
+[2022-06-24T16:13:42.178] [DEBUG] default - deploy stack: poll stack status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T20:06:37.828Z
+  LastUpdatedTime: 2022-06-24T23:08:15.892Z
 }
-[2022-06-24T14:48:00.433] [DEBUG] default - deploy stack: poll stack status: cp exited
-[2022-06-24T14:48:00.434] [DEBUG] default - deploy stack: done dev-RMR-StorageStack {
-  status: 'unchanged',
+[2022-06-24T16:13:42.178] [DEBUG] default - deploy stack: poll stack status: unknown
+[2022-06-24T16:13:45.536] [DEBUG] default - deploy stack: poll stack status: {
+  StackStatus: 'UPDATE_COMPLETE',
+  LastUpdatedTime: 2022-06-24T23:08:15.892Z
+}
+[2022-06-24T16:13:45.536] [DEBUG] default - deploy stack: poll stack status: unknown
+[2022-06-24T16:13:48.889] [DEBUG] default - deploy stack: poll stack status: {
+  StackStatus: 'UPDATE_IN_PROGRESS',
+  LastUpdatedTime: 2022-06-24T23:13:47.880Z
+}
+[2022-06-24T16:13:48.889] [DEBUG] default - deploy stack: poll stack status: cf update started
+[2022-06-24T16:13:48.890] [DEBUG] default - deploy stack: done dev-RMR-StorageStack {
+  status: 'deploying',
   statusReason: undefined,
   account: '215957796486',
   outputs: {
@@ -1630,19 +1636,28 @@ Stack ARN:
     'dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F': 'dev-RMR-Profiles'
   }
 }
-[2022-06-24T14:48:00.434] [INFO] default - [32m[39m
-[32m ✅  dev-RMR-StorageStack (no changes)[39m
+[2022-06-24T16:13:48.891] [TRACE] default - After deploy stacks: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"deploying","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656112428891,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"pending","dependencies":["dev-RMR-StorageStack"],"region":"us-west-2","events":[]}]
+[2022-06-24T16:13:48.891] [INFO] default - Checking deploy status...
+[2022-06-24T16:13:48.909] [DEBUG] default - deploy stack: run cdk deploy: exited with code null
+[2022-06-24T16:13:53.893] [TRACE] default - Initial stack states: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"deploying","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656112428891,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"pending","dependencies":["dev-RMR-StorageStack"],"region":"us-west-2","events":[]}]
+[2022-06-24T16:13:53.894] [DEBUG] default - Fetching stack events dev-RMR-StorageStack
+[2022-06-24T16:13:54.301] [INFO] default - dev-RMR-StorageStack | [0mUPDATE_IN_PROGRESS[0m | AWS::CloudFormation::Stack | [0m[1mdev-RMR-StorageStack[22m[0m | [0mUser Initiated[0m
+[2022-06-24T16:13:54.302] [INFO] default - dev-RMR-StorageStack | [32mUPDATE_COMPLETE_CLEANUP_IN_PROGRESS[39m | AWS::CloudFormation::Stack | [32m[1mdev-RMR-StorageStack[22m[39m
+[2022-06-24T16:13:54.302] [INFO] default - dev-RMR-StorageStack | [32mUPDATE_COMPLETE[39m | AWS::CloudFormation::Stack | [32m[1mdev-RMR-StorageStack[22m[39m
+[2022-06-24T16:13:54.303] [DEBUG] default - Checking stack status dev-RMR-StorageStack
+[2022-06-24T16:13:54.638] [INFO] default - [32m[39m
+[32m ✅  dev-RMR-StorageStack[39m
 [32m[39m
-[2022-06-24T14:48:00.434] [DEBUG] default - At least 1 stack successfully deployed, call deployStacks() again
-[2022-06-24T14:48:00.434] [DEBUG] default - deploy stack: started dev-RMR-ApiStack
-[2022-06-24T14:48:00.435] [DEBUG] default - deploy stack: get pre-deploy status
-[2022-06-24T14:48:00.782] [DEBUG] default - deploy stack: get pre-deploy status: {
+[2022-06-24T16:13:54.639] [TRACE] default - After update deploy statuses: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"succeeded","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656112428891,"endedAt":1656112434638,"events":[{"eventId":"4d3c5bc0-f413-11ec-871d-0a19ce392861","timestamp":"2022-06-24T23:13:47.880Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-StorageStack"},{"eventId":"50a131a0-f413-11ec-acba-0ab6f23c0003","timestamp":"2022-06-24T23:13:53.588Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-StorageStack"},{"eventId":"510327c0-f413-11ec-81d0-0ab48fda5d7b","timestamp":"2022-06-24T23:13:54.224Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"dev-RMR-StorageStack"}],"eventsFirstEventAt":"2022-06-24T23:13:42.880Z","outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"pending","dependencies":["dev-RMR-StorageStack"],"region":"us-west-2","events":[]}]
+[2022-06-24T16:13:54.639] [DEBUG] default - deploy stack: started dev-RMR-ApiStack
+[2022-06-24T16:13:54.640] [DEBUG] default - deploy stack: get pre-deploy status
+[2022-06-24T16:13:54.998] [DEBUG] default - deploy stack: get pre-deploy status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T21:40:50.330Z
+  LastUpdatedTime: 2022-06-24T23:08:52.982Z
 }
-[2022-06-24T14:48:00.783] [DEBUG] default - deploy stack: addInUseExports
-[2022-06-24T14:48:00.784] [DEBUG] default - deploy stack: isTemplateChanged
-[2022-06-24T14:48:01.286] [DEBUG] default - Resources:
+[2022-06-24T16:13:54.999] [DEBUG] default - deploy stack: addInUseExports
+[2022-06-24T16:13:55.001] [DEBUG] default - deploy stack: isTemplateChanged
+[2022-06-24T16:13:55.644] [DEBUG] default - Resources:
   SSTMetadata:
     Type: AWS::CDK::Metadata
     Metadata:
@@ -1741,6 +1756,68 @@ Stack ARN:
               Fn::GetAtt:
                 - ProfilesApiLambdaDELETEprofilesidD07786D7
                 - Arn
+        - id: ReviewsApi
+          addr: c8b7e86b12948e1db3373837f6ed25d8fe78787fdc
+          stack: dev-RMR-ApiStack
+          type: Api
+          data:
+            graphql: false
+            url:
+              Fn::Join:
+                - ''
+                - - https://
+                  - Ref: ReviewsApi00BAD234
+                  - .execute-api.us-west-2.
+                  - Ref: AWS::URLSuffix
+                  - /
+            httpApiId:
+              Ref: ReviewsApi00BAD234
+            routes:
+              - type: function
+                route: POST /reviews
+                fn:
+                  node: c8988a2a4aa1501e16e64bd2379c1f5cf6e1d6cdbe
+                  stack: dev-RMR-ApiStack
+              - type: function
+                route: GET /reviews/{id}
+                fn:
+                  node: c85fad853b177862ea35d6322b3fafb33608489755
+                  stack: dev-RMR-ApiStack
+              - type: function
+                route: PUT /reviews/{id}
+                fn:
+                  node: c8aa8f0aa44840768303268d5199f5ec62f08b3b43
+                  stack: dev-RMR-ApiStack
+        - id: Lambda_POST_--reviews
+          addr: c8988a2a4aa1501e16e64bd2379c1f5cf6e1d6cdbe
+          stack: dev-RMR-ApiStack
+          type: Function
+          data:
+            localId: dev-RMR-ApiStack-ReviewsApi-Lambda_POST_-reviews
+            arn:
+              Fn::GetAtt:
+                - ReviewsApiLambdaPOSTreviews577FF643
+                - Arn
+        - id: Lambda_GET_--reviews--{id}
+          addr: c85fad853b177862ea35d6322b3fafb33608489755
+          stack: dev-RMR-ApiStack
+          type: Function
+          data:
+            localId: dev-RMR-ApiStack-ReviewsApi-Lambda_GET_-reviews-{id}
+            arn:
+              Fn::GetAtt:
+                - ReviewsApiLambdaGETreviewsidD7B16A25
+                - Arn
+        - id: Lambda_PUT_--reviews--{id}
+          addr: c8aa8f0aa44840768303268d5199f5ec62f08b3b43
+          stack: dev-RMR-ApiStack
+          type: Function
+          data:
+            localId: dev-RMR-ApiStack-ReviewsApi-Lambda_PUT_-reviews-{id}
+            arn:
+              Fn::GetAtt:
+                - ReviewsApiLambdaPUTreviewsidA191C032
+                - Arn
   ProfilesApi7EB07B3F:
     Type: AWS::ApiGatewayV2::Api
     Properties:
@@ -1831,8 +1908,8 @@ Stack ARN:
           - Action: s3:*
             Effect: Allow
             Resource:
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
           - Action: dynamodb:*
             Effect: Allow
             Resource:
@@ -1866,8 +1943,8 @@ Stack ARN:
             Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
           SST_DEBUG_SRC_PATH: backend
           SST_DEBUG_SRC_HANDLER: profiles/createProfile.main
-          SST_DEBUG_ENDPOINT: wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev
-          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
           SST_FUNCTION_ID: dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
           SST_DEBUG_IS_API_ROUTE: '1'
@@ -1987,8 +2064,8 @@ Stack ARN:
           - Action: s3:*
             Effect: Allow
             Resource:
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
           - Action: dynamodb:*
             Effect: Allow
             Resource:
@@ -2022,8 +2099,8 @@ Stack ARN:
             Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
           SST_DEBUG_SRC_PATH: backend
           SST_DEBUG_SRC_HANDLER: profiles/getProfileList.main
-          SST_DEBUG_ENDPOINT: wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev
-          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
           SST_FUNCTION_ID: dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
           SST_DEBUG_IS_API_ROUTE: '1'
@@ -2144,8 +2221,8 @@ Stack ARN:
           - Action: s3:*
             Effect: Allow
             Resource:
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
           - Action: dynamodb:*
             Effect: Allow
             Resource:
@@ -2179,8 +2256,8 @@ Stack ARN:
             Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
           SST_DEBUG_SRC_PATH: backend
           SST_DEBUG_SRC_HANDLER: profiles/getProfile.main
-          SST_DEBUG_ENDPOINT: wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev
-          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
           SST_FUNCTION_ID: dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
           SST_DEBUG_IS_API_ROUTE: '1'
@@ -2301,8 +2378,8 @@ Stack ARN:
           - Action: s3:*
             Effect: Allow
             Resource:
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
           - Action: dynamodb:*
             Effect: Allow
             Resource:
@@ -2336,8 +2413,8 @@ Stack ARN:
             Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
           SST_DEBUG_SRC_PATH: backend
           SST_DEBUG_SRC_HANDLER: profiles/updateProfile.main
-          SST_DEBUG_ENDPOINT: wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev
-          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
           SST_FUNCTION_ID: dev-RMR-ApiStack-ProfilesApi-Lambda_PUT_-profiles-{id}
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
           SST_DEBUG_IS_API_ROUTE: '1'
@@ -2458,8 +2535,8 @@ Stack ARN:
           - Action: s3:*
             Effect: Allow
             Resource:
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
           - Action: dynamodb:*
             Effect: Allow
             Resource:
@@ -2493,8 +2570,8 @@ Stack ARN:
             Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
           SST_DEBUG_SRC_PATH: backend
           SST_DEBUG_SRC_HANDLER: profiles/deleteProfile.main
-          SST_DEBUG_ENDPOINT: wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev
-          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
           SST_FUNCTION_ID: dev-RMR-ApiStack-ProfilesApi-Lambda_DELETE_-profiles-{id}
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
           SST_DEBUG_IS_API_ROUTE: '1'
@@ -2579,11 +2656,540 @@ Stack ARN:
                 ProfilesApiRouteDELETEprofilesidIntegrationDELETEprofilesidCAE5CC8B
     Metadata:
       aws:cdk:path: dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Resource
+  ReviewsApi00BAD234:
+    Type: AWS::ApiGatewayV2::Api
+    Properties:
+      CorsConfiguration:
+        AllowHeaders:
+          - '*'
+        AllowMethods:
+          - '*'
+        AllowOrigins:
+          - '*'
+      Name: dev-RMR-ReviewsApi
+      ProtocolType: HTTP
+      Tags:
+        sst:app: RMR
+        sst:stage: dev
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ReviewsApi/Api/Resource
+  ReviewsApiDefaultStageA3125BDC:
+    Type: AWS::ApiGatewayV2::Stage
+    Properties:
+      ApiId:
+        Ref: ReviewsApi00BAD234
+      StageName: $default
+      AccessLogSettings:
+        DestinationArn:
+          Fn::GetAtt:
+            - ReviewsApiLogGroupA9FE9D0D
+            - Arn
+        Format: >-
+          {"requestTime":"$context.requestTime","requestId":"$context.requestId","httpMethod":"$context.httpMethod","path":"$context.path","routeKey":"$context.routeKey","status":$context.status,"responseLatency":$context.responseLatency,"integrationRequestId":"$context.integration.requestId","integrationStatus":"$context.integration.status","integrationLatency":"$context.integration.latency","integrationServiceStatus":"$context.integration.integrationStatus","ip":"$context.identity.sourceIp","userAgent":"$context.identity.userAgent","cognitoIdentityId":"$context.identity.cognitoIdentityId"}
+      AutoDeploy: true
+      Tags:
+        sst:app: RMR
+        sst:stage: dev
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ReviewsApi/Api/DefaultStage/Resource
+  ReviewsApiLogGroupA9FE9D0D:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName:
+        Fn::Join:
+          - ''
+          - - /aws/vendedlogs/apis/dev-RMR-ReviewsApi-
+            - Ref: ReviewsApi00BAD234
+            - /default
+      Tags:
+        - Key: sst:app
+          Value: RMR
+        - Key: sst:stage
+          Value: dev
+    UpdateReplacePolicy: Retain
+    DeletionPolicy: Retain
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ReviewsApi/LogGroup/Resource
+  ReviewsApiLambdaPOSTreviewsServiceRole2699BC75:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+        Version: '2012-10-17'
+      ManagedPolicyArns:
+        - Fn::Join:
+            - ''
+            - - 'arn:'
+              - Ref: AWS::Partition
+              - ':iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+      Tags:
+        - Key: sst:app
+          Value: RMR
+        - Key: sst:stage
+          Value: dev
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ReviewsApi/Lambda_POST_--reviews/ServiceRole/Resource
+  ReviewsApiLambdaPOSTreviewsServiceRoleDefaultPolicyB43F45AE:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - xray:PutTraceSegments
+              - xray:PutTelemetryRecords
+            Effect: Allow
+            Resource: '*'
+          - Action: s3:*
+            Effect: Allow
+            Resource:
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
+          - Action: dynamodb:*
+            Effect: Allow
+            Resource:
+              - Fn::ImportValue: >-
+                  dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2
+              - Fn::Join:
+                  - ''
+                  - - Fn::ImportValue: >-
+                        dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2
+                    - /*
+        Version: '2012-10-17'
+      PolicyName: ReviewsApiLambdaPOSTreviewsServiceRoleDefaultPolicyB43F45AE
+      Roles:
+        - Ref: ReviewsApiLambdaPOSTreviewsServiceRole2699BC75
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Lambda_POST_--reviews/ServiceRole/DefaultPolicy/Resource
+  ReviewsApiLambdaPOSTreviews577FF643:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket: cdk-hnb659fds-assets-215957796486-us-west-2
+        S3Key: 8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip
+      Role:
+        Fn::GetAtt:
+          - ReviewsApiLambdaPOSTreviewsServiceRole2699BC75
+          - Arn
+      Environment:
+        Variables:
+          TABLE_NAME:
+            Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5
+          SST_DEBUG_SRC_PATH: backend
+          SST_DEBUG_SRC_HANDLER: reviews/createReview.main
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+          SST_FUNCTION_ID: dev-RMR-ApiStack-ReviewsApi-Lambda_POST_-reviews
+          AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
+          SST_DEBUG_IS_API_ROUTE: '1'
+      EphemeralStorage:
+        Size: 512
+      Handler: index.main
+      MemorySize: 1024
+      Runtime: nodejs16.x
+      Tags:
+        - Key: sst:app
+          Value: RMR
+        - Key: sst:stage
+          Value: dev
+      Timeout: 10
+      TracingConfig:
+        Mode: Active
+    DependsOn:
+      - ReviewsApiLambdaPOSTreviewsServiceRoleDefaultPolicyB43F45AE
+      - ReviewsApiLambdaPOSTreviewsServiceRole2699BC75
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ReviewsApi/Lambda_POST_--reviews/Resource
+      aws:asset:path: >-
+        asset.8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip
+      aws:asset:is-bundled: false
+      aws:asset:property: Code
+  ReviewsApiLambdaPOSTreviewsEventInvokeConfig8E5D9B95:
+    Type: AWS::Lambda::EventInvokeConfig
+    Properties:
+      FunctionName:
+        Ref: ReviewsApiLambdaPOSTreviews577FF643
+      Qualifier: $LATEST
+      MaximumRetryAttempts: 0
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Lambda_POST_--reviews/EventInvokeConfig/Resource
+  ReviewsApiRoutePOSTreviewsIntegrationPOSTreviews012C0498:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId:
+        Ref: ReviewsApi00BAD234
+      IntegrationType: AWS_PROXY
+      IntegrationUri:
+        Fn::GetAtt:
+          - ReviewsApiLambdaPOSTreviews577FF643
+          - Arn
+      PayloadFormatVersion: '2.0'
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Route_POST_--reviews/Integration_POST_--reviews/Resource
+  ReviewsApiRoutePOSTreviewsIntegrationPOSTreviewsPermission406BC86B:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName:
+        Fn::GetAtt:
+          - ReviewsApiLambdaPOSTreviews577FF643
+          - Arn
+      Principal: apigateway.amazonaws.com
+      SourceArn:
+        Fn::Join:
+          - ''
+          - - 'arn:'
+            - Ref: AWS::Partition
+            - ':execute-api:us-west-2:215957796486:'
+            - Ref: ReviewsApi00BAD234
+            - /*/*/reviews
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Route_POST_--reviews/Integration_POST_--reviews-Permission
+  ReviewsApiRoutePOSTreviews7D4D56B3:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId:
+        Ref: ReviewsApi00BAD234
+      RouteKey: POST /reviews
+      AuthorizationType: NONE
+      Target:
+        Fn::Join:
+          - ''
+          - - integrations/
+            - Ref: ReviewsApiRoutePOSTreviewsIntegrationPOSTreviews012C0498
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ReviewsApi/Route_POST_--reviews/Resource
+  ReviewsApiLambdaGETreviewsidServiceRole621C413A:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+        Version: '2012-10-17'
+      ManagedPolicyArns:
+        - Fn::Join:
+            - ''
+            - - 'arn:'
+              - Ref: AWS::Partition
+              - ':iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+      Tags:
+        - Key: sst:app
+          Value: RMR
+        - Key: sst:stage
+          Value: dev
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Lambda_GET_--reviews--{id}/ServiceRole/Resource
+  ReviewsApiLambdaGETreviewsidServiceRoleDefaultPolicyF40F4E04:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - xray:PutTraceSegments
+              - xray:PutTelemetryRecords
+            Effect: Allow
+            Resource: '*'
+          - Action: s3:*
+            Effect: Allow
+            Resource:
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
+          - Action: dynamodb:*
+            Effect: Allow
+            Resource:
+              - Fn::ImportValue: >-
+                  dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2
+              - Fn::Join:
+                  - ''
+                  - - Fn::ImportValue: >-
+                        dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2
+                    - /*
+        Version: '2012-10-17'
+      PolicyName: ReviewsApiLambdaGETreviewsidServiceRoleDefaultPolicyF40F4E04
+      Roles:
+        - Ref: ReviewsApiLambdaGETreviewsidServiceRole621C413A
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Lambda_GET_--reviews--{id}/ServiceRole/DefaultPolicy/Resource
+  ReviewsApiLambdaGETreviewsidD7B16A25:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket: cdk-hnb659fds-assets-215957796486-us-west-2
+        S3Key: 8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip
+      Role:
+        Fn::GetAtt:
+          - ReviewsApiLambdaGETreviewsidServiceRole621C413A
+          - Arn
+      Environment:
+        Variables:
+          TABLE_NAME:
+            Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5
+          SST_DEBUG_SRC_PATH: backend
+          SST_DEBUG_SRC_HANDLER: reviews/getReview.main
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+          SST_FUNCTION_ID: dev-RMR-ApiStack-ReviewsApi-Lambda_GET_-reviews-{id}
+          AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
+          SST_DEBUG_IS_API_ROUTE: '1'
+      EphemeralStorage:
+        Size: 512
+      Handler: index.main
+      MemorySize: 1024
+      Runtime: nodejs16.x
+      Tags:
+        - Key: sst:app
+          Value: RMR
+        - Key: sst:stage
+          Value: dev
+      Timeout: 10
+      TracingConfig:
+        Mode: Active
+    DependsOn:
+      - ReviewsApiLambdaGETreviewsidServiceRoleDefaultPolicyF40F4E04
+      - ReviewsApiLambdaGETreviewsidServiceRole621C413A
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ReviewsApi/Lambda_GET_--reviews--{id}/Resource
+      aws:asset:path: >-
+        asset.8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip
+      aws:asset:is-bundled: false
+      aws:asset:property: Code
+  ReviewsApiLambdaGETreviewsidEventInvokeConfigDDA0DC5F:
+    Type: AWS::Lambda::EventInvokeConfig
+    Properties:
+      FunctionName:
+        Ref: ReviewsApiLambdaGETreviewsidD7B16A25
+      Qualifier: $LATEST
+      MaximumRetryAttempts: 0
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Lambda_GET_--reviews--{id}/EventInvokeConfig/Resource
+  ReviewsApiRouteGETreviewsidIntegrationGETreviewsidEC2EECEE:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId:
+        Ref: ReviewsApi00BAD234
+      IntegrationType: AWS_PROXY
+      IntegrationUri:
+        Fn::GetAtt:
+          - ReviewsApiLambdaGETreviewsidD7B16A25
+          - Arn
+      PayloadFormatVersion: '2.0'
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Route_GET_--reviews--{id}/Integration_GET_--reviews--{id}/Resource
+  ReviewsApiRouteGETreviewsidIntegrationGETreviewsidPermission8A6B878D:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName:
+        Fn::GetAtt:
+          - ReviewsApiLambdaGETreviewsidD7B16A25
+          - Arn
+      Principal: apigateway.amazonaws.com
+      SourceArn:
+        Fn::Join:
+          - ''
+          - - 'arn:'
+            - Ref: AWS::Partition
+            - ':execute-api:us-west-2:215957796486:'
+            - Ref: ReviewsApi00BAD234
+            - /*/*/reviews/{id}
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Route_GET_--reviews--{id}/Integration_GET_--reviews--{id}-Permission
+  ReviewsApiRouteGETreviewsidF4981757:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId:
+        Ref: ReviewsApi00BAD234
+      RouteKey: GET /reviews/{id}
+      AuthorizationType: NONE
+      Target:
+        Fn::Join:
+          - ''
+          - - integrations/
+            - Ref: ReviewsApiRouteGETreviewsidIntegrationGETreviewsidEC2EECEE
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ReviewsApi/Route_GET_--reviews--{id}/Resource
+  ReviewsApiLambdaPUTreviewsidServiceRoleF1090CD1:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+        Version: '2012-10-17'
+      ManagedPolicyArns:
+        - Fn::Join:
+            - ''
+            - - 'arn:'
+              - Ref: AWS::Partition
+              - ':iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+      Tags:
+        - Key: sst:app
+          Value: RMR
+        - Key: sst:stage
+          Value: dev
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Lambda_PUT_--reviews--{id}/ServiceRole/Resource
+  ReviewsApiLambdaPUTreviewsidServiceRoleDefaultPolicy650681C1:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - xray:PutTraceSegments
+              - xray:PutTelemetryRecords
+            Effect: Allow
+            Resource: '*'
+          - Action: s3:*
+            Effect: Allow
+            Resource:
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
+          - Action: dynamodb:*
+            Effect: Allow
+            Resource:
+              - Fn::ImportValue: >-
+                  dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2
+              - Fn::Join:
+                  - ''
+                  - - Fn::ImportValue: >-
+                        dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2
+                    - /*
+        Version: '2012-10-17'
+      PolicyName: ReviewsApiLambdaPUTreviewsidServiceRoleDefaultPolicy650681C1
+      Roles:
+        - Ref: ReviewsApiLambdaPUTreviewsidServiceRoleF1090CD1
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Lambda_PUT_--reviews--{id}/ServiceRole/DefaultPolicy/Resource
+  ReviewsApiLambdaPUTreviewsidA191C032:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket: cdk-hnb659fds-assets-215957796486-us-west-2
+        S3Key: 8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip
+      Role:
+        Fn::GetAtt:
+          - ReviewsApiLambdaPUTreviewsidServiceRoleF1090CD1
+          - Arn
+      Environment:
+        Variables:
+          TABLE_NAME:
+            Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5
+          SST_DEBUG_SRC_PATH: backend
+          SST_DEBUG_SRC_HANDLER: reviews/updateReview.main
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+          SST_FUNCTION_ID: dev-RMR-ApiStack-ReviewsApi-Lambda_PUT_-reviews-{id}
+          AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
+          SST_DEBUG_IS_API_ROUTE: '1'
+      EphemeralStorage:
+        Size: 512
+      Handler: index.main
+      MemorySize: 1024
+      Runtime: nodejs16.x
+      Tags:
+        - Key: sst:app
+          Value: RMR
+        - Key: sst:stage
+          Value: dev
+      Timeout: 10
+      TracingConfig:
+        Mode: Active
+    DependsOn:
+      - ReviewsApiLambdaPUTreviewsidServiceRoleDefaultPolicy650681C1
+      - ReviewsApiLambdaPUTreviewsidServiceRoleF1090CD1
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ReviewsApi/Lambda_PUT_--reviews--{id}/Resource
+      aws:asset:path: >-
+        asset.8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip
+      aws:asset:is-bundled: false
+      aws:asset:property: Code
+  ReviewsApiLambdaPUTreviewsidEventInvokeConfig3DC5735F:
+    Type: AWS::Lambda::EventInvokeConfig
+    Properties:
+      FunctionName:
+        Ref: ReviewsApiLambdaPUTreviewsidA191C032
+      Qualifier: $LATEST
+      MaximumRetryAttempts: 0
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Lambda_PUT_--reviews--{id}/EventInvokeConfig/Resource
+  ReviewsApiRoutePUTreviewsidIntegrationPUTreviewsid6A0A4496:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId:
+        Ref: ReviewsApi00BAD234
+      IntegrationType: AWS_PROXY
+      IntegrationUri:
+        Fn::GetAtt:
+          - ReviewsApiLambdaPUTreviewsidA191C032
+          - Arn
+      PayloadFormatVersion: '2.0'
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Route_PUT_--reviews--{id}/Integration_PUT_--reviews--{id}/Resource
+  ReviewsApiRoutePUTreviewsidIntegrationPUTreviewsidPermission84D975C4:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName:
+        Fn::GetAtt:
+          - ReviewsApiLambdaPUTreviewsidA191C032
+          - Arn
+      Principal: apigateway.amazonaws.com
+      SourceArn:
+        Fn::Join:
+          - ''
+          - - 'arn:'
+            - Ref: AWS::Partition
+            - ':execute-api:us-west-2:215957796486:'
+            - Ref: ReviewsApi00BAD234
+            - /*/*/reviews/{id}
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ReviewsApi/Route_PUT_--reviews--{id}/Integration_PUT_--reviews--{id}-Permission
+  ReviewsApiRoutePUTreviewsid89F4346D:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId:
+        Ref: ReviewsApi00BAD234
+      RouteKey: PUT /reviews/{id}
+      AuthorizationType: NONE
+      Target:
+        Fn::Join:
+          - ''
+          - - integrations/
+            - Ref: ReviewsApiRoutePUTreviewsidIntegrationPUTreviewsid6A0A4496
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ReviewsApi/Route_PUT_--reviews--{id}/Resource
 Outputs:
   ProfilesApiEndpoint:
     Value:
       Fn::GetAtt:
         - ProfilesApi7EB07B3F
+        - ApiEndpoint
+  ReviewsApiEndpoint:
+    Value:
+      Fn::GetAtt:
+        - ReviewsApi00BAD234
         - ApiEndpoint
 Parameters:
   BootstrapVersion:
@@ -2608,7 +3214,7 @@ Rules:
           CDK bootstrap stack version 6 required. Please run 'cdk bootstrap'
           with a recent version of the CDK CLI.
 
-[2022-06-24T14:48:01.287] [DEBUG] default - Resources:
+[2022-06-24T16:13:55.645] [DEBUG] default - Resources:
   SSTMetadata:
     Type: AWS::CDK::Metadata
     Metadata:
@@ -2638,6 +3244,16 @@ Rules:
                   node: c830956be3851f5a5d4ade40d83c5f4923d68862f7
                   stack: dev-RMR-ApiStack
               - type: function
+                route: GET /profiles
+                fn:
+                  node: c82f9709ebae36ea4d4d17094efcf7f0989e403623
+                  stack: dev-RMR-ApiStack
+              - type: function
+                route: DELETE /profiles
+                fn:
+                  node: c871f4ac8a2d4de3d533d1103c2fe799c0a73f3132
+                  stack: dev-RMR-ApiStack
+              - type: function
                 route: GET /profiles/{id}
                 fn:
                   node: c8c1500cc1e23fa2d867340373cdd07a95aa2dd1f6
@@ -2661,6 +3277,26 @@ Rules:
             arn:
               Fn::GetAtt:
                 - ProfilesApiLambdaPOSTprofilesEE603927
+                - Arn
+        - id: Lambda_GET_--profiles
+          addr: c82f9709ebae36ea4d4d17094efcf7f0989e403623
+          stack: dev-RMR-ApiStack
+          type: Function
+          data:
+            localId: dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles
+            arn:
+              Fn::GetAtt:
+                - ProfilesApiLambdaGETprofilesD7613302
+                - Arn
+        - id: Lambda_DELETE_--profiles
+          addr: c871f4ac8a2d4de3d533d1103c2fe799c0a73f3132
+          stack: dev-RMR-ApiStack
+          type: Function
+          data:
+            localId: dev-RMR-ApiStack-ProfilesApi-Lambda_DELETE_-profiles
+            arn:
+              Fn::GetAtt:
+                - ProfilesApiLambdaDELETEprofiles0505CDE7
                 - Arn
         - id: Lambda_GET_--profiles--{id}
           addr: c8c1500cc1e23fa2d867340373cdd07a95aa2dd1f6
@@ -2782,8 +3418,8 @@ Rules:
           - Action: s3:*
             Effect: Allow
             Resource:
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
           - Action: dynamodb:*
             Effect: Allow
             Resource:
@@ -2817,8 +3453,8 @@ Rules:
             Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
           SST_DEBUG_SRC_PATH: backend
           SST_DEBUG_SRC_HANDLER: profiles/createProfile.main
-          SST_DEBUG_ENDPOINT: wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev
-          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
           SST_FUNCTION_ID: dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
           SST_DEBUG_IS_API_ROUTE: '1'
@@ -2902,6 +3538,319 @@ Rules:
             - Ref: ProfilesApiRoutePOSTprofilesIntegrationPOSTprofilesFF12C094
     Metadata:
       aws:cdk:path: dev-RMR-ApiStack/ProfilesApi/Route_POST_--profiles/Resource
+  ProfilesApiLambdaGETprofilesServiceRole8762ACC4:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+        Version: '2012-10-17'
+      ManagedPolicyArns:
+        - Fn::Join:
+            - ''
+            - - 'arn:'
+              - Ref: AWS::Partition
+              - ':iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+      Tags:
+        - Key: sst:app
+          Value: RMR
+        - Key: sst:stage
+          Value: dev
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/ServiceRole/Resource
+  ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - xray:PutTraceSegments
+              - xray:PutTelemetryRecords
+            Effect: Allow
+            Resource: '*'
+          - Action: s3:*
+            Effect: Allow
+            Resource:
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
+          - Action: dynamodb:*
+            Effect: Allow
+            Resource:
+              - Fn::ImportValue: >-
+                  dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850
+              - Fn::Join:
+                  - ''
+                  - - Fn::ImportValue: >-
+                        dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850
+                    - /*
+        Version: '2012-10-17'
+      PolicyName: ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED
+      Roles:
+        - Ref: ProfilesApiLambdaGETprofilesServiceRole8762ACC4
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/ServiceRole/DefaultPolicy/Resource
+  ProfilesApiLambdaGETprofilesD7613302:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket: cdk-hnb659fds-assets-215957796486-us-west-2
+        S3Key: 8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip
+      Role:
+        Fn::GetAtt:
+          - ProfilesApiLambdaGETprofilesServiceRole8762ACC4
+          - Arn
+      Environment:
+        Variables:
+          TABLE_NAME:
+            Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
+          SST_DEBUG_SRC_PATH: backend
+          SST_DEBUG_SRC_HANDLER: profiles/getProfileList.main
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+          SST_FUNCTION_ID: dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles
+          AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
+          SST_DEBUG_IS_API_ROUTE: '1'
+      EphemeralStorage:
+        Size: 512
+      Handler: index.main
+      MemorySize: 1024
+      Runtime: nodejs16.x
+      Tags:
+        - Key: sst:app
+          Value: RMR
+        - Key: sst:stage
+          Value: dev
+      Timeout: 10
+      TracingConfig:
+        Mode: Active
+    DependsOn:
+      - ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED
+      - ProfilesApiLambdaGETprofilesServiceRole8762ACC4
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/Resource
+      aws:asset:path: >-
+        asset.8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip
+      aws:asset:is-bundled: false
+      aws:asset:property: Code
+  ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5:
+    Type: AWS::Lambda::EventInvokeConfig
+    Properties:
+      FunctionName:
+        Ref: ProfilesApiLambdaGETprofilesD7613302
+      Qualifier: $LATEST
+      MaximumRetryAttempts: 0
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/EventInvokeConfig/Resource
+  ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId:
+        Ref: ProfilesApi7EB07B3F
+      IntegrationType: AWS_PROXY
+      IntegrationUri:
+        Fn::GetAtt:
+          - ProfilesApiLambdaGETprofilesD7613302
+          - Arn
+      PayloadFormatVersion: '2.0'
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Integration_GET_--profiles/Resource
+  ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName:
+        Fn::GetAtt:
+          - ProfilesApiLambdaGETprofilesD7613302
+          - Arn
+      Principal: apigateway.amazonaws.com
+      SourceArn:
+        Fn::Join:
+          - ''
+          - - 'arn:'
+            - Ref: AWS::Partition
+            - ':execute-api:us-west-2:215957796486:'
+            - Ref: ProfilesApi7EB07B3F
+            - /*/*/profiles
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Integration_GET_--profiles-Permission
+  ProfilesApiRouteGETprofiles24D543E2:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId:
+        Ref: ProfilesApi7EB07B3F
+      RouteKey: GET /profiles
+      AuthorizationType: NONE
+      Target:
+        Fn::Join:
+          - ''
+          - - integrations/
+            - Ref: ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Resource
+  ProfilesApiLambdaDELETEprofilesServiceRole91A6F2DC:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+        Version: '2012-10-17'
+      ManagedPolicyArns:
+        - Fn::Join:
+            - ''
+            - - 'arn:'
+              - Ref: AWS::Partition
+              - ':iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+      Tags:
+        - Key: sst:app
+          Value: RMR
+        - Key: sst:stage
+          Value: dev
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles/ServiceRole/Resource
+  ProfilesApiLambdaDELETEprofilesServiceRoleDefaultPolicyE6949F5F:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - xray:PutTraceSegments
+              - xray:PutTelemetryRecords
+            Effect: Allow
+            Resource: '*'
+          - Action: s3:*
+            Effect: Allow
+            Resource:
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
+          - Action: dynamodb:*
+            Effect: Allow
+            Resource:
+              - Fn::ImportValue: >-
+                  dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850
+              - Fn::Join:
+                  - ''
+                  - - Fn::ImportValue: >-
+                        dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850
+                    - /*
+        Version: '2012-10-17'
+      PolicyName: ProfilesApiLambdaDELETEprofilesServiceRoleDefaultPolicyE6949F5F
+      Roles:
+        - Ref: ProfilesApiLambdaDELETEprofilesServiceRole91A6F2DC
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles/ServiceRole/DefaultPolicy/Resource
+  ProfilesApiLambdaDELETEprofiles0505CDE7:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket: cdk-hnb659fds-assets-215957796486-us-west-2
+        S3Key: 8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip
+      Role:
+        Fn::GetAtt:
+          - ProfilesApiLambdaDELETEprofilesServiceRole91A6F2DC
+          - Arn
+      Environment:
+        Variables:
+          TABLE_NAME:
+            Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
+          SST_DEBUG_SRC_PATH: backend
+          SST_DEBUG_SRC_HANDLER: profiles/deleteProfileList.main
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+          SST_FUNCTION_ID: dev-RMR-ApiStack-ProfilesApi-Lambda_DELETE_-profiles
+          AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
+          SST_DEBUG_IS_API_ROUTE: '1'
+      EphemeralStorage:
+        Size: 512
+      Handler: index.main
+      MemorySize: 1024
+      Runtime: nodejs16.x
+      Tags:
+        - Key: sst:app
+          Value: RMR
+        - Key: sst:stage
+          Value: dev
+      Timeout: 10
+      TracingConfig:
+        Mode: Active
+    DependsOn:
+      - ProfilesApiLambdaDELETEprofilesServiceRoleDefaultPolicyE6949F5F
+      - ProfilesApiLambdaDELETEprofilesServiceRole91A6F2DC
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles/Resource
+      aws:asset:path: >-
+        asset.8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip
+      aws:asset:is-bundled: false
+      aws:asset:property: Code
+  ProfilesApiLambdaDELETEprofilesEventInvokeConfigDF7700EE:
+    Type: AWS::Lambda::EventInvokeConfig
+    Properties:
+      FunctionName:
+        Ref: ProfilesApiLambdaDELETEprofiles0505CDE7
+      Qualifier: $LATEST
+      MaximumRetryAttempts: 0
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles/EventInvokeConfig/Resource
+  ProfilesApiRouteDELETEprofilesIntegrationDELETEprofiles39A59BD0:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId:
+        Ref: ProfilesApi7EB07B3F
+      IntegrationType: AWS_PROXY
+      IntegrationUri:
+        Fn::GetAtt:
+          - ProfilesApiLambdaDELETEprofiles0505CDE7
+          - Arn
+      PayloadFormatVersion: '2.0'
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles/Integration_DELETE_--profiles/Resource
+  ProfilesApiRouteDELETEprofilesIntegrationDELETEprofilesPermissionEBC3210C:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName:
+        Fn::GetAtt:
+          - ProfilesApiLambdaDELETEprofiles0505CDE7
+          - Arn
+      Principal: apigateway.amazonaws.com
+      SourceArn:
+        Fn::Join:
+          - ''
+          - - 'arn:'
+            - Ref: AWS::Partition
+            - ':execute-api:us-west-2:215957796486:'
+            - Ref: ProfilesApi7EB07B3F
+            - /*/*/profiles
+    Metadata:
+      aws:cdk:path: >-
+        dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles/Integration_DELETE_--profiles-Permission
+  ProfilesApiRouteDELETEprofiles6FC667C7:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId:
+        Ref: ProfilesApi7EB07B3F
+      RouteKey: DELETE /profiles
+      AuthorizationType: NONE
+      Target:
+        Fn::Join:
+          - ''
+          - - integrations/
+            - Ref: ProfilesApiRouteDELETEprofilesIntegrationDELETEprofiles39A59BD0
+    Metadata:
+      aws:cdk:path: dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles/Resource
   ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B:
     Type: AWS::IAM::Role
     Properties:
@@ -2939,8 +3888,8 @@ Rules:
           - Action: s3:*
             Effect: Allow
             Resource:
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
           - Action: dynamodb:*
             Effect: Allow
             Resource:
@@ -2974,8 +3923,8 @@ Rules:
             Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
           SST_DEBUG_SRC_PATH: backend
           SST_DEBUG_SRC_HANDLER: profiles/getProfile.main
-          SST_DEBUG_ENDPOINT: wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev
-          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
           SST_FUNCTION_ID: dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
           SST_DEBUG_IS_API_ROUTE: '1'
@@ -3096,8 +4045,8 @@ Rules:
           - Action: s3:*
             Effect: Allow
             Resource:
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
           - Action: dynamodb:*
             Effect: Allow
             Resource:
@@ -3131,8 +4080,8 @@ Rules:
             Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
           SST_DEBUG_SRC_PATH: backend
           SST_DEBUG_SRC_HANDLER: profiles/updateProfile.main
-          SST_DEBUG_ENDPOINT: wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev
-          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
           SST_FUNCTION_ID: dev-RMR-ApiStack-ProfilesApi-Lambda_PUT_-profiles-{id}
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
           SST_DEBUG_IS_API_ROUTE: '1'
@@ -3253,8 +4202,8 @@ Rules:
           - Action: s3:*
             Effect: Allow
             Resource:
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
-              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
+              - arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80/*
           - Action: dynamodb:*
             Effect: Allow
             Resource:
@@ -3288,8 +4237,8 @@ Rules:
             Fn::ImportValue: dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F
           SST_DEBUG_SRC_PATH: backend
           SST_DEBUG_SRC_HANDLER: profiles/deleteProfile.main
-          SST_DEBUG_ENDPOINT: wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev
-          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
+          SST_DEBUG_ENDPOINT: wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev
+          SST_DEBUG_BUCKET_NAME: dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80
           SST_FUNCTION_ID: dev-RMR-ApiStack-ProfilesApi-Lambda_DELETE_-profiles-{id}
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
           SST_DEBUG_IS_API_ROUTE: '1'
@@ -3403,363 +4352,61 @@ Rules:
           CDK bootstrap stack version 6 required. Please run 'cdk bootstrap'
           with a recent version of the CDK CLI.
 
-[2022-06-24T14:48:01.288] [DEBUG] default - deploy stack: run cdk deploy
-[2022-06-24T14:48:01.301] [DEBUG] default - deploy stack: poll stack status
-[2022-06-24T14:48:01.679] [DEBUG] default - deploy stack: poll stack status: {
+[2022-06-24T16:13:55.646] [DEBUG] default - deploy stack: run cdk deploy
+[2022-06-24T16:13:55.654] [DEBUG] default - deploy stack: poll stack status
+[2022-06-24T16:13:56.015] [DEBUG] default - deploy stack: poll stack status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T21:40:50.330Z
+  LastUpdatedTime: 2022-06-24T23:08:52.982Z
 }
-[2022-06-24T14:48:01.680] [DEBUG] default - deploy stack: poll stack status: unknown
-[2022-06-24T14:48:02.776] [TRACE] default - deploy stack: run cdk deploy: stderr: 
+[2022-06-24T16:13:56.016] [DEBUG] default - deploy stack: poll stack status: unknown
+[2022-06-24T16:13:56.900] [TRACE] default - deploy stack: run cdk deploy: stderr: 
 ✨  Synthesis time: 0.02s
 
 
-[2022-06-24T14:48:02.777] [TRACE] default - deploy stack: run cdk deploy: stderr: [1mdev-RMR-ApiStack[22m: deploying...
+[2022-06-24T16:13:56.901] [TRACE] default - deploy stack: run cdk deploy: stderr: [1mdev-RMR-ApiStack[22m: deploying...
 
-[2022-06-24T14:48:04.195] [TRACE] default - deploy stack: run cdk deploy: stderr: [0%] start: Publishing 8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c:215957796486-us-west-2
+[2022-06-24T16:13:58.491] [TRACE] default - deploy stack: run cdk deploy: stderr: [0%] start: Publishing 8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c:215957796486-us-west-2
 
-[2022-06-24T14:48:04.195] [TRACE] default - deploy stack: run cdk deploy: stderr: [0%] start: Publishing 2645f646e0fdcc9c129e99449da07beace56387cd44f2b12bd609ac263cf770e:215957796486-us-west-2
+[2022-06-24T16:13:58.491] [TRACE] default - deploy stack: run cdk deploy: stderr: [0%] start: Publishing 987ab82e2ed81f857017adfc57ba15226e8943fe470816f51b80b3fc077cc80e:215957796486-us-west-2
 
-[2022-06-24T14:48:05.048] [DEBUG] default - deploy stack: poll stack status: {
+[2022-06-24T16:13:59.382] [DEBUG] default - deploy stack: poll stack status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T21:40:50.330Z
+  LastUpdatedTime: 2022-06-24T23:08:52.982Z
 }
-[2022-06-24T14:48:05.048] [DEBUG] default - deploy stack: poll stack status: unknown
-[2022-06-24T14:48:05.498] [TRACE] default - deploy stack: run cdk deploy: stderr: [50%] success: Published 2645f646e0fdcc9c129e99449da07beace56387cd44f2b12bd609ac263cf770e:215957796486-us-west-2
+[2022-06-24T16:13:59.383] [DEBUG] default - deploy stack: poll stack status: unknown
+[2022-06-24T16:14:00.067] [TRACE] default - deploy stack: run cdk deploy: stderr: [50%] success: Published 987ab82e2ed81f857017adfc57ba15226e8943fe470816f51b80b3fc077cc80e:215957796486-us-west-2
 
-[2022-06-24T14:48:05.502] [TRACE] default - deploy stack: run cdk deploy: stderr: [100%] success: Published 8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c:215957796486-us-west-2
+[2022-06-24T16:14:00.069] [TRACE] default - deploy stack: run cdk deploy: stderr: [100%] success: Published 8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c:215957796486-us-west-2
 
-[2022-06-24T14:48:06.789] [TRACE] default - deploy stack: run cdk deploy: stderr: [1mdev-RMR-ApiStack[22m: creating CloudFormation changeset...
+[2022-06-24T16:14:01.581] [TRACE] default - deploy stack: run cdk deploy: stderr: [1mdev-RMR-ApiStack[22m: creating CloudFormation changeset...
 
-[2022-06-24T14:48:08.391] [DEBUG] default - deploy stack: poll stack status: {
+[2022-06-24T16:14:02.804] [DEBUG] default - deploy stack: poll stack status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T21:40:50.330Z
+  LastUpdatedTime: 2022-06-24T23:08:52.982Z
 }
-[2022-06-24T14:48:08.392] [DEBUG] default - deploy stack: poll stack status: unknown
-[2022-06-24T14:48:11.732] [DEBUG] default - deploy stack: poll stack status: {
+[2022-06-24T16:14:02.805] [DEBUG] default - deploy stack: poll stack status: unknown
+[2022-06-24T16:14:06.166] [DEBUG] default - deploy stack: poll stack status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T21:40:50.330Z
+  LastUpdatedTime: 2022-06-24T23:08:52.982Z
 }
-[2022-06-24T14:48:11.733] [DEBUG] default - deploy stack: poll stack status: unknown
-[2022-06-24T14:48:15.087] [DEBUG] default - deploy stack: poll stack status: {
+[2022-06-24T16:14:06.167] [DEBUG] default - deploy stack: poll stack status: unknown
+[2022-06-24T16:14:09.533] [DEBUG] default - deploy stack: poll stack status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T21:40:50.330Z
+  LastUpdatedTime: 2022-06-24T23:08:52.982Z
 }
-[2022-06-24T14:48:15.088] [DEBUG] default - deploy stack: poll stack status: unknown
-[2022-06-24T14:48:18.454] [DEBUG] default - deploy stack: poll stack status: {
+[2022-06-24T16:14:09.534] [DEBUG] default - deploy stack: poll stack status: unknown
+[2022-06-24T16:14:12.897] [DEBUG] default - deploy stack: poll stack status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T21:40:50.330Z
+  LastUpdatedTime: 2022-06-24T23:08:52.982Z
 }
-[2022-06-24T14:48:18.454] [DEBUG] default - deploy stack: poll stack status: unknown
-[2022-06-24T14:48:21.782] [DEBUG] default - deploy stack: poll stack status: {
+[2022-06-24T16:14:12.898] [DEBUG] default - deploy stack: poll stack status: unknown
+[2022-06-24T16:14:16.255] [DEBUG] default - deploy stack: poll stack status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T21:40:50.330Z
+  LastUpdatedTime: 2022-06-24T23:08:52.982Z
 }
-[2022-06-24T14:48:21.783] [DEBUG] default - deploy stack: poll stack status: unknown
-[2022-06-24T14:48:25.134] [DEBUG] default - deploy stack: poll stack status: {
+[2022-06-24T16:14:16.255] [DEBUG] default - deploy stack: poll stack status: unknown
+[2022-06-24T16:14:19.577] [DEBUG] default - deploy stack: poll stack status: {
   StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T21:40:50.330Z
+  LastUpdatedTime: 2022-06-24T23:08:52.982Z
 }
-[2022-06-24T14:48:25.135] [DEBUG] default - deploy stack: poll stack status: unknown
-[2022-06-24T14:48:28.487] [DEBUG] default - deploy stack: poll stack status: {
-  StackStatus: 'UPDATE_COMPLETE',
-  LastUpdatedTime: 2022-06-24T21:40:50.330Z
-}
-[2022-06-24T14:48:28.488] [DEBUG] default - deploy stack: poll stack status: unknown
-[2022-06-24T14:48:31.845] [DEBUG] default - deploy stack: poll stack status: {
-  StackStatus: 'UPDATE_IN_PROGRESS',
-  LastUpdatedTime: 2022-06-24T21:48:30.138Z
-}
-[2022-06-24T14:48:31.845] [DEBUG] default - deploy stack: poll stack status: cf update started
-[2022-06-24T14:48:31.846] [DEBUG] default - deploy stack: done dev-RMR-ApiStack {
-  status: 'deploying',
-  statusReason: undefined,
-  account: '215957796486',
-  outputs: {
-    ProfilesApiEndpoint: 'https://u4g7ienpbd.execute-api.us-west-2.amazonaws.com'
-  },
-  exports: {}
-}
-[2022-06-24T14:48:31.846] [TRACE] default - After deploy stacks: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[],"outputs":{"ProfilesApiEndpoint":"https://u4g7ienpbd.execute-api.us-west-2.amazonaws.com"},"exports":{}}]
-[2022-06-24T14:48:31.846] [INFO] default - Checking deploy status...
-[2022-06-24T14:48:31.866] [DEBUG] default - deploy stack: run cdk deploy: exited with code null
-[2022-06-24T14:48:36.847] [TRACE] default - Initial stack states: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[],"outputs":{"ProfilesApiEndpoint":"https://u4g7ienpbd.execute-api.us-west-2.amazonaws.com"},"exports":{}}]
-[2022-06-24T14:48:36.848] [DEBUG] default - Fetching stack events dev-RMR-ApiStack
-[2022-06-24T14:48:37.370] [INFO] default - dev-RMR-ApiStack | [0mUPDATE_IN_PROGRESS[0m | AWS::CloudFormation::Stack | [0m[1mdev-RMR-ApiStack[22m[0m | [0mUser Initiated[0m
-[2022-06-24T14:48:37.371] [DEBUG] default - Checking stack status dev-RMR-ApiStack
-[2022-06-24T14:48:37.696] [TRACE] default - After update deploy statuses: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:48:37.697] [TRACE] default - After deploy stacks: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:48:42.699] [TRACE] default - Initial stack states: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:48:42.699] [DEBUG] default - Fetching stack events dev-RMR-ApiStack
-[2022-06-24T14:48:43.434] [INFO] default - dev-RMR-ApiStack | [32mUPDATE_COMPLETE[39m | AWS::CDK::Metadata | [32m[1mSSTMetadata[22m[39m
-[2022-06-24T14:48:43.434] [INFO] default - dev-RMR-ApiStack | [32mUPDATE_COMPLETE_CLEANUP_IN_PROGRESS[39m | AWS::CloudFormation::Stack | [32m[1mdev-RMR-ApiStack[22m[39m
-[2022-06-24T14:48:43.435] [DEBUG] default - Checking stack status dev-RMR-ApiStack
-[2022-06-24T14:48:43.778] [TRACE] default - After update deploy statuses: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:48:43.778] [TRACE] default - After deploy stacks: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:48:48.780] [TRACE] default - Initial stack states: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:48:48.781] [DEBUG] default - Fetching stack events dev-RMR-ApiStack
-[2022-06-24T14:48:49.304] [INFO] default - dev-RMR-ApiStack | [0mDELETE_IN_PROGRESS[0m | AWS::Lambda::EventInvokeConfig | [0m[1mProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5[22m[0m
-[2022-06-24T14:48:49.304] [INFO] default - dev-RMR-ApiStack | [0mDELETE_IN_PROGRESS[0m | AWS::ApiGatewayV2::Route | [0m[1mProfilesApiRouteGETprofiles24D543E2[22m[0m
-[2022-06-24T14:48:49.305] [INFO] default - dev-RMR-ApiStack | [0mDELETE_IN_PROGRESS[0m | AWS::Lambda::Permission | [0m[1mProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76[22m[0m
-[2022-06-24T14:48:49.305] [INFO] default - dev-RMR-ApiStack | [32mDELETE_COMPLETE[39m | AWS::ApiGatewayV2::Route | [32m[1mProfilesApiRouteGETprofiles24D543E2[22m[39m
-[2022-06-24T14:48:49.305] [INFO] default - dev-RMR-ApiStack | [32mDELETE_COMPLETE[39m | AWS::Lambda::EventInvokeConfig | [32m[1mProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5[22m[39m
-[2022-06-24T14:48:49.306] [INFO] default - dev-RMR-ApiStack | [0mDELETE_IN_PROGRESS[0m | AWS::ApiGatewayV2::Integration | [0m[1mProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6[22m[0m
-[2022-06-24T14:48:49.306] [INFO] default - dev-RMR-ApiStack | [32mDELETE_COMPLETE[39m | AWS::ApiGatewayV2::Integration | [32m[1mProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6[22m[39m
-[2022-06-24T14:48:49.306] [DEBUG] default - Checking stack status dev-RMR-ApiStack
-[2022-06-24T14:48:49.635] [TRACE] default - After update deploy statuses: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-f0cf881a-3bd7-4398-962d-bb33223ce2d0","timestamp":"2022-06-24T21:48:43.415Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-352bf35a-94e8-4e16-9fea-9d0bcf1c2f98","timestamp":"2022-06-24T21:48:43.777Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-b8dc58eb-d5c4-4285-a04e-ff3975b7b046","timestamp":"2022-06-24T21:48:43.912Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-cf3c5dd4-ccfc-4ae2-acd9-4e00f7b6c0ce","timestamp":"2022-06-24T21:48:44.884Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-73204e16-535e-4603-80ee-696c93981ebb","timestamp":"2022-06-24T21:48:45.464Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-9375a2f8-56ce-4a52-bd12-01e0f769d90f","timestamp":"2022-06-24T21:48:45.745Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-64d17c50-42a7-4f19-a9dc-53e46e3adfa2","timestamp":"2022-06-24T21:48:46.854Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:48:49.636] [TRACE] default - After deploy stacks: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-f0cf881a-3bd7-4398-962d-bb33223ce2d0","timestamp":"2022-06-24T21:48:43.415Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-352bf35a-94e8-4e16-9fea-9d0bcf1c2f98","timestamp":"2022-06-24T21:48:43.777Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-b8dc58eb-d5c4-4285-a04e-ff3975b7b046","timestamp":"2022-06-24T21:48:43.912Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-cf3c5dd4-ccfc-4ae2-acd9-4e00f7b6c0ce","timestamp":"2022-06-24T21:48:44.884Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-73204e16-535e-4603-80ee-696c93981ebb","timestamp":"2022-06-24T21:48:45.464Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-9375a2f8-56ce-4a52-bd12-01e0f769d90f","timestamp":"2022-06-24T21:48:45.745Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-64d17c50-42a7-4f19-a9dc-53e46e3adfa2","timestamp":"2022-06-24T21:48:46.854Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:48:54.637] [TRACE] default - Initial stack states: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-f0cf881a-3bd7-4398-962d-bb33223ce2d0","timestamp":"2022-06-24T21:48:43.415Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-352bf35a-94e8-4e16-9fea-9d0bcf1c2f98","timestamp":"2022-06-24T21:48:43.777Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-b8dc58eb-d5c4-4285-a04e-ff3975b7b046","timestamp":"2022-06-24T21:48:43.912Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-cf3c5dd4-ccfc-4ae2-acd9-4e00f7b6c0ce","timestamp":"2022-06-24T21:48:44.884Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-73204e16-535e-4603-80ee-696c93981ebb","timestamp":"2022-06-24T21:48:45.464Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-9375a2f8-56ce-4a52-bd12-01e0f769d90f","timestamp":"2022-06-24T21:48:45.745Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-64d17c50-42a7-4f19-a9dc-53e46e3adfa2","timestamp":"2022-06-24T21:48:46.854Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:48:54.638] [DEBUG] default - Fetching stack events dev-RMR-ApiStack
-[2022-06-24T14:48:55.672] [INFO] default - dev-RMR-ApiStack | [32mDELETE_COMPLETE[39m | AWS::Lambda::Permission | [32m[1mProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76[22m[39m
-[2022-06-24T14:48:55.672] [DEBUG] default - Checking stack status dev-RMR-ApiStack
-[2022-06-24T14:48:56.037] [TRACE] default - After update deploy statuses: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-f0cf881a-3bd7-4398-962d-bb33223ce2d0","timestamp":"2022-06-24T21:48:43.415Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-352bf35a-94e8-4e16-9fea-9d0bcf1c2f98","timestamp":"2022-06-24T21:48:43.777Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-b8dc58eb-d5c4-4285-a04e-ff3975b7b046","timestamp":"2022-06-24T21:48:43.912Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-cf3c5dd4-ccfc-4ae2-acd9-4e00f7b6c0ce","timestamp":"2022-06-24T21:48:44.884Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-73204e16-535e-4603-80ee-696c93981ebb","timestamp":"2022-06-24T21:48:45.464Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-9375a2f8-56ce-4a52-bd12-01e0f769d90f","timestamp":"2022-06-24T21:48:45.745Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-64d17c50-42a7-4f19-a9dc-53e46e3adfa2","timestamp":"2022-06-24T21:48:46.854Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-0d77c1a0-46b8-436f-b646-ecb9258795fd","timestamp":"2022-06-24T21:48:54.613Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:48:56.038] [TRACE] default - After deploy stacks: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-f0cf881a-3bd7-4398-962d-bb33223ce2d0","timestamp":"2022-06-24T21:48:43.415Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-352bf35a-94e8-4e16-9fea-9d0bcf1c2f98","timestamp":"2022-06-24T21:48:43.777Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-b8dc58eb-d5c4-4285-a04e-ff3975b7b046","timestamp":"2022-06-24T21:48:43.912Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-cf3c5dd4-ccfc-4ae2-acd9-4e00f7b6c0ce","timestamp":"2022-06-24T21:48:44.884Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-73204e16-535e-4603-80ee-696c93981ebb","timestamp":"2022-06-24T21:48:45.464Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-9375a2f8-56ce-4a52-bd12-01e0f769d90f","timestamp":"2022-06-24T21:48:45.745Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-64d17c50-42a7-4f19-a9dc-53e46e3adfa2","timestamp":"2022-06-24T21:48:46.854Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-0d77c1a0-46b8-436f-b646-ecb9258795fd","timestamp":"2022-06-24T21:48:54.613Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:49:01.038] [TRACE] default - Initial stack states: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-f0cf881a-3bd7-4398-962d-bb33223ce2d0","timestamp":"2022-06-24T21:48:43.415Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-352bf35a-94e8-4e16-9fea-9d0bcf1c2f98","timestamp":"2022-06-24T21:48:43.777Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-b8dc58eb-d5c4-4285-a04e-ff3975b7b046","timestamp":"2022-06-24T21:48:43.912Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-cf3c5dd4-ccfc-4ae2-acd9-4e00f7b6c0ce","timestamp":"2022-06-24T21:48:44.884Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-73204e16-535e-4603-80ee-696c93981ebb","timestamp":"2022-06-24T21:48:45.464Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-9375a2f8-56ce-4a52-bd12-01e0f769d90f","timestamp":"2022-06-24T21:48:45.745Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-64d17c50-42a7-4f19-a9dc-53e46e3adfa2","timestamp":"2022-06-24T21:48:46.854Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-0d77c1a0-46b8-436f-b646-ecb9258795fd","timestamp":"2022-06-24T21:48:54.613Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:49:01.039] [DEBUG] default - Fetching stack events dev-RMR-ApiStack
-[2022-06-24T14:49:01.704] [INFO] default - dev-RMR-ApiStack | [0mDELETE_IN_PROGRESS[0m | AWS::Lambda::Function | [0m[1mProfilesApiLambdaGETprofilesD7613302[22m[0m
-[2022-06-24T14:49:01.705] [DEBUG] default - Checking stack status dev-RMR-ApiStack
-[2022-06-24T14:49:02.153] [TRACE] default - After update deploy statuses: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-f0cf881a-3bd7-4398-962d-bb33223ce2d0","timestamp":"2022-06-24T21:48:43.415Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-352bf35a-94e8-4e16-9fea-9d0bcf1c2f98","timestamp":"2022-06-24T21:48:43.777Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-b8dc58eb-d5c4-4285-a04e-ff3975b7b046","timestamp":"2022-06-24T21:48:43.912Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-cf3c5dd4-ccfc-4ae2-acd9-4e00f7b6c0ce","timestamp":"2022-06-24T21:48:44.884Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-73204e16-535e-4603-80ee-696c93981ebb","timestamp":"2022-06-24T21:48:45.464Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-9375a2f8-56ce-4a52-bd12-01e0f769d90f","timestamp":"2022-06-24T21:48:45.745Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-64d17c50-42a7-4f19-a9dc-53e46e3adfa2","timestamp":"2022-06-24T21:48:46.854Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-0d77c1a0-46b8-436f-b646-ecb9258795fd","timestamp":"2022-06-24T21:48:54.613Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiLambdaGETprofilesD7613302-8a58b33e-9c50-40b4-b2bf-328505e37894","timestamp":"2022-06-24T21:48:55.351Z","resourceType":"AWS::Lambda::Function","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesD7613302"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:49:02.154] [TRACE] default - After deploy stacks: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-f0cf881a-3bd7-4398-962d-bb33223ce2d0","timestamp":"2022-06-24T21:48:43.415Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-352bf35a-94e8-4e16-9fea-9d0bcf1c2f98","timestamp":"2022-06-24T21:48:43.777Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-b8dc58eb-d5c4-4285-a04e-ff3975b7b046","timestamp":"2022-06-24T21:48:43.912Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-cf3c5dd4-ccfc-4ae2-acd9-4e00f7b6c0ce","timestamp":"2022-06-24T21:48:44.884Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-73204e16-535e-4603-80ee-696c93981ebb","timestamp":"2022-06-24T21:48:45.464Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-9375a2f8-56ce-4a52-bd12-01e0f769d90f","timestamp":"2022-06-24T21:48:45.745Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-64d17c50-42a7-4f19-a9dc-53e46e3adfa2","timestamp":"2022-06-24T21:48:46.854Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-0d77c1a0-46b8-436f-b646-ecb9258795fd","timestamp":"2022-06-24T21:48:54.613Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiLambdaGETprofilesD7613302-8a58b33e-9c50-40b4-b2bf-328505e37894","timestamp":"2022-06-24T21:48:55.351Z","resourceType":"AWS::Lambda::Function","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesD7613302"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:49:07.155] [TRACE] default - Initial stack states: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"deploying","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-f0cf881a-3bd7-4398-962d-bb33223ce2d0","timestamp":"2022-06-24T21:48:43.415Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-352bf35a-94e8-4e16-9fea-9d0bcf1c2f98","timestamp":"2022-06-24T21:48:43.777Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-b8dc58eb-d5c4-4285-a04e-ff3975b7b046","timestamp":"2022-06-24T21:48:43.912Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-cf3c5dd4-ccfc-4ae2-acd9-4e00f7b6c0ce","timestamp":"2022-06-24T21:48:44.884Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-73204e16-535e-4603-80ee-696c93981ebb","timestamp":"2022-06-24T21:48:45.464Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-9375a2f8-56ce-4a52-bd12-01e0f769d90f","timestamp":"2022-06-24T21:48:45.745Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-64d17c50-42a7-4f19-a9dc-53e46e3adfa2","timestamp":"2022-06-24T21:48:46.854Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-0d77c1a0-46b8-436f-b646-ecb9258795fd","timestamp":"2022-06-24T21:48:54.613Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiLambdaGETprofilesD7613302-8a58b33e-9c50-40b4-b2bf-328505e37894","timestamp":"2022-06-24T21:48:55.351Z","resourceType":"AWS::Lambda::Function","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesD7613302"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z"}]
-[2022-06-24T14:49:07.155] [DEBUG] default - Fetching stack events dev-RMR-ApiStack
-[2022-06-24T14:49:07.834] [INFO] default - dev-RMR-ApiStack | [32mDELETE_COMPLETE[39m | AWS::Lambda::Function | [32m[1mProfilesApiLambdaGETprofilesD7613302[22m[39m
-[2022-06-24T14:49:07.835] [INFO] default - dev-RMR-ApiStack | [0mDELETE_IN_PROGRESS[0m | AWS::IAM::Policy | [0m[1mProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED[22m[0m
-[2022-06-24T14:49:07.835] [INFO] default - dev-RMR-ApiStack | [32mDELETE_COMPLETE[39m | AWS::IAM::Policy | [32m[1mProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED[22m[39m
-[2022-06-24T14:49:07.835] [INFO] default - dev-RMR-ApiStack | [0mDELETE_IN_PROGRESS[0m | AWS::IAM::Role | [0m[1mProfilesApiLambdaGETprofilesServiceRole8762ACC4[22m[0m
-[2022-06-24T14:49:07.835] [INFO] default - dev-RMR-ApiStack | [32mDELETE_COMPLETE[39m | AWS::IAM::Role | [32m[1mProfilesApiLambdaGETprofilesServiceRole8762ACC4[22m[39m
-[2022-06-24T14:49:07.836] [DEBUG] default - Checking stack status dev-RMR-ApiStack
-[2022-06-24T14:49:08.169] [INFO] default - [32m[39m
-[32m ✅  dev-RMR-ApiStack[39m
-[32m[39m
-[2022-06-24T14:49:08.169] [TRACE] default - After update deploy statuses: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"succeeded","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"endedAt":1656107348169,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-f0cf881a-3bd7-4398-962d-bb33223ce2d0","timestamp":"2022-06-24T21:48:43.415Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-352bf35a-94e8-4e16-9fea-9d0bcf1c2f98","timestamp":"2022-06-24T21:48:43.777Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-b8dc58eb-d5c4-4285-a04e-ff3975b7b046","timestamp":"2022-06-24T21:48:43.912Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-cf3c5dd4-ccfc-4ae2-acd9-4e00f7b6c0ce","timestamp":"2022-06-24T21:48:44.884Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-73204e16-535e-4603-80ee-696c93981ebb","timestamp":"2022-06-24T21:48:45.464Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-9375a2f8-56ce-4a52-bd12-01e0f769d90f","timestamp":"2022-06-24T21:48:45.745Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-64d17c50-42a7-4f19-a9dc-53e46e3adfa2","timestamp":"2022-06-24T21:48:46.854Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-0d77c1a0-46b8-436f-b646-ecb9258795fd","timestamp":"2022-06-24T21:48:54.613Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiLambdaGETprofilesD7613302-8a58b33e-9c50-40b4-b2bf-328505e37894","timestamp":"2022-06-24T21:48:55.351Z","resourceType":"AWS::Lambda::Function","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesD7613302"},{"eventId":"ProfilesApiLambdaGETprofilesD7613302-8dc3825c-5586-4c28-aa76-15c95c8e61df","timestamp":"2022-06-24T21:49:02.318Z","resourceType":"AWS::Lambda::Function","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesD7613302"},{"eventId":"ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED-f594d834-2bf8-457b-a769-ef2bedb957b1","timestamp":"2022-06-24T21:49:03.426Z","resourceType":"AWS::IAM::Policy","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED"},{"eventId":"ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED-1f287a81-d98c-447c-a83f-75c06e6410a6","timestamp":"2022-06-24T21:49:04.345Z","resourceType":"AWS::IAM::Policy","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED"},{"eventId":"ProfilesApiLambdaGETprofilesServiceRole8762ACC4-88135cf0-f461-4f6e-ac09-0457d48525c6","timestamp":"2022-06-24T21:49:05.340Z","resourceType":"AWS::IAM::Role","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesServiceRole8762ACC4"},{"eventId":"ProfilesApiLambdaGETprofilesServiceRole8762ACC4-90be9cae-5140-4684-a5a5-4a93d295f699","timestamp":"2022-06-24T21:49:07.165Z","resourceType":"AWS::IAM::Role","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesServiceRole8762ACC4"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z","outputs":{"ProfilesApiEndpoint":"https://u4g7ienpbd.execute-api.us-west-2.amazonaws.com"},"exports":{}}]
-[2022-06-24T14:49:08.170] [TRACE] default - After deploy stacks: [{"id":"dev-RMR-StorageStack","name":"dev-RMR-StorageStack","status":"unchanged","dependencies":[],"account":"215957796486","region":"us-west-2","startedAt":1656107280434,"endedAt":1656107280434,"events":[],"outputs":{"ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"},"exports":{"dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850":"arn:aws:dynamodb:us-west-2:215957796486:table/dev-RMR-Profiles","dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5":"dev-RMR-Reviews","dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F":"dev-RMR-Profiles"}},{"id":"dev-RMR-ApiStack","name":"dev-RMR-ApiStack","status":"succeeded","dependencies":["dev-RMR-StorageStack"],"account":"215957796486","region":"us-west-2","startedAt":1656107311846,"endedAt":1656107348169,"events":[{"eventId":"62d24aa0-f407-11ec-ad65-0269f6d6477d","timestamp":"2022-06-24T21:48:30.138Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_IN_PROGRESS","resourceStatusReason":"User Initiated","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"SSTMetadata-UPDATE_COMPLETE-2022-06-24T21:48:38.241Z","timestamp":"2022-06-24T21:48:38.241Z","resourceType":"AWS::CDK::Metadata","resourceStatus":"UPDATE_COMPLETE","logicalResourceId":"SSTMetadata"},{"eventId":"69d555e0-f407-11ec-8490-0279e97cbfcd","timestamp":"2022-06-24T21:48:41.912Z","resourceType":"AWS::CloudFormation::Stack","resourceStatus":"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS","logicalResourceId":"dev-RMR-ApiStack"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-f0cf881a-3bd7-4398-962d-bb33223ce2d0","timestamp":"2022-06-24T21:48:43.415Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-352bf35a-94e8-4e16-9fea-9d0bcf1c2f98","timestamp":"2022-06-24T21:48:43.777Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-b8dc58eb-d5c4-4285-a04e-ff3975b7b046","timestamp":"2022-06-24T21:48:43.912Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiRouteGETprofiles24D543E2-cf3c5dd4-ccfc-4ae2-acd9-4e00f7b6c0ce","timestamp":"2022-06-24T21:48:44.884Z","resourceType":"AWS::ApiGatewayV2::Route","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofiles24D543E2"},{"eventId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5-73204e16-535e-4603-80ee-696c93981ebb","timestamp":"2022-06-24T21:48:45.464Z","resourceType":"AWS::Lambda::EventInvokeConfig","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesEventInvokeConfig5B0D53F5"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-9375a2f8-56ce-4a52-bd12-01e0f769d90f","timestamp":"2022-06-24T21:48:45.745Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6-64d17c50-42a7-4f19-a9dc-53e46e3adfa2","timestamp":"2022-06-24T21:48:46.854Z","resourceType":"AWS::ApiGatewayV2::Integration","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"},{"eventId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76-0d77c1a0-46b8-436f-b646-ecb9258795fd","timestamp":"2022-06-24T21:48:54.613Z","resourceType":"AWS::Lambda::Permission","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiRouteGETprofilesIntegrationGETprofilesPermission5D491D76"},{"eventId":"ProfilesApiLambdaGETprofilesD7613302-8a58b33e-9c50-40b4-b2bf-328505e37894","timestamp":"2022-06-24T21:48:55.351Z","resourceType":"AWS::Lambda::Function","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesD7613302"},{"eventId":"ProfilesApiLambdaGETprofilesD7613302-8dc3825c-5586-4c28-aa76-15c95c8e61df","timestamp":"2022-06-24T21:49:02.318Z","resourceType":"AWS::Lambda::Function","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesD7613302"},{"eventId":"ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED-f594d834-2bf8-457b-a769-ef2bedb957b1","timestamp":"2022-06-24T21:49:03.426Z","resourceType":"AWS::IAM::Policy","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED"},{"eventId":"ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED-1f287a81-d98c-447c-a83f-75c06e6410a6","timestamp":"2022-06-24T21:49:04.345Z","resourceType":"AWS::IAM::Policy","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED"},{"eventId":"ProfilesApiLambdaGETprofilesServiceRole8762ACC4-88135cf0-f461-4f6e-ac09-0457d48525c6","timestamp":"2022-06-24T21:49:05.340Z","resourceType":"AWS::IAM::Role","resourceStatus":"DELETE_IN_PROGRESS","logicalResourceId":"ProfilesApiLambdaGETprofilesServiceRole8762ACC4"},{"eventId":"ProfilesApiLambdaGETprofilesServiceRole8762ACC4-90be9cae-5140-4684-a5a5-4a93d295f699","timestamp":"2022-06-24T21:49:07.165Z","resourceType":"AWS::IAM::Role","resourceStatus":"DELETE_COMPLETE","logicalResourceId":"ProfilesApiLambdaGETprofilesServiceRole8762ACC4"}],"eventsFirstEventAt":"2022-06-24T21:48:25.138Z","outputs":{"ProfilesApiEndpoint":"https://u4g7ienpbd.execute-api.us-west-2.amazonaws.com"},"exports":{}}]
-[2022-06-24T14:49:08.171] [INFO] default - 
-Stack dev-RMR-StorageStack
-[2022-06-24T14:49:08.171] [INFO] default -   Status: no changes
-[2022-06-24T14:49:08.172] [INFO] default - 
-Stack dev-RMR-ApiStack
-[2022-06-24T14:49:08.172] [INFO] default -   Status: deployed
-[2022-06-24T14:49:08.172] [INFO] default -   Outputs:
-[2022-06-24T14:49:08.173] [INFO] default -     ProfilesApiEndpoint: https://u4g7ienpbd.execute-api.us-west-2.amazonaws.com
-[2022-06-24T14:49:08.173] [INFO] default - 
-[2022-06-24T14:49:08.513] [INFO] default - 
-[2022-06-24T14:49:08.514] [INFO] default - ==========================
-[2022-06-24T14:49:08.514] [INFO] default -  Starting Live Lambda Dev
-[2022-06-24T14:49:08.514] [INFO] default - ==========================
-[2022-06-24T14:49:08.515] [INFO] default - 
-[2022-06-24T14:49:08.532] [DEBUG] websocket - startWebSocketClient wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92
-[2022-06-24T14:49:08.535] [DEBUG] default - Checking port 12557 on host 0.0.0.0
-[2022-06-24T14:49:08.549] [DEBUG] default - Checking port 13557 on host 0.0.0.0
-[2022-06-24T14:49:08.556] [DEBUG] client - Starting runtime server on port: 12557
-[2022-06-24T14:49:08.969] [DEBUG] websocket - WebSocket connection opened
-[2022-06-24T14:49:09.140] [INFO] client - Debug session started. Listening for requests...
-[2022-06-24T14:49:09.140] [DEBUG] client - Client connection id: UPylUcI-vHcCGvQ=
-[2022-06-24T14:49:53.344] [DEBUG] default - File changed:  [
-  '/Users/michael.moschitto/Desktop/RateMyRidgeliners/backend/profiles/createProfile.js'
-]
-[2022-06-24T14:49:59.473] [DEBUG] default - File changed:  [
-  '/Users/michael.moschitto/Desktop/RateMyRidgeliners/backend/profiles/createProfile.js'
-]
-[2022-06-24T14:50:07.616] [DEBUG] default - File changed:  [
-  '/Users/michael.moschitto/Desktop/RateMyRidgeliners/backend/profiles/createProfile.js'
-]
-[2022-06-24T14:50:11.263] [INFO] client - [90m86a93a1a-284b-48c0-8c8c-30b4daaf6aa5 REQUEST dev-RMR-ApiStack-ProfilesApiLambdaPOSTprofilesEE60-85qQUU0pjiJi [profiles/createProfile.main] invoked by API POST /profiles[39m
-[2022-06-24T14:50:11.266] [DEBUG] client - Invoking local function...
-[2022-06-24T14:50:11.267] [DEBUG] client - Triggering {
-  id: 'dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles',
-  handler: 'profiles/createProfile.main',
-  runtime: 'nodejs16.x',
-  srcPath: 'backend',
-  bundle: { format: 'esm' },
-  root: '/Users/michael.moschitto/Desktop/RateMyRidgeliners'
-}
-[2022-06-24T14:50:11.267] [DEBUG] client - First build...
-[2022-06-24T14:50:11.654] [DEBUG] client - First build finished
-[2022-06-24T14:50:11.655] [DEBUG] client - Spawning {
-  command: '/usr/local/bin/node',
-  args: [
-    '/Users/michael.moschitto/Desktop/RateMyRidgeliners/node_modules/@serverless-stack/aws-lambda-ric/bin/index.js',
-    '/Users/michael.moschitto/Desktop/RateMyRidgeliners/.sst/artifacts/dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles/backend/profiles/createProfile.main'
-  ],
-  env: { AWS_LAMBDA_NODEJS_USE_ALTERNATIVE_CLIENT_1: 'true' }
-}
-[2022-06-24T14:50:12.055] [DEBUG] client - Worker waiting for function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
-[2022-06-24T14:50:12.056] [DEBUG] client - Sending next payload 86a93a1a-284b-48c0-8c8c-30b4daaf6aa5 dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles {
-  version: '2.0',
-  routeKey: 'POST /profiles',
-  rawPath: '/profiles',
-  rawQueryString: '',
-  headers: {
-    accept: '*/*',
-    'accept-encoding': 'gzip, deflate, br',
-    'accept-language': 'en-US,en;q=0.9',
-    'content-length': '76',
-    'content-type': 'text/plain;charset=UTF-8',
-    host: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
-    origin: 'https://console.sst.dev',
-    referer: 'https://console.sst.dev/',
-    'sec-ch-ua': '".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"macOS"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'cross-site',
-    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
-    'x-amzn-trace-id': 'Root=1-62b63193-5bcd235e480b21e71a6d7040',
-    'x-forwarded-for': '163.116.139.116',
-    'x-forwarded-port': '443',
-    'x-forwarded-proto': 'https'
-  },
-  requestContext: {
-    accountId: '215957796486',
-    apiId: 'u4g7ienpbd',
-    domainName: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
-    domainPrefix: 'u4g7ienpbd',
-    http: {
-      method: 'POST',
-      path: '/profiles',
-      protocol: 'HTTP/1.1',
-      sourceIp: '163.116.139.116',
-      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
-    },
-    requestId: 'UPyvCiyyPHcEM9w=',
-    routeKey: 'POST /profiles',
-    stage: '$default',
-    time: '24/Jun/2022:21:50:11 +0000',
-    timeEpoch: 1656107411243
-  },
-  body: '{"profileName" : "mike", "profileRole" : "P&E", "profilePhoto" : "test.jpg"}',
-  isBase64Encoded: false
-}
-[2022-06-24T14:50:12.480] [DEBUG] client - Received response for 86a93a1a-284b-48c0-8c8c-30b4daaf6aa5 dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
-[2022-06-24T14:50:12.483] [DEBUG] client - Response {
-  type: 'success',
-  data: {
-    statusCode: 200,
-    body: '{"profileId":"9f905ef0-f407-11ec-8edb-ef51f029ab5f","profileRole":"P&E","profileName":"mike","profilePhoto":"test.jpg","profileLikes":0,"createdAt":1656107412063}',
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Credentials': true
-    }
-  }
-}
-[2022-06-24T14:50:12.484] [INFO] client - [90m86a93a1a-284b-48c0-8c8c-30b4daaf6aa5 RESPONSE {"statusCode":200,"body":"{\"profileId\":\"9f905ef0-f407-11ec-8edb-ef51f029ab5f\",\"profileRole\":\"P&E\",\"profileName\":\"mike\",\"profil... 62 more characters","headers":{"Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":true}}[39m
-[2022-06-24T14:50:12.486] [DEBUG] client - Worker waiting for function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
-[2022-06-24T14:50:39.463] [INFO] client - [90m4ba6174c-aeb6-4ba0-a450-336e4976853b REQUEST dev-RMR-ApiStack-ProfilesApiLambdaPOSTprofilesEE60-85qQUU0pjiJi [profiles/createProfile.main] invoked by API POST /profiles[39m
-[2022-06-24T14:50:39.465] [DEBUG] client - Invoking local function...
-[2022-06-24T14:50:39.465] [DEBUG] client - Triggering {
-  id: 'dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles',
-  handler: 'profiles/createProfile.main',
-  runtime: 'nodejs16.x',
-  srcPath: 'backend',
-  bundle: { format: 'esm' },
-  root: '/Users/michael.moschitto/Desktop/RateMyRidgeliners'
-}
-[2022-06-24T14:50:39.466] [DEBUG] client - Sending next payload 4ba6174c-aeb6-4ba0-a450-336e4976853b dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles {
-  version: '2.0',
-  routeKey: 'POST /profiles',
-  rawPath: '/profiles',
-  rawQueryString: '',
-  headers: {
-    accept: '*/*',
-    'accept-encoding': 'gzip, deflate, br',
-    'accept-language': 'en-US,en;q=0.9',
-    'content-length': '47',
-    'content-type': 'text/plain;charset=UTF-8',
-    host: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
-    origin: 'https://console.sst.dev',
-    referer: 'https://console.sst.dev/',
-    'sec-ch-ua': '".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"macOS"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'cross-site',
-    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
-    'x-amzn-trace-id': 'Root=1-62b631af-3c6716d80b6199ce1c79e67c',
-    'x-forwarded-for': '163.116.139.116',
-    'x-forwarded-port': '443',
-    'x-forwarded-proto': 'https'
-  },
-  requestContext: {
-    accountId: '215957796486',
-    apiId: 'u4g7ienpbd',
-    domainName: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
-    domainPrefix: 'u4g7ienpbd',
-    http: {
-      method: 'POST',
-      path: '/profiles',
-      protocol: 'HTTP/1.1',
-      sourceIp: '163.116.139.116',
-      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
-    },
-    requestId: 'UPyzcgBmPHcEMQA=',
-    routeKey: 'POST /profiles',
-    stage: '$default',
-    time: '24/Jun/2022:21:50:39 +0000',
-    timeEpoch: 1656107439447
-  },
-  body: '{"profileName" : "mike", "profileRole" : "P&E"}',
-  isBase64Encoded: false
-}
-[2022-06-24T14:50:39.469] [INFO] client - must have profileRole, profileName, profilePhoto
-[2022-06-24T14:50:39.470] [DEBUG] client - Received response for 4ba6174c-aeb6-4ba0-a450-336e4976853b dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
-[2022-06-24T14:50:39.471] [DEBUG] client - Response {
-  type: 'success',
-  data: {
-    statusCode: 500,
-    body: '{}',
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Credentials': true
-    }
-  }
-}
-[2022-06-24T14:50:39.472] [INFO] client - [90m4ba6174c-aeb6-4ba0-a450-336e4976853b RESPONSE {"statusCode":500,"body":"{}","headers":{"Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":true}}[39m
-[2022-06-24T14:50:39.473] [DEBUG] client - Worker waiting for function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
-[2022-06-24T14:50:56.635] [DEBUG] default - File changed:  [
-  '/Users/michael.moschitto/Desktop/RateMyRidgeliners/backend/profiles/createProfile.js'
-]
-[2022-06-24T14:50:56.639] [INFO] client - [90mFunctions: Building backend profiles/createProfile.main...[39m
-[2022-06-24T14:50:56.892] [INFO] client - [90mFunctions: Done building backend profiles/createProfile.main (255ms)[39m
-[2022-06-24T14:50:56.893] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
-[2022-06-24T14:51:00.794] [INFO] client - [90mStacks: Building changes...[39m
-[2022-06-24T14:51:00.799] [DEBUG] default - synth {
-  app: 'node .build/run.mjs',
-  output: '.build/cdk.out',
-  rollback: true,
-  roleArn: undefined,
-  verbose: 0,
-  noColor: false
-}
-[2022-06-24T14:51:00.813] [INFO] client - [90mStacks: Synthesizing changes...[39m
-[2022-06-24T14:51:05.254] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/michael.moschitto/Desktop/RateMyRidgeliners/.build/cdk.out[39m[32m[39m
-
-[2022-06-24T14:51:05.255] [TRACE] cdk - Supply a stack id ([32mdev-RMR-StorageStack[39m, [32mdev-RMR-ApiStack[39m) to display its template.
-
-[2022-06-24T14:51:05.262] [TRACE] cdk - 
-
-[2022-06-24T14:51:05.304] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
-[2022-06-24T14:51:05.304] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}
-[2022-06-24T14:51:05.304] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_PUT_-profiles-{id}
-[2022-06-24T14:51:05.304] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_DELETE_-profiles-{id}
-[2022-06-24T14:51:05.305] [INFO] client - [90mStacks: No changes to deploy.[39m
-[2022-06-24T14:51:25.752] [DEBUG] default - File changed:  [
-  '/Users/michael.moschitto/Desktop/RateMyRidgeliners/backend/profiles/createProfile.js'
-]
-[2022-06-24T14:51:25.754] [INFO] client - [90mFunctions: Building backend profiles/createProfile.main...[39m
-[2022-06-24T14:51:26.014] [INFO] client - [90mFunctions: Done building backend profiles/createProfile.main (261ms)[39m
-[2022-06-24T14:51:26.014] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
-[2022-06-24T14:51:56.484] [DEBUG] default - File changed:  [
-  '/Users/michael.moschitto/Desktop/RateMyRidgeliners/backend/profiles/createProfile.js'
-]
-[2022-06-24T14:51:56.487] [INFO] client - [90mFunctions: Building backend profiles/createProfile.main...[39m
-[2022-06-24T14:52:01.403] [DEBUG] default - File changed:  [
-  '/Users/michael.moschitto/Desktop/RateMyRidgeliners/backend/profiles/createProfile.js'
-]
-[2022-06-24T14:52:01.404] [INFO] client - [90mFunctions: Building backend profiles/createProfile.main...[39m
-[2022-06-24T14:52:01.650] [INFO] client - [90mFunctions: Done building backend profiles/createProfile.main (246ms)[39m
-[2022-06-24T14:52:01.665] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
-[2022-06-24T14:52:24.241] [WARN] client - A new debug session has been started. This session will be closed...
-[2022-06-24T14:52:24.327] [DEBUG] websocket - Websocket connection closed { code: 4901, reason: <Buffer > }
-[2022-06-24T14:52:24.332] [DEBUG] websocket - Websocket connection closed due to new client connected
+[2022-06-24T16:14:19.578] [DEBUG] default - deploy stack: poll stack status: unknown
