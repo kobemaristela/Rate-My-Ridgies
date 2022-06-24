@@ -15,7 +15,15 @@
         }
       }
     },
+<<<<<<< HEAD
     "2645f646e0fdcc9c129e99449da07beace56387cd44f2b12bd609ac263cf770e": {
+=======
+<<<<<<< HEAD
+    "fc7af0fbf56c8aebf16df999d24fdfe98ff993d263068eccd2cc25e3e4ed3c80": {
+=======
+    "2645f646e0fdcc9c129e99449da07beace56387cd44f2b12bd609ac263cf770e": {
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
       "source": {
         "path": "dev-RMR-ApiStack.template.json",
         "packaging": "file"
@@ -23,7 +31,15 @@
       "destinations": {
         "215957796486-us-west-2": {
           "bucketName": "cdk-hnb659fds-assets-215957796486-us-west-2",
+<<<<<<< HEAD
           "objectKey": "2645f646e0fdcc9c129e99449da07beace56387cd44f2b12bd609ac263cf770e.json",
+=======
+<<<<<<< HEAD
+          "objectKey": "fc7af0fbf56c8aebf16df999d24fdfe98ff993d263068eccd2cc25e3e4ed3c80.json",
+=======
+          "objectKey": "2645f646e0fdcc9c129e99449da07beace56387cd44f2b12bd609ac263cf770e.json",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
           "region": "us-west-2",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::215957796486:role/cdk-hnb659fds-file-publishing-role-215957796486-us-west-2"
         }

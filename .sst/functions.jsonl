@@ -1,4 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+{"id":"dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles","handler":"profiles/createProfile.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"/Users/kobe.maristela/Desktop/RMR"}
+{"id":"dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles","handler":"profiles/getProfileList.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"/Users/kobe.maristela/Desktop/RMR"}
+{"id":"dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}","handler":"profiles/getProfile.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"/Users/kobe.maristela/Desktop/RMR"}
+=======
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
 {"id":"dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles","handler":"profiles/createProfile.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"/Users/michael.moschitto/Desktop/RateMyRidgeliners"}
 {"id":"dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}","handler":"profiles/getProfile.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"/Users/michael.moschitto/Desktop/RateMyRidgeliners"}
 {"id":"dev-RMR-ApiStack-ProfilesApi-Lambda_PUT_-profiles-{id}","handler":"profiles/updateProfile.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"/Users/michael.moschitto/Desktop/RateMyRidgeliners"}
 {"id":"dev-RMR-ApiStack-ProfilesApi-Lambda_DELETE_-profiles-{id}","handler":"profiles/deleteProfile.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"/Users/michael.moschitto/Desktop/RateMyRidgeliners"}
+<<<<<<< HEAD
+=======
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
