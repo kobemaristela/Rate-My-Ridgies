@@ -10,29 +10,30 @@ export function ApiStack({ stack, app }) {
       function: {
         permissions: [profiles],
         environment: {
-          PROFILES_NAME: profiles.tableName,
+          TABLE_NAME: profiles.tableName,
         },
       },
     },
     routes: {
-      "POST /profiles": "backend/profiles/functions/create.main",
+      "POST /profiles": "profiles/functions/create.main",
+      "GET /profiles/{id}": "profiles/functions/get.main",
     },
   });
 
   // Create the API
-  const reviewsApi = new Api(stack, "ReviewsApi", {
-    defaults: {
-      function: {
-        permissions: [reviews],
-        environment: {
-          REVIEWS_NAME: reviews.tableName,
-        },
-      },
-    },
-    routes: {
-      "POST /reviews": "backend/reviews/functions/create.main",
-    },
-  });
+  // const reviewsApi = new Api(stack, "ReviewsApi", {
+  //   defaults: {
+  //     function: {
+  //       permissions: [reviews],
+  //       environment: {
+  //         TABLE_NAME: reviews.tableName,
+  //       },
+  //     },
+  //   },
+  //   routes: {
+  //     "POST /reviews": "reviews/functions/create.main",
+  //   },
+  // });
 
   // Show the API endpoint in the output
   stack.addOutputs({

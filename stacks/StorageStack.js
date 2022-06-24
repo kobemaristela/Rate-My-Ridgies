@@ -8,8 +8,9 @@ export function StorageStack({ stack }) {
   const profiles = new Table(stack, "Profiles", {
     fields: {
       profileId: "string",
+      profileName: "string",
       role: "string",
-      photo: "string",
+      // photo: "string",
       likes: "number",
     },
     primaryIndex: { partitionKey: "profileId" },

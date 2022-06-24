@@ -40,6 +40,14 @@
           "node": "c830956be3851f5a5d4ade40d83c5f4923d68862f7",
           "stack": "dev-RMR-ApiStack"
          }
+        },
+        {
+         "type": "function",
+         "route": "GET /profiles/{id}",
+         "fn": {
+          "node": "c8c1500cc1e23fa2d867340373cdd07a95aa2dd1f6",
+          "stack": "dev-RMR-ApiStack"
+         }
         }
        ]
       }
@@ -60,53 +68,15 @@
       }
      },
      {
-      "id": "ReviewsApi",
-      "addr": "c8b7e86b12948e1db3373837f6ed25d8fe78787fdc",
-      "stack": "dev-RMR-ApiStack",
-      "type": "Api",
-      "data": {
-       "graphql": false,
-       "url": {
-        "Fn::Join": [
-         "",
-         [
-          "https://",
-          {
-           "Ref": "ReviewsApi00BAD234"
-          },
-          ".execute-api.us-west-2.",
-          {
-           "Ref": "AWS::URLSuffix"
-          },
-          "/"
-         ]
-        ]
-       },
-       "httpApiId": {
-        "Ref": "ReviewsApi00BAD234"
-       },
-       "routes": [
-        {
-         "type": "function",
-         "route": "POST /reviews",
-         "fn": {
-          "node": "c8988a2a4aa1501e16e64bd2379c1f5cf6e1d6cdbe",
-          "stack": "dev-RMR-ApiStack"
-         }
-        }
-       ]
-      }
-     },
-     {
-      "id": "Lambda_POST_--reviews",
-      "addr": "c8988a2a4aa1501e16e64bd2379c1f5cf6e1d6cdbe",
+      "id": "Lambda_GET_--profiles--{id}",
+      "addr": "c8c1500cc1e23fa2d867340373cdd07a95aa2dd1f6",
       "stack": "dev-RMR-ApiStack",
       "type": "Function",
       "data": {
-       "localId": "dev-RMR-ApiStack-ReviewsApi-Lambda_POST_-reviews",
+       "localId": "dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}",
        "arn": {
         "Fn::GetAtt": [
-         "ReviewsApiLambdaPOSTreviews577FF643",
+         "ProfilesApiLambdaGETprofilesidD4146CB6",
          "Arn"
         ]
        }
@@ -259,8 +229,8 @@
        "Action": "s3:*",
        "Effect": "Allow",
        "Resource": [
-        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-rjrl06l93e43",
-        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-rjrl06l93e43/*"
+        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
+        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*"
        ]
       },
       {
@@ -312,13 +282,13 @@
     },
     "Environment": {
      "Variables": {
-      "PROFILES_NAME": {
+      "TABLE_NAME": {
        "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
       },
       "SST_DEBUG_SRC_PATH": "backend",
-      "SST_DEBUG_SRC_HANDLER": "backend/profiles/functions/create.main",
-      "SST_DEBUG_ENDPOINT": "wss://fogz3s8rrk.execute-api.us-west-2.amazonaws.com/dev",
-      "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-rjrl06l93e43",
+      "SST_DEBUG_SRC_HANDLER": "profiles/functions/create.main",
+      "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
+      "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
       "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles",
       "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
       "SST_DEBUG_IS_API_ROUTE": "1"
@@ -444,90 +414,7 @@
     "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_POST_--profiles/Resource"
    }
   },
-  "ReviewsApi00BAD234": {
-   "Type": "AWS::ApiGatewayV2::Api",
-   "Properties": {
-    "CorsConfiguration": {
-     "AllowHeaders": [
-      "*"
-     ],
-     "AllowMethods": [
-      "*"
-     ],
-     "AllowOrigins": [
-      "*"
-     ]
-    },
-    "Name": "dev-RMR-ReviewsApi",
-    "ProtocolType": "HTTP",
-    "Tags": {
-     "sst:app": "RMR",
-     "sst:stage": "dev"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ReviewsApi/Api/Resource"
-   }
-  },
-  "ReviewsApiDefaultStageA3125BDC": {
-   "Type": "AWS::ApiGatewayV2::Stage",
-   "Properties": {
-    "ApiId": {
-     "Ref": "ReviewsApi00BAD234"
-    },
-    "StageName": "$default",
-    "AccessLogSettings": {
-     "DestinationArn": {
-      "Fn::GetAtt": [
-       "ReviewsApiLogGroupA9FE9D0D",
-       "Arn"
-      ]
-     },
-     "Format": "{\"requestTime\":\"$context.requestTime\",\"requestId\":\"$context.requestId\",\"httpMethod\":\"$context.httpMethod\",\"path\":\"$context.path\",\"routeKey\":\"$context.routeKey\",\"status\":$context.status,\"responseLatency\":$context.responseLatency,\"integrationRequestId\":\"$context.integration.requestId\",\"integrationStatus\":\"$context.integration.status\",\"integrationLatency\":\"$context.integration.latency\",\"integrationServiceStatus\":\"$context.integration.integrationStatus\",\"ip\":\"$context.identity.sourceIp\",\"userAgent\":\"$context.identity.userAgent\",\"cognitoIdentityId\":\"$context.identity.cognitoIdentityId\"}"
-    },
-    "AutoDeploy": true,
-    "Tags": {
-     "sst:app": "RMR",
-     "sst:stage": "dev"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ReviewsApi/Api/DefaultStage/Resource"
-   }
-  },
-  "ReviewsApiLogGroupA9FE9D0D": {
-   "Type": "AWS::Logs::LogGroup",
-   "Properties": {
-    "LogGroupName": {
-     "Fn::Join": [
-      "",
-      [
-       "/aws/vendedlogs/apis/dev-RMR-ReviewsApi-",
-       {
-        "Ref": "ReviewsApi00BAD234"
-       },
-       "/default"
-      ]
-     ]
-    },
-    "Tags": [
-     {
-      "Key": "sst:app",
-      "Value": "RMR"
-     },
-     {
-      "Key": "sst:stage",
-      "Value": "dev"
-     }
-    ]
-   },
-   "UpdateReplacePolicy": "Retain",
-   "DeletionPolicy": "Retain",
-   "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ReviewsApi/LogGroup/Resource"
-   }
-  },
-  "ReviewsApiLambdaPOSTreviewsServiceRole2699BC75": {
+  "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B": {
    "Type": "AWS::IAM::Role",
    "Properties": {
     "AssumeRolePolicyDocument": {
@@ -568,10 +455,10 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ReviewsApi/Lambda_POST_--reviews/ServiceRole/Resource"
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/ServiceRole/Resource"
    }
   },
-  "ReviewsApiLambdaPOSTreviewsServiceRoleDefaultPolicyB43F45AE": {
+  "ProfilesApiLambdaGETprofilesidServiceRoleDefaultPolicyC55E7D45": {
    "Type": "AWS::IAM::Policy",
    "Properties": {
     "PolicyDocument": {
@@ -588,8 +475,8 @@
        "Action": "s3:*",
        "Effect": "Allow",
        "Resource": [
-        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-rjrl06l93e43",
-        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-rjrl06l93e43/*"
+        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
+        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*"
        ]
       },
       {
@@ -597,14 +484,14 @@
        "Effect": "Allow",
        "Resource": [
         {
-         "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2"
+         "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850"
         },
         {
          "Fn::Join": [
           "",
           [
            {
-            "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2"
+            "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850"
            },
            "/*"
           ]
@@ -615,18 +502,18 @@
      ],
      "Version": "2012-10-17"
     },
-    "PolicyName": "ReviewsApiLambdaPOSTreviewsServiceRoleDefaultPolicyB43F45AE",
+    "PolicyName": "ProfilesApiLambdaGETprofilesidServiceRoleDefaultPolicyC55E7D45",
     "Roles": [
      {
-      "Ref": "ReviewsApiLambdaPOSTreviewsServiceRole2699BC75"
+      "Ref": "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ReviewsApi/Lambda_POST_--reviews/ServiceRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/ServiceRole/DefaultPolicy/Resource"
    }
   },
-  "ReviewsApiLambdaPOSTreviews577FF643": {
+  "ProfilesApiLambdaGETprofilesidD4146CB6": {
    "Type": "AWS::Lambda::Function",
    "Properties": {
     "Code": {
@@ -635,20 +522,20 @@
     },
     "Role": {
      "Fn::GetAtt": [
-      "ReviewsApiLambdaPOSTreviewsServiceRole2699BC75",
+      "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B",
       "Arn"
      ]
     },
     "Environment": {
      "Variables": {
-      "REVIEWS_NAME": {
-       "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5"
+      "TABLE_NAME": {
+       "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
       },
       "SST_DEBUG_SRC_PATH": "backend",
-      "SST_DEBUG_SRC_HANDLER": "backend/reviews/functions/create.main",
-      "SST_DEBUG_ENDPOINT": "wss://fogz3s8rrk.execute-api.us-west-2.amazonaws.com/dev",
-      "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-rjrl06l93e43",
-      "SST_FUNCTION_ID": "dev-RMR-ApiStack-ReviewsApi-Lambda_POST_-reviews",
+      "SST_DEBUG_SRC_HANDLER": "profiles/functions/get.main",
+      "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
+      "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
+      "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}",
       "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
       "SST_DEBUG_IS_API_ROUTE": "1"
      }
@@ -675,55 +562,55 @@
     }
    },
    "DependsOn": [
-    "ReviewsApiLambdaPOSTreviewsServiceRoleDefaultPolicyB43F45AE",
-    "ReviewsApiLambdaPOSTreviewsServiceRole2699BC75"
+    "ProfilesApiLambdaGETprofilesidServiceRoleDefaultPolicyC55E7D45",
+    "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B"
    ],
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ReviewsApi/Lambda_POST_--reviews/Resource",
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/Resource",
     "aws:asset:path": "asset.8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
   },
-  "ReviewsApiLambdaPOSTreviewsEventInvokeConfig8E5D9B95": {
+  "ProfilesApiLambdaGETprofilesidEventInvokeConfig8416267C": {
    "Type": "AWS::Lambda::EventInvokeConfig",
    "Properties": {
     "FunctionName": {
-     "Ref": "ReviewsApiLambdaPOSTreviews577FF643"
+     "Ref": "ProfilesApiLambdaGETprofilesidD4146CB6"
     },
     "Qualifier": "$LATEST",
     "MaximumRetryAttempts": 0
    },
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ReviewsApi/Lambda_POST_--reviews/EventInvokeConfig/Resource"
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/EventInvokeConfig/Resource"
    }
   },
-  "ReviewsApiRoutePOSTreviewsIntegrationPOSTreviews012C0498": {
+  "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidED893D9B": {
    "Type": "AWS::ApiGatewayV2::Integration",
    "Properties": {
     "ApiId": {
-     "Ref": "ReviewsApi00BAD234"
+     "Ref": "ProfilesApi7EB07B3F"
     },
     "IntegrationType": "AWS_PROXY",
     "IntegrationUri": {
      "Fn::GetAtt": [
-      "ReviewsApiLambdaPOSTreviews577FF643",
+      "ProfilesApiLambdaGETprofilesidD4146CB6",
       "Arn"
      ]
     },
     "PayloadFormatVersion": "2.0"
    },
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ReviewsApi/Route_POST_--reviews/Integration_POST_--reviews/Resource"
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Integration_GET_--profiles--{id}/Resource"
    }
   },
-  "ReviewsApiRoutePOSTreviewsIntegrationPOSTreviewsPermission406BC86B": {
+  "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidPermission2FE44392": {
    "Type": "AWS::Lambda::Permission",
    "Properties": {
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "ReviewsApiLambdaPOSTreviews577FF643",
+      "ProfilesApiLambdaGETprofilesidD4146CB6",
       "Arn"
      ]
     },
@@ -738,24 +625,24 @@
        },
        ":execute-api:us-west-2:215957796486:",
        {
-        "Ref": "ReviewsApi00BAD234"
+        "Ref": "ProfilesApi7EB07B3F"
        },
-       "/*/*/reviews"
+       "/*/*/profiles/{id}"
       ]
      ]
     }
    },
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ReviewsApi/Route_POST_--reviews/Integration_POST_--reviews-Permission"
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Integration_GET_--profiles--{id}-Permission"
    }
   },
-  "ReviewsApiRoutePOSTreviews7D4D56B3": {
+  "ProfilesApiRouteGETprofilesidB307DFEA": {
    "Type": "AWS::ApiGatewayV2::Route",
    "Properties": {
     "ApiId": {
-     "Ref": "ReviewsApi00BAD234"
+     "Ref": "ProfilesApi7EB07B3F"
     },
-    "RouteKey": "POST /reviews",
+    "RouteKey": "GET /profiles/{id}",
     "AuthorizationType": "NONE",
     "Target": {
      "Fn::Join": [
@@ -763,14 +650,14 @@
       [
        "integrations/",
        {
-        "Ref": "ReviewsApiRoutePOSTreviewsIntegrationPOSTreviews012C0498"
+        "Ref": "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidED893D9B"
        }
       ]
      ]
     }
    },
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ReviewsApi/Route_POST_--reviews/Resource"
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Resource"
    }
   }
  },
