@@ -17,6 +17,7 @@ export function ApiStack({ stack, app }) {
     routes: {
       "POST /profiles": "profiles/createProfile.main",
       "GET /profiles": "profiles/getProfileList.main",
+      "DELETE /profiles": "profiles/deleteProfileList.main",
 
 
       "GET /profiles/{id}": "profiles/getProfile.main",
