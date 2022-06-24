@@ -1,0 +1,103 @@
+{
+  "version": "18.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "dev-RMR-StorageStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "dev-RMR-StorageStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "dev-RMR-StorageStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://215957796486/us-west-2",
+      "properties": {
+        "templateFile": "dev-RMR-StorageStack.template.json",
+        "tags": {
+          "sst:app": "RMR",
+          "sst:stage": "dev"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::215957796486:role/cdk-hnb659fds-deploy-role-215957796486-us-west-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::215957796486:role/cdk-hnb659fds-cfn-exec-role-215957796486-us-west-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-215957796486-us-west-2/87a51c63dc2d4d3ff56ce7e3d5e5e6238e11cd3eb9bd8af636b214ce5798efd4.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "dev-RMR-StorageStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::215957796486:role/cdk-hnb659fds-lookup-role-215957796486-us-west-2",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "dev-RMR-StorageStack.assets"
+      ],
+      "metadata": {
+        "/dev-RMR-StorageStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "sst:app",
+                "Value": "RMR"
+              },
+              {
+                "Key": "sst:stage",
+                "Value": "dev"
+              }
+            ]
+          }
+        ],
+        "/dev-RMR-StorageStack/SSTMetadata": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSTMetadata"
+          }
+        ],
+        "/dev-RMR-StorageStack/Uploads/Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UploadsBucketC4B27CC7"
+          }
+        ],
+        "/dev-RMR-StorageStack/Profile/Table": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "ProfileTable1E6F6C62"
+            }
+          }
+        ],
+        "/dev-RMR-StorageStack/Profile/Table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfileTable1E6F6C62"
+          }
+        ],
+        "/dev-RMR-StorageStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/dev-RMR-StorageStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "dev-RMR-StorageStack"
+    }
+  }
+}
