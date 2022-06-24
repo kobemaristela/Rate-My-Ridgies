@@ -1,0 +1,3 @@
+# RateMyRidgies 
+
+Initial Commit
