@@ -558,7 +558,7 @@
                               "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
                             },
                             "SST_DEBUG_SRC_PATH": "backend",
-                            "SST_DEBUG_SRC_HANDLER": "profiles/functions/create.main",
+                            "SST_DEBUG_SRC_HANDLER": "profiles/createProfile.main",
                             "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
                             "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
                             "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles",
@@ -720,6 +720,366 @@
                               "integrations/",
                               {
                                 "Ref": "ProfilesApiRoutePOSTprofilesIntegrationPOSTprofilesFF12C094"
+                              }
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigatewayv2.CfnRoute",
+                      "version": "2.24.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-apigatewayv2-alpha.HttpRoute",
+                  "version": "2.24.0-alpha.0"
+                }
+              },
+              "Lambda_GET_--profiles": {
+                "id": "Lambda_GET_--profiles",
+                "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "sst:app",
+                                "value": "RMR"
+                              },
+                              {
+                                "key": "sst:stage",
+                                "value": "dev"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                          "version": "2.24.0"
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/ServiceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": [
+                                        "xray:PutTraceSegments",
+                                        "xray:PutTelemetryRecords"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": "s3:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
+                                        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*"
+                                      ]
+                                    },
+                                    {
+                                      "Action": "dynamodb:*",
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850"
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850"
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED",
+                                "roles": [
+                                  {
+                                    "Ref": "ProfilesApiLambdaGETprofilesServiceRole8762ACC4"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                              "version": "2.24.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.Policy",
+                          "version": "2.24.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.Role",
+                      "version": "2.24.0"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.24.0"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.24.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.24.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": "cdk-hnb659fds-assets-215957796486-us-west-2",
+                          "s3Key": "8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip"
+                        },
+                        "role": {
+                          "Fn::GetAtt": [
+                            "ProfilesApiLambdaGETprofilesServiceRole8762ACC4",
+                            "Arn"
+                          ]
+                        },
+                        "environment": {
+                          "variables": {
+                            "TABLE_NAME": {
+                              "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
+                            },
+                            "SST_DEBUG_SRC_PATH": "backend",
+                            "SST_DEBUG_SRC_HANDLER": "profiles/getProfileList.main",
+                            "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
+                            "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
+                            "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles",
+                            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+                            "SST_DEBUG_IS_API_ROUTE": "1"
+                          }
+                        },
+                        "ephemeralStorage": {
+                          "size": 512
+                        },
+                        "handler": "index.main",
+                        "memorySize": 1024,
+                        "runtime": "nodejs16.x",
+                        "tags": [
+                          {
+                            "key": "sst:app",
+                            "value": "RMR"
+                          },
+                          {
+                            "key": "sst:stage",
+                            "value": "dev"
+                          }
+                        ],
+                        "timeout": 10,
+                        "tracingConfig": {
+                          "mode": "Active"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                      "version": "2.24.0"
+                    }
+                  },
+                  "EventInvokeConfig": {
+                    "id": "EventInvokeConfig",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/EventInvokeConfig",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/EventInvokeConfig/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
+                          "aws:cdk:cloudformation:props": {
+                            "functionName": {
+                              "Ref": "ProfilesApiLambdaGETprofilesD7613302"
+                            },
+                            "qualifier": "$LATEST",
+                            "maximumRetryAttempts": 0
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_lambda.CfnEventInvokeConfig",
+                          "version": "2.24.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.EventInvokeConfig",
+                      "version": "2.24.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.Function",
+                  "version": "2.24.0"
+                }
+              },
+              "Route_GET_--profiles": {
+                "id": "Route_GET_--profiles",
+                "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles",
+                "children": {
+                  "Integration_GET_--profiles": {
+                    "id": "Integration_GET_--profiles",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Integration_GET_--profiles",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Integration_GET_--profiles/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
+                          "aws:cdk:cloudformation:props": {
+                            "apiId": {
+                              "Ref": "ProfilesApi7EB07B3F"
+                            },
+                            "integrationType": "AWS_PROXY",
+                            "integrationUri": {
+                              "Fn::GetAtt": [
+                                "ProfilesApiLambdaGETprofilesD7613302",
+                                "Arn"
+                              ]
+                            },
+                            "payloadFormatVersion": "2.0"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigatewayv2.CfnIntegration",
+                          "version": "2.24.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-apigatewayv2-alpha.HttpIntegration",
+                      "version": "2.24.0-alpha.0"
+                    }
+                  },
+                  "Integration_GET_--profiles-Permission": {
+                    "id": "Integration_GET_--profiles-Permission",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Integration_GET_--profiles-Permission",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                      "aws:cdk:cloudformation:props": {
+                        "action": "lambda:InvokeFunction",
+                        "functionName": {
+                          "Fn::GetAtt": [
+                            "ProfilesApiLambdaGETprofilesD7613302",
+                            "Arn"
+                          ]
+                        },
+                        "principal": "apigateway.amazonaws.com",
+                        "sourceArn": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "arn:",
+                              {
+                                "Ref": "AWS::Partition"
+                              },
+                              ":execute-api:us-west-2:215957796486:",
+                              {
+                                "Ref": "ProfilesApi7EB07B3F"
+                              },
+                              "/*/*/profiles"
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.CfnPermission",
+                      "version": "2.24.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "apiId": {
+                          "Ref": "ProfilesApi7EB07B3F"
+                        },
+                        "routeKey": "GET /profiles",
+                        "authorizationType": "NONE",
+                        "target": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "integrations/",
+                              {
+                                "Ref": "ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"
                               }
                             ]
                           ]
@@ -918,7 +1278,7 @@
                               "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
                             },
                             "SST_DEBUG_SRC_PATH": "backend",
-                            "SST_DEBUG_SRC_HANDLER": "profiles/functions/getProfile.main",
+                            "SST_DEBUG_SRC_HANDLER": "profiles/getProfile.main",
                             "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
                             "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
                             "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}",
@@ -1080,726 +1440,6 @@
                               "integrations/",
                               {
                                 "Ref": "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidED893D9B"
-                              }
-                            ]
-                          ]
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_apigatewayv2.CfnRoute",
-                      "version": "2.24.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "@aws-cdk/aws-apigatewayv2-alpha.HttpRoute",
-                  "version": "2.24.0-alpha.0"
-                }
-              },
-              "Lambda_DELETE_--profiles--{id}": {
-                "id": "Lambda_DELETE_--profiles--{id}",
-                "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}",
-                "children": {
-                  "ServiceRole": {
-                    "id": "ServiceRole",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole",
-                    "children": {
-                      "Resource": {
-                        "id": "Resource",
-                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/Resource",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
-                          "aws:cdk:cloudformation:props": {
-                            "assumeRolePolicyDocument": {
-                              "Statement": [
-                                {
-                                  "Action": "sts:AssumeRole",
-                                  "Effect": "Allow",
-                                  "Principal": {
-                                    "Service": "lambda.amazonaws.com"
-                                  }
-                                }
-                              ],
-                              "Version": "2012-10-17"
-                            },
-                            "managedPolicyArns": [
-                              {
-                                "Fn::Join": [
-                                  "",
-                                  [
-                                    "arn:",
-                                    {
-                                      "Ref": "AWS::Partition"
-                                    },
-                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-                                  ]
-                                ]
-                              }
-                            ],
-                            "tags": [
-                              {
-                                "key": "sst:app",
-                                "value": "RMR"
-                              },
-                              {
-                                "key": "sst:stage",
-                                "value": "dev"
-                              }
-                            ]
-                          }
-                        },
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                          "version": "2.24.0"
-                        }
-                      },
-                      "DefaultPolicy": {
-                        "id": "DefaultPolicy",
-                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/DefaultPolicy",
-                        "children": {
-                          "Resource": {
-                            "id": "Resource",
-                            "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/DefaultPolicy/Resource",
-                            "attributes": {
-                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
-                              "aws:cdk:cloudformation:props": {
-                                "policyDocument": {
-                                  "Statement": [
-                                    {
-                                      "Action": [
-                                        "xray:PutTraceSegments",
-                                        "xray:PutTelemetryRecords"
-                                      ],
-                                      "Effect": "Allow",
-                                      "Resource": "*"
-                                    },
-                                    {
-                                      "Action": "s3:*",
-                                      "Effect": "Allow",
-                                      "Resource": [
-                                        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
-                                        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*"
-                                      ]
-                                    },
-                                    {
-                                      "Action": "dynamodb:*",
-                                      "Effect": "Allow",
-                                      "Resource": [
-                                        {
-                                          "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850"
-                                        },
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              {
-                                                "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850"
-                                              },
-                                              "/*"
-                                            ]
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "Version": "2012-10-17"
-                                },
-                                "policyName": "ProfilesApiLambdaDELETEprofilesidServiceRoleDefaultPolicy4A6E74DB",
-                                "roles": [
-                                  {
-                                    "Ref": "ProfilesApiLambdaDELETEprofilesidServiceRole05F0F7CC"
-                                  }
-                                ]
-                              }
-                            },
-                            "constructInfo": {
-                              "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                              "version": "2.24.0"
-                            }
-                          }
-                        },
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_iam.Policy",
-                          "version": "2.24.0"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_iam.Role",
-                      "version": "2.24.0"
-                    }
-                  },
-                  "Code": {
-                    "id": "Code",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Code",
-                    "children": {
-                      "Stage": {
-                        "id": "Stage",
-                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Code/Stage",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.AssetStaging",
-                          "version": "2.24.0"
-                        }
-                      },
-                      "AssetBucket": {
-                        "id": "AssetBucket",
-                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Code/AssetBucket",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                          "version": "2.24.0"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                      "version": "2.24.0"
-                    }
-                  },
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
-                      "aws:cdk:cloudformation:props": {
-                        "code": {
-                          "s3Bucket": "cdk-hnb659fds-assets-215957796486-us-west-2",
-                          "s3Key": "8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip"
-                        },
-                        "role": {
-                          "Fn::GetAtt": [
-                            "ProfilesApiLambdaDELETEprofilesidServiceRole05F0F7CC",
-                            "Arn"
-                          ]
-                        },
-                        "environment": {
-                          "variables": {
-                            "TABLE_NAME": {
-                              "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
-                            },
-                            "SST_DEBUG_SRC_PATH": "backend",
-                            "SST_DEBUG_SRC_HANDLER": "profiles/functions/deleteProfile.main",
-                            "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
-                            "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
-                            "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_DELETE_-profiles-{id}",
-                            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
-                            "SST_DEBUG_IS_API_ROUTE": "1"
-                          }
-                        },
-                        "ephemeralStorage": {
-                          "size": 512
-                        },
-                        "handler": "index.main",
-                        "memorySize": 1024,
-                        "runtime": "nodejs16.x",
-                        "tags": [
-                          {
-                            "key": "sst:app",
-                            "value": "RMR"
-                          },
-                          {
-                            "key": "sst:stage",
-                            "value": "dev"
-                          }
-                        ],
-                        "timeout": 10,
-                        "tracingConfig": {
-                          "mode": "Active"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
-                      "version": "2.24.0"
-                    }
-                  },
-                  "EventInvokeConfig": {
-                    "id": "EventInvokeConfig",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/EventInvokeConfig",
-                    "children": {
-                      "Resource": {
-                        "id": "Resource",
-                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/EventInvokeConfig/Resource",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
-                          "aws:cdk:cloudformation:props": {
-                            "functionName": {
-                              "Ref": "ProfilesApiLambdaDELETEprofilesidD07786D7"
-                            },
-                            "qualifier": "$LATEST",
-                            "maximumRetryAttempts": 0
-                          }
-                        },
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_lambda.CfnEventInvokeConfig",
-                          "version": "2.24.0"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.EventInvokeConfig",
-                      "version": "2.24.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "aws-cdk-lib.aws_lambda.Function",
-                  "version": "2.24.0"
-                }
-              },
-              "Route_DELETE_--profiles--{id}": {
-                "id": "Route_DELETE_--profiles--{id}",
-                "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}",
-                "children": {
-                  "Integration_DELETE_--profiles--{id}": {
-                    "id": "Integration_DELETE_--profiles--{id}",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Integration_DELETE_--profiles--{id}",
-                    "children": {
-                      "Resource": {
-                        "id": "Resource",
-                        "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Integration_DELETE_--profiles--{id}/Resource",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
-                          "aws:cdk:cloudformation:props": {
-                            "apiId": {
-                              "Ref": "ProfilesApi7EB07B3F"
-                            },
-                            "integrationType": "AWS_PROXY",
-                            "integrationUri": {
-                              "Fn::GetAtt": [
-                                "ProfilesApiLambdaDELETEprofilesidD07786D7",
-                                "Arn"
-                              ]
-                            },
-                            "payloadFormatVersion": "2.0"
-                          }
-                        },
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_apigatewayv2.CfnIntegration",
-                          "version": "2.24.0"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/aws-apigatewayv2-alpha.HttpIntegration",
-                      "version": "2.24.0-alpha.0"
-                    }
-                  },
-                  "Integration_DELETE_--profiles--{id}-Permission": {
-                    "id": "Integration_DELETE_--profiles--{id}-Permission",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Integration_DELETE_--profiles--{id}-Permission",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
-                      "aws:cdk:cloudformation:props": {
-                        "action": "lambda:InvokeFunction",
-                        "functionName": {
-                          "Fn::GetAtt": [
-                            "ProfilesApiLambdaDELETEprofilesidD07786D7",
-                            "Arn"
-                          ]
-                        },
-                        "principal": "apigateway.amazonaws.com",
-                        "sourceArn": {
-                          "Fn::Join": [
-                            "",
-                            [
-                              "arn:",
-                              {
-                                "Ref": "AWS::Partition"
-                              },
-                              ":execute-api:us-west-2:215957796486:",
-                              {
-                                "Ref": "ProfilesApi7EB07B3F"
-                              },
-                              "/*/*/profiles/{id}"
-                            ]
-                          ]
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.CfnPermission",
-                      "version": "2.24.0"
-                    }
-                  },
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
-                      "aws:cdk:cloudformation:props": {
-                        "apiId": {
-                          "Ref": "ProfilesApi7EB07B3F"
-                        },
-                        "routeKey": "DELETE /profiles/{id}",
-                        "authorizationType": "NONE",
-                        "target": {
-                          "Fn::Join": [
-                            "",
-                            [
-                              "integrations/",
-                              {
-                                "Ref": "ProfilesApiRouteDELETEprofilesidIntegrationDELETEprofilesidCAE5CC8B"
-                              }
-                            ]
-                          ]
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_apigatewayv2.CfnRoute",
-                      "version": "2.24.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "@aws-cdk/aws-apigatewayv2-alpha.HttpRoute",
-                  "version": "2.24.0-alpha.0"
-                }
-              },
-              "Lambda_PUT_--profiles--{id}": {
-                "id": "Lambda_PUT_--profiles--{id}",
-                "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}",
-                "children": {
-                  "ServiceRole": {
-                    "id": "ServiceRole",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole",
-                    "children": {
-                      "Resource": {
-                        "id": "Resource",
-                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole/Resource",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
-                          "aws:cdk:cloudformation:props": {
-                            "assumeRolePolicyDocument": {
-                              "Statement": [
-                                {
-                                  "Action": "sts:AssumeRole",
-                                  "Effect": "Allow",
-                                  "Principal": {
-                                    "Service": "lambda.amazonaws.com"
-                                  }
-                                }
-                              ],
-                              "Version": "2012-10-17"
-                            },
-                            "managedPolicyArns": [
-                              {
-                                "Fn::Join": [
-                                  "",
-                                  [
-                                    "arn:",
-                                    {
-                                      "Ref": "AWS::Partition"
-                                    },
-                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-                                  ]
-                                ]
-                              }
-                            ],
-                            "tags": [
-                              {
-                                "key": "sst:app",
-                                "value": "RMR"
-                              },
-                              {
-                                "key": "sst:stage",
-                                "value": "dev"
-                              }
-                            ]
-                          }
-                        },
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                          "version": "2.24.0"
-                        }
-                      },
-                      "DefaultPolicy": {
-                        "id": "DefaultPolicy",
-                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole/DefaultPolicy",
-                        "children": {
-                          "Resource": {
-                            "id": "Resource",
-                            "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole/DefaultPolicy/Resource",
-                            "attributes": {
-                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
-                              "aws:cdk:cloudformation:props": {
-                                "policyDocument": {
-                                  "Statement": [
-                                    {
-                                      "Action": [
-                                        "xray:PutTraceSegments",
-                                        "xray:PutTelemetryRecords"
-                                      ],
-                                      "Effect": "Allow",
-                                      "Resource": "*"
-                                    },
-                                    {
-                                      "Action": "s3:*",
-                                      "Effect": "Allow",
-                                      "Resource": [
-                                        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
-                                        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*"
-                                      ]
-                                    },
-                                    {
-                                      "Action": "dynamodb:*",
-                                      "Effect": "Allow",
-                                      "Resource": [
-                                        {
-                                          "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850"
-                                        },
-                                        {
-                                          "Fn::Join": [
-                                            "",
-                                            [
-                                              {
-                                                "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850"
-                                              },
-                                              "/*"
-                                            ]
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "Version": "2012-10-17"
-                                },
-                                "policyName": "ProfilesApiLambdaPUTprofilesidServiceRoleDefaultPolicy17DECB62",
-                                "roles": [
-                                  {
-                                    "Ref": "ProfilesApiLambdaPUTprofilesidServiceRoleE02CF388"
-                                  }
-                                ]
-                              }
-                            },
-                            "constructInfo": {
-                              "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                              "version": "2.24.0"
-                            }
-                          }
-                        },
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_iam.Policy",
-                          "version": "2.24.0"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_iam.Role",
-                      "version": "2.24.0"
-                    }
-                  },
-                  "Code": {
-                    "id": "Code",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Code",
-                    "children": {
-                      "Stage": {
-                        "id": "Stage",
-                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Code/Stage",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.AssetStaging",
-                          "version": "2.24.0"
-                        }
-                      },
-                      "AssetBucket": {
-                        "id": "AssetBucket",
-                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Code/AssetBucket",
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                          "version": "2.24.0"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                      "version": "2.24.0"
-                    }
-                  },
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
-                      "aws:cdk:cloudformation:props": {
-                        "code": {
-                          "s3Bucket": "cdk-hnb659fds-assets-215957796486-us-west-2",
-                          "s3Key": "8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip"
-                        },
-                        "role": {
-                          "Fn::GetAtt": [
-                            "ProfilesApiLambdaPUTprofilesidServiceRoleE02CF388",
-                            "Arn"
-                          ]
-                        },
-                        "environment": {
-                          "variables": {
-                            "TABLE_NAME": {
-                              "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
-                            },
-                            "SST_DEBUG_SRC_PATH": "backend",
-                            "SST_DEBUG_SRC_HANDLER": "profiles/functions/updateProfile.main",
-                            "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
-                            "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
-                            "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_PUT_-profiles-{id}",
-                            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
-                            "SST_DEBUG_IS_API_ROUTE": "1"
-                          }
-                        },
-                        "ephemeralStorage": {
-                          "size": 512
-                        },
-                        "handler": "index.main",
-                        "memorySize": 1024,
-                        "runtime": "nodejs16.x",
-                        "tags": [
-                          {
-                            "key": "sst:app",
-                            "value": "RMR"
-                          },
-                          {
-                            "key": "sst:stage",
-                            "value": "dev"
-                          }
-                        ],
-                        "timeout": 10,
-                        "tracingConfig": {
-                          "mode": "Active"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
-                      "version": "2.24.0"
-                    }
-                  },
-                  "EventInvokeConfig": {
-                    "id": "EventInvokeConfig",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/EventInvokeConfig",
-                    "children": {
-                      "Resource": {
-                        "id": "Resource",
-                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/EventInvokeConfig/Resource",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
-                          "aws:cdk:cloudformation:props": {
-                            "functionName": {
-                              "Ref": "ProfilesApiLambdaPUTprofilesid2024A88A"
-                            },
-                            "qualifier": "$LATEST",
-                            "maximumRetryAttempts": 0
-                          }
-                        },
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_lambda.CfnEventInvokeConfig",
-                          "version": "2.24.0"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.EventInvokeConfig",
-                      "version": "2.24.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "aws-cdk-lib.aws_lambda.Function",
-                  "version": "2.24.0"
-                }
-              },
-              "Route_PUT_--profiles--{id}": {
-                "id": "Route_PUT_--profiles--{id}",
-                "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}",
-                "children": {
-                  "Integration_PUT_--profiles--{id}": {
-                    "id": "Integration_PUT_--profiles--{id}",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Integration_PUT_--profiles--{id}",
-                    "children": {
-                      "Resource": {
-                        "id": "Resource",
-                        "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Integration_PUT_--profiles--{id}/Resource",
-                        "attributes": {
-                          "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
-                          "aws:cdk:cloudformation:props": {
-                            "apiId": {
-                              "Ref": "ProfilesApi7EB07B3F"
-                            },
-                            "integrationType": "AWS_PROXY",
-                            "integrationUri": {
-                              "Fn::GetAtt": [
-                                "ProfilesApiLambdaPUTprofilesid2024A88A",
-                                "Arn"
-                              ]
-                            },
-                            "payloadFormatVersion": "2.0"
-                          }
-                        },
-                        "constructInfo": {
-                          "fqn": "aws-cdk-lib.aws_apigatewayv2.CfnIntegration",
-                          "version": "2.24.0"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/aws-apigatewayv2-alpha.HttpIntegration",
-                      "version": "2.24.0-alpha.0"
-                    }
-                  },
-                  "Integration_PUT_--profiles--{id}-Permission": {
-                    "id": "Integration_PUT_--profiles--{id}-Permission",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Integration_PUT_--profiles--{id}-Permission",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
-                      "aws:cdk:cloudformation:props": {
-                        "action": "lambda:InvokeFunction",
-                        "functionName": {
-                          "Fn::GetAtt": [
-                            "ProfilesApiLambdaPUTprofilesid2024A88A",
-                            "Arn"
-                          ]
-                        },
-                        "principal": "apigateway.amazonaws.com",
-                        "sourceArn": {
-                          "Fn::Join": [
-                            "",
-                            [
-                              "arn:",
-                              {
-                                "Ref": "AWS::Partition"
-                              },
-                              ":execute-api:us-west-2:215957796486:",
-                              {
-                                "Ref": "ProfilesApi7EB07B3F"
-                              },
-                              "/*/*/profiles/{id}"
-                            ]
-                          ]
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_lambda.CfnPermission",
-                      "version": "2.24.0"
-                    }
-                  },
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
-                      "aws:cdk:cloudformation:props": {
-                        "apiId": {
-                          "Ref": "ProfilesApi7EB07B3F"
-                        },
-                        "routeKey": "PUT /profiles/{id}",
-                        "authorizationType": "NONE",
-                        "target": {
-                          "Fn::Join": [
-                            "",
-                            [
-                              "integrations/",
-                              {
-                                "Ref": "ProfilesApiRoutePUTprofilesidIntegrationPUTprofilesidE1E40722"
                               }
                             ]
                           ]

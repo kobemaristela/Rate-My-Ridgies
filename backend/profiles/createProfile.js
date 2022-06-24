@@ -14,7 +14,7 @@ export const main = handler(async (event) => {
       profileId: uuid.v1(),
       role: data.role,
       profileName: data.name,
-      // photo: data.photo,
+      photo: data.photo,
       likes: 0,
       createdAt: Date.now(), // Current Unix timestamp
     },
