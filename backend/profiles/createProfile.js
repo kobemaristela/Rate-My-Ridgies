@@ -3,7 +3,7 @@ import handler from "../util/handler";
 import dynamoDb from "../util/dynamodb";
 
 
-// {"name" : "mike", "role" : "P&E"}
+// {"name" : "mike", "role" : "P&E", "photo" : "test.jpg"}
 export const main = handler(async (event) => {
   const data = JSON.parse(event.body);
 
