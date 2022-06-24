@@ -43,17 +43,37 @@
         },
         {
          "type": "function",
+<<<<<<< HEAD
          "route": "GET /profiles",
          "fn": {
           "node": "c82f9709ebae36ea4d4d17094efcf7f0989e403623",
+=======
+         "route": "GET /profiles/{id}",
+         "fn": {
+          "node": "c8c1500cc1e23fa2d867340373cdd07a95aa2dd1f6",
           "stack": "dev-RMR-ApiStack"
          }
         },
         {
          "type": "function",
+         "route": "PUT /profiles/{id}",
+         "fn": {
+          "node": "c8d334da4ec771853afb59e5424540661e92ef2409",
+>>>>>>> 55678ac (deal with dynamo keywords)
+          "stack": "dev-RMR-ApiStack"
+         }
+        },
+        {
+         "type": "function",
+<<<<<<< HEAD
          "route": "GET /profiles/{id}",
          "fn": {
           "node": "c8c1500cc1e23fa2d867340373cdd07a95aa2dd1f6",
+=======
+         "route": "DELETE /profiles/{id}",
+         "fn": {
+          "node": "c8235de633028010c7962c2bf21576797f4bfbe8c4",
+>>>>>>> 55678ac (deal with dynamo keywords)
           "stack": "dev-RMR-ApiStack"
          }
         }
@@ -76,6 +96,7 @@
       }
      },
      {
+<<<<<<< HEAD
       "id": "Lambda_GET_--profiles",
       "addr": "c82f9709ebae36ea4d4d17094efcf7f0989e403623",
       "stack": "dev-RMR-ApiStack",
@@ -85,12 +106,7 @@
        "arn": {
         "Fn::GetAtt": [
          "ProfilesApiLambdaGETprofilesD7613302",
-         "Arn"
-        ]
-       }
-      }
-     },
-     {
+=======
       "id": "Lambda_GET_--profiles--{id}",
       "addr": "c8c1500cc1e23fa2d867340373cdd07a95aa2dd1f6",
       "stack": "dev-RMR-ApiStack",
@@ -100,6 +116,49 @@
        "arn": {
         "Fn::GetAtt": [
          "ProfilesApiLambdaGETprofilesidD4146CB6",
+         "Arn"
+        ]
+       }
+      }
+     },
+     {
+      "id": "Lambda_PUT_--profiles--{id}",
+      "addr": "c8d334da4ec771853afb59e5424540661e92ef2409",
+      "stack": "dev-RMR-ApiStack",
+      "type": "Function",
+      "data": {
+       "localId": "dev-RMR-ApiStack-ProfilesApi-Lambda_PUT_-profiles-{id}",
+       "arn": {
+        "Fn::GetAtt": [
+         "ProfilesApiLambdaPUTprofilesid2024A88A",
+>>>>>>> 55678ac (deal with dynamo keywords)
+         "Arn"
+        ]
+       }
+      }
+     },
+     {
+<<<<<<< HEAD
+      "id": "Lambda_GET_--profiles--{id}",
+      "addr": "c8c1500cc1e23fa2d867340373cdd07a95aa2dd1f6",
+      "stack": "dev-RMR-ApiStack",
+      "type": "Function",
+      "data": {
+       "localId": "dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}",
+       "arn": {
+        "Fn::GetAtt": [
+         "ProfilesApiLambdaGETprofilesidD4146CB6",
+=======
+      "id": "Lambda_DELETE_--profiles--{id}",
+      "addr": "c8235de633028010c7962c2bf21576797f4bfbe8c4",
+      "stack": "dev-RMR-ApiStack",
+      "type": "Function",
+      "data": {
+       "localId": "dev-RMR-ApiStack-ProfilesApi-Lambda_DELETE_-profiles-{id}",
+       "arn": {
+        "Fn::GetAtt": [
+         "ProfilesApiLambdaDELETEprofilesidD07786D7",
+>>>>>>> 55678ac (deal with dynamo keywords)
          "Arn"
         ]
        }
@@ -555,7 +614,11 @@
        "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
       },
       "SST_DEBUG_SRC_PATH": "backend",
+<<<<<<< HEAD
       "SST_DEBUG_SRC_HANDLER": "profiles/getProfileList.main",
+=======
+      "SST_DEBUG_SRC_HANDLER": "profiles/getProfile.main",
+>>>>>>> 55678ac (deal with dynamo keywords)
       "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
       "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
       "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles",
@@ -650,22 +713,25 @@
        {
         "Ref": "ProfilesApi7EB07B3F"
        },
+<<<<<<< HEAD
        "/*/*/profiles"
+=======
+       "/*/*/profiles/{id}"
       ]
      ]
     }
    },
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Integration_GET_--profiles-Permission"
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Integration_GET_--profiles--{id}-Permission"
    }
   },
-  "ProfilesApiRouteGETprofiles24D543E2": {
+  "ProfilesApiRouteGETprofilesidB307DFEA": {
    "Type": "AWS::ApiGatewayV2::Route",
    "Properties": {
     "ApiId": {
      "Ref": "ProfilesApi7EB07B3F"
     },
-    "RouteKey": "GET /profiles",
+    "RouteKey": "GET /profiles/{id}",
     "AuthorizationType": "NONE",
     "Target": {
      "Fn::Join": [
@@ -673,17 +739,17 @@
       [
        "integrations/",
        {
-        "Ref": "ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"
+        "Ref": "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidED893D9B"
        }
       ]
      ]
     }
    },
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Resource"
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Resource"
    }
   },
-  "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B": {
+  "ProfilesApiLambdaPUTprofilesidServiceRoleE02CF388": {
    "Type": "AWS::IAM::Role",
    "Properties": {
     "AssumeRolePolicyDocument": {
@@ -724,10 +790,10 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/ServiceRole/Resource"
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole/Resource"
    }
   },
-  "ProfilesApiLambdaGETprofilesidServiceRoleDefaultPolicyC55E7D45": {
+  "ProfilesApiLambdaPUTprofilesidServiceRoleDefaultPolicy17DECB62": {
    "Type": "AWS::IAM::Policy",
    "Properties": {
     "PolicyDocument": {
@@ -771,18 +837,18 @@
      ],
      "Version": "2012-10-17"
     },
-    "PolicyName": "ProfilesApiLambdaGETprofilesidServiceRoleDefaultPolicyC55E7D45",
+    "PolicyName": "ProfilesApiLambdaPUTprofilesidServiceRoleDefaultPolicy17DECB62",
     "Roles": [
      {
-      "Ref": "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B"
+      "Ref": "ProfilesApiLambdaPUTprofilesidServiceRoleE02CF388"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/ServiceRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole/DefaultPolicy/Resource"
    }
   },
-  "ProfilesApiLambdaGETprofilesidD4146CB6": {
+  "ProfilesApiLambdaPUTprofilesid2024A88A": {
    "Type": "AWS::Lambda::Function",
    "Properties": {
     "Code": {
@@ -791,7 +857,7 @@
     },
     "Role": {
      "Fn::GetAtt": [
-      "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B",
+      "ProfilesApiLambdaPUTprofilesidServiceRoleE02CF388",
       "Arn"
      ]
     },
@@ -801,10 +867,10 @@
        "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
       },
       "SST_DEBUG_SRC_PATH": "backend",
-      "SST_DEBUG_SRC_HANDLER": "profiles/getProfile.main",
+      "SST_DEBUG_SRC_HANDLER": "profiles/updateProfile.main",
       "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
       "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
-      "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}",
+      "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_PUT_-profiles-{id}",
       "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
       "SST_DEBUG_IS_API_ROUTE": "1"
      }
@@ -831,30 +897,30 @@
     }
    },
    "DependsOn": [
-    "ProfilesApiLambdaGETprofilesidServiceRoleDefaultPolicyC55E7D45",
-    "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B"
+    "ProfilesApiLambdaPUTprofilesidServiceRoleDefaultPolicy17DECB62",
+    "ProfilesApiLambdaPUTprofilesidServiceRoleE02CF388"
    ],
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/Resource",
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Resource",
     "aws:asset:path": "asset.8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
   },
-  "ProfilesApiLambdaGETprofilesidEventInvokeConfig8416267C": {
+  "ProfilesApiLambdaPUTprofilesidEventInvokeConfigC5B65705": {
    "Type": "AWS::Lambda::EventInvokeConfig",
    "Properties": {
     "FunctionName": {
-     "Ref": "ProfilesApiLambdaGETprofilesidD4146CB6"
+     "Ref": "ProfilesApiLambdaPUTprofilesid2024A88A"
     },
     "Qualifier": "$LATEST",
     "MaximumRetryAttempts": 0
    },
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/EventInvokeConfig/Resource"
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/EventInvokeConfig/Resource"
    }
   },
-  "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidED893D9B": {
+  "ProfilesApiRoutePUTprofilesidIntegrationPUTprofilesidE1E40722": {
    "Type": "AWS::ApiGatewayV2::Integration",
    "Properties": {
     "ApiId": {
@@ -863,23 +929,362 @@
     "IntegrationType": "AWS_PROXY",
     "IntegrationUri": {
      "Fn::GetAtt": [
-      "ProfilesApiLambdaGETprofilesidD4146CB6",
+      "ProfilesApiLambdaPUTprofilesid2024A88A",
       "Arn"
      ]
     },
     "PayloadFormatVersion": "2.0"
    },
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Integration_GET_--profiles--{id}/Resource"
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Integration_PUT_--profiles--{id}/Resource"
    }
   },
-  "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidPermission2FE44392": {
+  "ProfilesApiRoutePUTprofilesidIntegrationPUTprofilesidPermissionB745E0E1": {
    "Type": "AWS::Lambda::Permission",
    "Properties": {
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
+      "ProfilesApiLambdaPUTprofilesid2024A88A",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:us-west-2:215957796486:",
+       {
+        "Ref": "ProfilesApi7EB07B3F"
+       },
+       "/*/*/profiles/{id}"
+>>>>>>> 55678ac (deal with dynamo keywords)
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+<<<<<<< HEAD
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Integration_GET_--profiles-Permission"
+   }
+  },
+  "ProfilesApiRouteGETprofiles24D543E2": {
+=======
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Integration_PUT_--profiles--{id}-Permission"
+   }
+  },
+  "ProfilesApiRoutePUTprofilesid36F542CB": {
+>>>>>>> 55678ac (deal with dynamo keywords)
+   "Type": "AWS::ApiGatewayV2::Route",
+   "Properties": {
+    "ApiId": {
+     "Ref": "ProfilesApi7EB07B3F"
+    },
+<<<<<<< HEAD
+    "RouteKey": "GET /profiles",
+=======
+    "RouteKey": "PUT /profiles/{id}",
+>>>>>>> 55678ac (deal with dynamo keywords)
+    "AuthorizationType": "NONE",
+    "Target": {
+     "Fn::Join": [
+      "",
+      [
+       "integrations/",
+       {
+<<<<<<< HEAD
+        "Ref": "ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"
+=======
+        "Ref": "ProfilesApiRoutePUTprofilesidIntegrationPUTprofilesidE1E40722"
+>>>>>>> 55678ac (deal with dynamo keywords)
+       }
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+<<<<<<< HEAD
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Resource"
+   }
+  },
+  "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B": {
+=======
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Resource"
+   }
+  },
+  "ProfilesApiLambdaDELETEprofilesidServiceRole05F0F7CC": {
+>>>>>>> 55678ac (deal with dynamo keywords)
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "RMR"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "dev"
+     }
+    ]
+   },
+   "Metadata": {
+<<<<<<< HEAD
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/ServiceRole/Resource"
+   }
+  },
+  "ProfilesApiLambdaGETprofilesidServiceRoleDefaultPolicyC55E7D45": {
+=======
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/Resource"
+   }
+  },
+  "ProfilesApiLambdaDELETEprofilesidServiceRoleDefaultPolicy4A6E74DB": {
+>>>>>>> 55678ac (deal with dynamo keywords)
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "s3:*",
+       "Effect": "Allow",
+       "Resource": [
+        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
+        "arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92/*"
+       ]
+      },
+      {
+       "Action": "dynamodb:*",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850"
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850"
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+<<<<<<< HEAD
+    "PolicyName": "ProfilesApiLambdaGETprofilesidServiceRoleDefaultPolicyC55E7D45",
+    "Roles": [
+     {
+      "Ref": "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B"
+=======
+    "PolicyName": "ProfilesApiLambdaDELETEprofilesidServiceRoleDefaultPolicy4A6E74DB",
+    "Roles": [
+     {
+      "Ref": "ProfilesApiLambdaDELETEprofilesidServiceRole05F0F7CC"
+>>>>>>> 55678ac (deal with dynamo keywords)
+     }
+    ]
+   },
+   "Metadata": {
+<<<<<<< HEAD
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "ProfilesApiLambdaGETprofilesidD4146CB6": {
+=======
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "ProfilesApiLambdaDELETEprofilesidD07786D7": {
+>>>>>>> 55678ac (deal with dynamo keywords)
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-215957796486-us-west-2",
+     "S3Key": "8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip"
+    },
+    "Role": {
+     "Fn::GetAtt": [
+<<<<<<< HEAD
+      "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B",
+=======
+      "ProfilesApiLambdaDELETEprofilesidServiceRole05F0F7CC",
+>>>>>>> 55678ac (deal with dynamo keywords)
+      "Arn"
+     ]
+    },
+    "Environment": {
+     "Variables": {
+      "TABLE_NAME": {
+       "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
+      },
+      "SST_DEBUG_SRC_PATH": "backend",
+<<<<<<< HEAD
+      "SST_DEBUG_SRC_HANDLER": "profiles/getProfile.main",
+      "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
+      "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
+      "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}",
+=======
+      "SST_DEBUG_SRC_HANDLER": "profiles/deleteProfile.main",
+      "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
+      "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
+      "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_DELETE_-profiles-{id}",
+>>>>>>> 55678ac (deal with dynamo keywords)
+      "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+      "SST_DEBUG_IS_API_ROUTE": "1"
+     }
+    },
+    "EphemeralStorage": {
+     "Size": 512
+    },
+    "Handler": "index.main",
+    "MemorySize": 1024,
+    "Runtime": "nodejs16.x",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "RMR"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "dev"
+     }
+    ],
+    "Timeout": 10,
+    "TracingConfig": {
+     "Mode": "Active"
+    }
+   },
+   "DependsOn": [
+<<<<<<< HEAD
+    "ProfilesApiLambdaGETprofilesidServiceRoleDefaultPolicyC55E7D45",
+    "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/Resource",
+=======
+    "ProfilesApiLambdaDELETEprofilesidServiceRoleDefaultPolicy4A6E74DB",
+    "ProfilesApiLambdaDELETEprofilesidServiceRole05F0F7CC"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Resource",
+>>>>>>> 55678ac (deal with dynamo keywords)
+    "aws:asset:path": "asset.8d95e8000e6446a74f6ae9f39a0dd7b299ed6d7d68d831dce41cee1cb4119a1c.zip",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+<<<<<<< HEAD
+  "ProfilesApiLambdaGETprofilesidEventInvokeConfig8416267C": {
+   "Type": "AWS::Lambda::EventInvokeConfig",
+   "Properties": {
+    "FunctionName": {
+     "Ref": "ProfilesApiLambdaGETprofilesidD4146CB6"
+=======
+  "ProfilesApiLambdaDELETEprofilesidEventInvokeConfig85E01C37": {
+   "Type": "AWS::Lambda::EventInvokeConfig",
+   "Properties": {
+    "FunctionName": {
+     "Ref": "ProfilesApiLambdaDELETEprofilesidD07786D7"
+>>>>>>> 55678ac (deal with dynamo keywords)
+    },
+    "Qualifier": "$LATEST",
+    "MaximumRetryAttempts": 0
+   },
+   "Metadata": {
+<<<<<<< HEAD
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/EventInvokeConfig/Resource"
+   }
+  },
+  "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidED893D9B": {
+=======
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/EventInvokeConfig/Resource"
+   }
+  },
+  "ProfilesApiRouteDELETEprofilesidIntegrationDELETEprofilesidCAE5CC8B": {
+>>>>>>> 55678ac (deal with dynamo keywords)
+   "Type": "AWS::ApiGatewayV2::Integration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "ProfilesApi7EB07B3F"
+    },
+    "IntegrationType": "AWS_PROXY",
+    "IntegrationUri": {
+     "Fn::GetAtt": [
+<<<<<<< HEAD
       "ProfilesApiLambdaGETprofilesidD4146CB6",
+=======
+      "ProfilesApiLambdaDELETEprofilesidD07786D7",
+>>>>>>> 55678ac (deal with dynamo keywords)
+      "Arn"
+     ]
+    },
+    "PayloadFormatVersion": "2.0"
+   },
+   "Metadata": {
+<<<<<<< HEAD
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Integration_GET_--profiles--{id}/Resource"
+   }
+  },
+  "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidPermission2FE44392": {
+=======
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Integration_DELETE_--profiles--{id}/Resource"
+   }
+  },
+  "ProfilesApiRouteDELETEprofilesidIntegrationDELETEprofilesidPermission6AC5C91F": {
+>>>>>>> 55678ac (deal with dynamo keywords)
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+<<<<<<< HEAD
+      "ProfilesApiLambdaGETprofilesidD4146CB6",
+=======
+      "ProfilesApiLambdaDELETEprofilesidD07786D7",
+>>>>>>> 55678ac (deal with dynamo keywords)
       "Arn"
      ]
     },
@@ -902,16 +1307,27 @@
     }
    },
    "Metadata": {
+<<<<<<< HEAD
     "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Integration_GET_--profiles--{id}-Permission"
    }
   },
   "ProfilesApiRouteGETprofilesidB307DFEA": {
+=======
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Integration_DELETE_--profiles--{id}-Permission"
+   }
+  },
+  "ProfilesApiRouteDELETEprofilesid004DFD19": {
+>>>>>>> 55678ac (deal with dynamo keywords)
    "Type": "AWS::ApiGatewayV2::Route",
    "Properties": {
     "ApiId": {
      "Ref": "ProfilesApi7EB07B3F"
     },
+<<<<<<< HEAD
     "RouteKey": "GET /profiles/{id}",
+=======
+    "RouteKey": "DELETE /profiles/{id}",
+>>>>>>> 55678ac (deal with dynamo keywords)
     "AuthorizationType": "NONE",
     "Target": {
      "Fn::Join": [
@@ -919,14 +1335,22 @@
       [
        "integrations/",
        {
+<<<<<<< HEAD
         "Ref": "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidED893D9B"
+=======
+        "Ref": "ProfilesApiRouteDELETEprofilesidIntegrationDELETEprofilesidCAE5CC8B"
+>>>>>>> 55678ac (deal with dynamo keywords)
        }
       ]
      ]
     }
    },
    "Metadata": {
+<<<<<<< HEAD
     "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Resource"
+=======
+    "aws:cdk:path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Resource"
+>>>>>>> 55678ac (deal with dynamo keywords)
    }
   }
  },

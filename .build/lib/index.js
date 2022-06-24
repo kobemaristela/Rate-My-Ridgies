@@ -14,7 +14,8 @@ function StorageStack({ stack }) {
     fields: {
       profileId: "string",
       profileName: "string",
-      role: "string",
+      profileRole: "string",
+      photo: "string",
       likes: "number"
     },
     primaryIndex: { partitionKey: "profileId" }
@@ -49,8 +50,9 @@ function ApiStack({ stack, app }) {
     },
     routes: {
       "POST /profiles": "profiles/createProfile.main",
-      "GET /profiles": "profiles/getProfileList.main",
-      "GET /profiles/{id}": "profiles/getProfile.main"
+      "GET /profiles/{id}": "profiles/getProfile.main",
+      "PUT /profiles/{id}": "profiles/updateProfile.main",
+      "DELETE /profiles/{id}": "profiles/deleteProfile.main"
     }
   });
   stack.addOutputs({
