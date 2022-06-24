@@ -1,0 +1,20 @@
+{
+  "version": "18.0.0",
+  "files": {
+    "87a51c63dc2d4d3ff56ce7e3d5e5e6238e11cd3eb9bd8af636b214ce5798efd4": {
+      "source": {
+        "path": "dev-RMR-StorageStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "215957796486-us-west-2": {
+          "bucketName": "cdk-hnb659fds-assets-215957796486-us-west-2",
+          "objectKey": "87a51c63dc2d4d3ff56ce7e3d5e5e6238e11cd3eb9bd8af636b214ce5798efd4.json",
+          "region": "us-west-2",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::215957796486:role/cdk-hnb659fds-file-publishing-role-215957796486-us-west-2"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

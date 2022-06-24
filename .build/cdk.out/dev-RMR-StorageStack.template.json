@@ -1,0 +1,137 @@
+{
+ "Resources": {
+  "SSTMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Metadata": {
+    "aws:cdk:path": "dev-RMR-StorageStack/SSTMetadata",
+    "sst:version": "1.2.20",
+    "sst:constructs": [
+     {
+      "id": "Uploads",
+      "addr": "c823369913fbb9060e06f7228644691c2e90635727",
+      "stack": "dev-RMR-StorageStack",
+      "type": "Bucket",
+      "data": {
+       "name": {
+        "Ref": "UploadsBucketC4B27CC7"
+       },
+       "notifications": [],
+       "notificationNames": []
+      }
+     },
+     {
+      "id": "Profile",
+      "addr": "c8ffcdb143272e7bd0440518cf177eb46f61694eee",
+      "stack": "dev-RMR-StorageStack",
+      "type": "Table",
+      "data": {
+       "tableName": {
+        "Ref": "ProfileTable1E6F6C62"
+       },
+       "consumers": []
+      }
+     }
+    ]
+   }
+  },
+  "UploadsBucketC4B27CC7": {
+   "Type": "AWS::S3::Bucket",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "RMR"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "dev"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "dev-RMR-StorageStack/Uploads/Bucket/Resource"
+   }
+  },
+  "ProfileTable1E6F6C62": {
+   "Type": "AWS::DynamoDB::Table",
+   "Properties": {
+    "KeySchema": [
+     {
+      "AttributeName": "profileId",
+      "KeyType": "HASH"
+     },
+     {
+      "AttributeName": "reviewId",
+      "KeyType": "RANGE"
+     }
+    ],
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "profileId",
+      "AttributeType": "S"
+     },
+     {
+      "AttributeName": "reviewId",
+      "AttributeType": "S"
+     }
+    ],
+    "BillingMode": "PAY_PER_REQUEST",
+    "PointInTimeRecoverySpecification": {
+     "PointInTimeRecoveryEnabled": true
+    },
+    "TableName": "dev-RMR-Profile",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "RMR"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "dev"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "dev-RMR-StorageStack/Profile/Table/Resource"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

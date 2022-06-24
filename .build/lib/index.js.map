@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../stacks/StorageStack.js", "../../stacks/index.js"],
+  "sourcesContent": ["import { Bucket, Table } from \"@serverless-stack/resources\";\n\nexport function StorageStack({ stack }) {\n  // Create an S3 bucket\n  const bucket = new Bucket(stack, \"Uploads\");\n\n  // Create the DynamoDB table\n  const table = new Table(stack, \"Profile\", {\n    fields: {\n      profileId: \"string\",\n      reviewId: \"string\",\n    },\n    primaryIndex: { partitionKey: \"profileId\", sortKey: \"reviewId\" },\n  });\n\n  // Return the bucket and table resources\n  return {\n    table,\n    bucket,\n  };\n}\n", "import { StorageStack } from \"./StorageStack\";\n\nexport default function main(app) {\n  app.setDefaultFunctionProps({\n    runtime: \"nodejs16.x\",\n    srcPath: \"backend\",\n    bundle: {\n      format: \"esm\",\n    },\n  });\n  app.stack(StorageStack);\n}\n"],
+  "mappings": ";;;;;;AAAA;AAEO,sBAAsB,EAAE,SAAS;AAEtC,QAAM,SAAS,IAAI,OAAO,OAAO,SAAS;AAG1C,QAAM,QAAQ,IAAI,MAAM,OAAO,WAAW;AAAA,IACxC,QAAQ;AAAA,MACN,WAAW;AAAA,MACX,UAAU;AAAA,IACZ;AAAA,IACA,cAAc,EAAE,cAAc,aAAa,SAAS,WAAW;AAAA,EACjE,CAAC;AAGD,SAAO;AAAA,IACL;AAAA,IACA;AAAA,EACF;AACF;AAlBgB;;;ACAD,cAAc,KAAK;AAChC,MAAI,wBAAwB;AAAA,IAC1B,SAAS;AAAA,IACT,SAAS;AAAA,IACT,QAAQ;AAAA,MACN,QAAQ;AAAA,IACV;AAAA,EACF,CAAC;AACD,MAAI,MAAM,YAAY;AACxB;AATwB;",
+  "names": []
+}

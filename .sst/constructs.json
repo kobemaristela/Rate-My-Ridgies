@@ -1,0 +1,1 @@
+[{"id":"Uploads","addr":"c823369913fbb9060e06f7228644691c2e90635727","stack":"dev-RMR-StorageStack","type":"Bucket","data":{"name":"${Token[TOKEN.206]}","notifications":[],"notificationNames":[]}},{"id":"Profile","addr":"c8ffcdb143272e7bd0440518cf177eb46f61694eee","stack":"dev-RMR-StorageStack","type":"Table","data":{"tableName":"${Token[TOKEN.215]}","consumers":[]}}]
