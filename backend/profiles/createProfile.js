@@ -1,6 +1,6 @@
 import * as uuid from "uuid";
-import handler from "../../util/handler";
-import dynamoDb from "../../util/dynamodb";
+import handler from "../util/handler";
+import dynamoDb from "../util/dynamodb";
 
 
 // {"name" : "mike", "role" : "P&E"}
@@ -12,9 +12,9 @@ export const main = handler(async (event) => {
     TableName: process.env.TABLE_NAME,
     Item: {
       profileId: uuid.v1(),
-      role: data.role,
-      profileName: data.name,
-      // photo: data.photo,
+      profileRole: data.profileRole,
+      profileName: data.profileName,
+      photo: data.photo,
       likes: 0,
       createdAt: Date.now(), // Current Unix timestamp
     },
