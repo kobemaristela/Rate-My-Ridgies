@@ -1,3 +1,0 @@
-{"id":"dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles","handler":"profiles/createProfile.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"/Users/kobe.maristela/Desktop/RMR"}
-{"id":"dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles","handler":"profiles/getProfileList.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"/Users/kobe.maristela/Desktop/RMR"}
-{"id":"dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}","handler":"profiles/getProfile.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"/Users/kobe.maristela/Desktop/RMR"}

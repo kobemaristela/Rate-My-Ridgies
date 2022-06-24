@@ -1,1 +1,0 @@
-[{"bundle":{"format":"esm"},"handler":"profiles/createProfile.main","runtime":"nodejs16.x","srcPath":"backend"},{"bundle":{"format":"esm"},"handler":"profiles/getProfileList.main","runtime":"nodejs16.x","srcPath":"backend"},{"bundle":{"format":"esm"},"handler":"profiles/getProfile.main","runtime":"nodejs16.x","srcPath":"backend"}]
