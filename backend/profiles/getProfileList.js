@@ -8,7 +8,7 @@ export const main = handler(async () => {
     KeyConditionExpression: "profileName = :profileName",
 
     ExpressionAttributeValues: {
-      ":userId": "*",
+      ":profileName": "*",
     },
   };
 
