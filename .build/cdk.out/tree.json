@@ -737,6 +737,19 @@
                   "version": "2.24.0-alpha.0"
                 }
               },
+<<<<<<< HEAD
+              "Lambda_GET_--profiles": {
+                "id": "Lambda_GET_--profiles",
+                "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/ServiceRole/Resource",
+=======
               "Lambda_GET_--profiles--{id}": {
                 "id": "Lambda_GET_--profiles--{id}",
                 "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}",
@@ -1108,6 +1121,10 @@
                       "Resource": {
                         "id": "Resource",
                         "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole/Resource",
+<<<<<<< HEAD
+=======
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                           "aws:cdk:cloudformation:props": {
@@ -1156,11 +1173,27 @@
                       },
                       "DefaultPolicy": {
                         "id": "DefaultPolicy",
+<<<<<<< HEAD
                         "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole/DefaultPolicy",
                         "children": {
                           "Resource": {
                             "id": "Resource",
                             "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole/DefaultPolicy/Resource",
+=======
+<<<<<<< HEAD
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/ServiceRole/DefaultPolicy/Resource",
+=======
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/ServiceRole/DefaultPolicy/Resource",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                               "aws:cdk:cloudformation:props": {
@@ -1205,10 +1238,24 @@
                                   ],
                                   "Version": "2012-10-17"
                                 },
+<<<<<<< HEAD
                                 "policyName": "ProfilesApiLambdaPUTprofilesidServiceRoleDefaultPolicy17DECB62",
                                 "roles": [
                                   {
                                     "Ref": "ProfilesApiLambdaPUTprofilesidServiceRoleE02CF388"
+=======
+<<<<<<< HEAD
+                                "policyName": "ProfilesApiLambdaGETprofilesServiceRoleDefaultPolicy7A8A04ED",
+                                "roles": [
+                                  {
+                                    "Ref": "ProfilesApiLambdaGETprofilesServiceRole8762ACC4"
+=======
+                                "policyName": "ProfilesApiLambdaPUTprofilesidServiceRoleDefaultPolicy17DECB62",
+                                "roles": [
+                                  {
+                                    "Ref": "ProfilesApiLambdaPUTprofilesidServiceRoleE02CF388"
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                                   }
                                 ]
                               }
@@ -1232,11 +1279,27 @@
                   },
                   "Code": {
                     "id": "Code",
+<<<<<<< HEAD
                     "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Code",
                     "children": {
                       "Stage": {
                         "id": "Stage",
                         "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Code/Stage",
+=======
+<<<<<<< HEAD
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/Code/Stage",
+=======
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Code/Stage",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.AssetStaging",
                           "version": "2.24.0"
@@ -1244,7 +1307,15 @@
                       },
                       "AssetBucket": {
                         "id": "AssetBucket",
+<<<<<<< HEAD
                         "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Code/AssetBucket",
+=======
+<<<<<<< HEAD
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/Code/AssetBucket",
+=======
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Code/AssetBucket",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                           "version": "2.24.0"
@@ -1258,7 +1329,15 @@
                   },
                   "Resource": {
                     "id": "Resource",
+<<<<<<< HEAD
                     "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Resource",
+=======
+<<<<<<< HEAD
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/Resource",
+=======
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/Resource",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                       "aws:cdk:cloudformation:props": {
@@ -1268,7 +1347,15 @@
                         },
                         "role": {
                           "Fn::GetAtt": [
+<<<<<<< HEAD
                             "ProfilesApiLambdaPUTprofilesidServiceRoleE02CF388",
+=======
+<<<<<<< HEAD
+                            "ProfilesApiLambdaGETprofilesServiceRole8762ACC4",
+=======
+                            "ProfilesApiLambdaPUTprofilesidServiceRoleE02CF388",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                             "Arn"
                           ]
                         },
@@ -1278,10 +1365,24 @@
                               "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
                             },
                             "SST_DEBUG_SRC_PATH": "backend",
+<<<<<<< HEAD
                             "SST_DEBUG_SRC_HANDLER": "profiles/updateProfile.main",
                             "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
                             "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
                             "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_PUT_-profiles-{id}",
+=======
+<<<<<<< HEAD
+                            "SST_DEBUG_SRC_HANDLER": "profiles/getProfileList.main",
+                            "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
+                            "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
+                            "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles",
+=======
+                            "SST_DEBUG_SRC_HANDLER": "profiles/updateProfile.main",
+                            "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
+                            "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
+                            "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_PUT_-profiles-{id}",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
                             "SST_DEBUG_IS_API_ROUTE": "1"
                           }
@@ -1315,16 +1416,40 @@
                   },
                   "EventInvokeConfig": {
                     "id": "EventInvokeConfig",
+<<<<<<< HEAD
                     "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/EventInvokeConfig",
                     "children": {
                       "Resource": {
                         "id": "Resource",
                         "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/EventInvokeConfig/Resource",
+=======
+<<<<<<< HEAD
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/EventInvokeConfig",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles/EventInvokeConfig/Resource",
+=======
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/EventInvokeConfig",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_PUT_--profiles--{id}/EventInvokeConfig/Resource",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
                           "aws:cdk:cloudformation:props": {
                             "functionName": {
+<<<<<<< HEAD
                               "Ref": "ProfilesApiLambdaPUTprofilesid2024A88A"
+=======
+<<<<<<< HEAD
+                              "Ref": "ProfilesApiLambdaGETprofilesD7613302"
+=======
+                              "Ref": "ProfilesApiLambdaPUTprofilesid2024A88A"
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                             },
                             "qualifier": "$LATEST",
                             "maximumRetryAttempts": 0
@@ -1347,6 +1472,7 @@
                   "version": "2.24.0"
                 }
               },
+<<<<<<< HEAD
               "Route_PUT_--profiles--{id}": {
                 "id": "Route_PUT_--profiles--{id}",
                 "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}",
@@ -1358,6 +1484,33 @@
                       "Resource": {
                         "id": "Resource",
                         "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Integration_PUT_--profiles--{id}/Resource",
+=======
+<<<<<<< HEAD
+              "Route_GET_--profiles": {
+                "id": "Route_GET_--profiles",
+                "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles",
+                "children": {
+                  "Integration_GET_--profiles": {
+                    "id": "Integration_GET_--profiles",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Integration_GET_--profiles",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Integration_GET_--profiles/Resource",
+=======
+              "Route_PUT_--profiles--{id}": {
+                "id": "Route_PUT_--profiles--{id}",
+                "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}",
+                "children": {
+                  "Integration_PUT_--profiles--{id}": {
+                    "id": "Integration_PUT_--profiles--{id}",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Integration_PUT_--profiles--{id}",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Integration_PUT_--profiles--{id}/Resource",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
                           "aws:cdk:cloudformation:props": {
@@ -1367,7 +1520,15 @@
                             "integrationType": "AWS_PROXY",
                             "integrationUri": {
                               "Fn::GetAtt": [
+<<<<<<< HEAD
                                 "ProfilesApiLambdaPUTprofilesid2024A88A",
+=======
+<<<<<<< HEAD
+                                "ProfilesApiLambdaGETprofilesD7613302",
+=======
+                                "ProfilesApiLambdaPUTprofilesid2024A88A",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                                 "Arn"
                               ]
                             },
@@ -1385,16 +1546,36 @@
                       "version": "2.24.0-alpha.0"
                     }
                   },
+<<<<<<< HEAD
                   "Integration_PUT_--profiles--{id}-Permission": {
                     "id": "Integration_PUT_--profiles--{id}-Permission",
                     "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Integration_PUT_--profiles--{id}-Permission",
+=======
+<<<<<<< HEAD
+                  "Integration_GET_--profiles-Permission": {
+                    "id": "Integration_GET_--profiles-Permission",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Integration_GET_--profiles-Permission",
+=======
+                  "Integration_PUT_--profiles--{id}-Permission": {
+                    "id": "Integration_PUT_--profiles--{id}-Permission",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Integration_PUT_--profiles--{id}-Permission",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                       "aws:cdk:cloudformation:props": {
                         "action": "lambda:InvokeFunction",
                         "functionName": {
                           "Fn::GetAtt": [
+<<<<<<< HEAD
                             "ProfilesApiLambdaPUTprofilesid2024A88A",
+=======
+<<<<<<< HEAD
+                            "ProfilesApiLambdaGETprofilesD7613302",
+=======
+                            "ProfilesApiLambdaPUTprofilesid2024A88A",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                             "Arn"
                           ]
                         },
@@ -1411,7 +1592,7 @@
                               {
                                 "Ref": "ProfilesApi7EB07B3F"
                               },
-                              "/*/*/profiles/{id}"
+                              "/*/*/profiles"
                             ]
                           ]
                         }
@@ -1424,14 +1605,30 @@
                   },
                   "Resource": {
                     "id": "Resource",
+<<<<<<< HEAD
                     "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Resource",
+=======
+<<<<<<< HEAD
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles/Resource",
+=======
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_PUT_--profiles--{id}/Resource",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
                       "aws:cdk:cloudformation:props": {
                         "apiId": {
                           "Ref": "ProfilesApi7EB07B3F"
                         },
+<<<<<<< HEAD
                         "routeKey": "PUT /profiles/{id}",
+=======
+<<<<<<< HEAD
+                        "routeKey": "GET /profiles",
+=======
+                        "routeKey": "PUT /profiles/{id}",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                         "authorizationType": "NONE",
                         "target": {
                           "Fn::Join": [
@@ -1439,7 +1636,15 @@
                             [
                               "integrations/",
                               {
+<<<<<<< HEAD
                                 "Ref": "ProfilesApiRoutePUTprofilesidIntegrationPUTprofilesidE1E40722"
+=======
+<<<<<<< HEAD
+                                "Ref": "ProfilesApiRouteGETprofilesIntegrationGETprofiles54315FA6"
+=======
+                                "Ref": "ProfilesApiRoutePUTprofilesidIntegrationPUTprofilesidE1E40722"
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                               }
                             ]
                           ]
@@ -1457,6 +1662,7 @@
                   "version": "2.24.0-alpha.0"
                 }
               },
+<<<<<<< HEAD
               "Lambda_DELETE_--profiles--{id}": {
                 "id": "Lambda_DELETE_--profiles--{id}",
                 "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}",
@@ -1468,6 +1674,33 @@
                       "Resource": {
                         "id": "Resource",
                         "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/Resource",
+=======
+<<<<<<< HEAD
+              "Lambda_GET_--profiles--{id}": {
+                "id": "Lambda_GET_--profiles--{id}",
+                "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/ServiceRole/Resource",
+=======
+              "Lambda_DELETE_--profiles--{id}": {
+                "id": "Lambda_DELETE_--profiles--{id}",
+                "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/Resource",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                           "aws:cdk:cloudformation:props": {
@@ -1516,11 +1749,27 @@
                       },
                       "DefaultPolicy": {
                         "id": "DefaultPolicy",
+<<<<<<< HEAD
                         "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/DefaultPolicy",
                         "children": {
                           "Resource": {
                             "id": "Resource",
                             "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/DefaultPolicy/Resource",
+=======
+<<<<<<< HEAD
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/ServiceRole/DefaultPolicy/Resource",
+=======
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/ServiceRole/DefaultPolicy/Resource",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                               "aws:cdk:cloudformation:props": {
@@ -1565,10 +1814,24 @@
                                   ],
                                   "Version": "2012-10-17"
                                 },
+<<<<<<< HEAD
                                 "policyName": "ProfilesApiLambdaDELETEprofilesidServiceRoleDefaultPolicy4A6E74DB",
                                 "roles": [
                                   {
                                     "Ref": "ProfilesApiLambdaDELETEprofilesidServiceRole05F0F7CC"
+=======
+<<<<<<< HEAD
+                                "policyName": "ProfilesApiLambdaGETprofilesidServiceRoleDefaultPolicyC55E7D45",
+                                "roles": [
+                                  {
+                                    "Ref": "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B"
+=======
+                                "policyName": "ProfilesApiLambdaDELETEprofilesidServiceRoleDefaultPolicy4A6E74DB",
+                                "roles": [
+                                  {
+                                    "Ref": "ProfilesApiLambdaDELETEprofilesidServiceRole05F0F7CC"
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                                   }
                                 ]
                               }
@@ -1592,11 +1855,27 @@
                   },
                   "Code": {
                     "id": "Code",
+<<<<<<< HEAD
                     "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Code",
                     "children": {
                       "Stage": {
                         "id": "Stage",
                         "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Code/Stage",
+=======
+<<<<<<< HEAD
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/Code/Stage",
+=======
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Code/Stage",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.AssetStaging",
                           "version": "2.24.0"
@@ -1604,7 +1883,15 @@
                       },
                       "AssetBucket": {
                         "id": "AssetBucket",
+<<<<<<< HEAD
                         "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Code/AssetBucket",
+=======
+<<<<<<< HEAD
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/Code/AssetBucket",
+=======
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Code/AssetBucket",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                           "version": "2.24.0"
@@ -1618,7 +1905,15 @@
                   },
                   "Resource": {
                     "id": "Resource",
+<<<<<<< HEAD
                     "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Resource",
+=======
+<<<<<<< HEAD
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/Resource",
+=======
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/Resource",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                       "aws:cdk:cloudformation:props": {
@@ -1628,7 +1923,15 @@
                         },
                         "role": {
                           "Fn::GetAtt": [
+<<<<<<< HEAD
                             "ProfilesApiLambdaDELETEprofilesidServiceRole05F0F7CC",
+=======
+<<<<<<< HEAD
+                            "ProfilesApiLambdaGETprofilesidServiceRole0CD13A4B",
+=======
+                            "ProfilesApiLambdaDELETEprofilesidServiceRole05F0F7CC",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                             "Arn"
                           ]
                         },
@@ -1638,10 +1941,24 @@
                               "Fn::ImportValue": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
                             },
                             "SST_DEBUG_SRC_PATH": "backend",
+<<<<<<< HEAD
                             "SST_DEBUG_SRC_HANDLER": "profiles/deleteProfile.main",
                             "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
                             "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
                             "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_DELETE_-profiles-{id}",
+=======
+<<<<<<< HEAD
+                            "SST_DEBUG_SRC_HANDLER": "profiles/getProfile.main",
+                            "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
+                            "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
+                            "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}",
+=======
+                            "SST_DEBUG_SRC_HANDLER": "profiles/deleteProfile.main",
+                            "SST_DEBUG_ENDPOINT": "wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev",
+                            "SST_DEBUG_BUCKET_NAME": "dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92",
+                            "SST_FUNCTION_ID": "dev-RMR-ApiStack-ProfilesApi-Lambda_DELETE_-profiles-{id}",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
                             "SST_DEBUG_IS_API_ROUTE": "1"
                           }
@@ -1675,16 +1992,40 @@
                   },
                   "EventInvokeConfig": {
                     "id": "EventInvokeConfig",
+<<<<<<< HEAD
                     "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/EventInvokeConfig",
                     "children": {
                       "Resource": {
                         "id": "Resource",
                         "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/EventInvokeConfig/Resource",
+=======
+<<<<<<< HEAD
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/EventInvokeConfig",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_GET_--profiles--{id}/EventInvokeConfig/Resource",
+=======
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/EventInvokeConfig",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Lambda_DELETE_--profiles--{id}/EventInvokeConfig/Resource",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::Lambda::EventInvokeConfig",
                           "aws:cdk:cloudformation:props": {
                             "functionName": {
+<<<<<<< HEAD
                               "Ref": "ProfilesApiLambdaDELETEprofilesidD07786D7"
+=======
+<<<<<<< HEAD
+                              "Ref": "ProfilesApiLambdaGETprofilesidD4146CB6"
+=======
+                              "Ref": "ProfilesApiLambdaDELETEprofilesidD07786D7"
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                             },
                             "qualifier": "$LATEST",
                             "maximumRetryAttempts": 0
@@ -1707,6 +2048,7 @@
                   "version": "2.24.0"
                 }
               },
+<<<<<<< HEAD
               "Route_DELETE_--profiles--{id}": {
                 "id": "Route_DELETE_--profiles--{id}",
                 "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}",
@@ -1718,6 +2060,33 @@
                       "Resource": {
                         "id": "Resource",
                         "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Integration_DELETE_--profiles--{id}/Resource",
+=======
+<<<<<<< HEAD
+              "Route_GET_--profiles--{id}": {
+                "id": "Route_GET_--profiles--{id}",
+                "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}",
+                "children": {
+                  "Integration_GET_--profiles--{id}": {
+                    "id": "Integration_GET_--profiles--{id}",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Integration_GET_--profiles--{id}",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Integration_GET_--profiles--{id}/Resource",
+=======
+              "Route_DELETE_--profiles--{id}": {
+                "id": "Route_DELETE_--profiles--{id}",
+                "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}",
+                "children": {
+                  "Integration_DELETE_--profiles--{id}": {
+                    "id": "Integration_DELETE_--profiles--{id}",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Integration_DELETE_--profiles--{id}",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Integration_DELETE_--profiles--{id}/Resource",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
                           "aws:cdk:cloudformation:props": {
@@ -1727,7 +2096,15 @@
                             "integrationType": "AWS_PROXY",
                             "integrationUri": {
                               "Fn::GetAtt": [
+<<<<<<< HEAD
                                 "ProfilesApiLambdaDELETEprofilesidD07786D7",
+=======
+<<<<<<< HEAD
+                                "ProfilesApiLambdaGETprofilesidD4146CB6",
+=======
+                                "ProfilesApiLambdaDELETEprofilesidD07786D7",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                                 "Arn"
                               ]
                             },
@@ -1745,16 +2122,36 @@
                       "version": "2.24.0-alpha.0"
                     }
                   },
+<<<<<<< HEAD
                   "Integration_DELETE_--profiles--{id}-Permission": {
                     "id": "Integration_DELETE_--profiles--{id}-Permission",
                     "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Integration_DELETE_--profiles--{id}-Permission",
+=======
+<<<<<<< HEAD
+                  "Integration_GET_--profiles--{id}-Permission": {
+                    "id": "Integration_GET_--profiles--{id}-Permission",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Integration_GET_--profiles--{id}-Permission",
+=======
+                  "Integration_DELETE_--profiles--{id}-Permission": {
+                    "id": "Integration_DELETE_--profiles--{id}-Permission",
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Integration_DELETE_--profiles--{id}-Permission",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                       "aws:cdk:cloudformation:props": {
                         "action": "lambda:InvokeFunction",
                         "functionName": {
                           "Fn::GetAtt": [
+<<<<<<< HEAD
                             "ProfilesApiLambdaDELETEprofilesidD07786D7",
+=======
+<<<<<<< HEAD
+                            "ProfilesApiLambdaGETprofilesidD4146CB6",
+=======
+                            "ProfilesApiLambdaDELETEprofilesidD07786D7",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                             "Arn"
                           ]
                         },
@@ -1784,14 +2181,30 @@
                   },
                   "Resource": {
                     "id": "Resource",
+<<<<<<< HEAD
                     "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Resource",
+=======
+<<<<<<< HEAD
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_GET_--profiles--{id}/Resource",
+=======
+                    "path": "dev-RMR-ApiStack/ProfilesApi/Route_DELETE_--profiles--{id}/Resource",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
                       "aws:cdk:cloudformation:props": {
                         "apiId": {
                           "Ref": "ProfilesApi7EB07B3F"
                         },
+<<<<<<< HEAD
                         "routeKey": "DELETE /profiles/{id}",
+=======
+<<<<<<< HEAD
+                        "routeKey": "GET /profiles/{id}",
+=======
+                        "routeKey": "DELETE /profiles/{id}",
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                         "authorizationType": "NONE",
                         "target": {
                           "Fn::Join": [
@@ -1799,7 +2212,15 @@
                             [
                               "integrations/",
                               {
+<<<<<<< HEAD
                                 "Ref": "ProfilesApiRouteDELETEprofilesidIntegrationDELETEprofilesidCAE5CC8B"
+=======
+<<<<<<< HEAD
+                                "Ref": "ProfilesApiRouteGETprofilesidIntegrationGETprofilesidED893D9B"
+=======
+                                "Ref": "ProfilesApiRouteDELETEprofilesidIntegrationDELETEprofilesidCAE5CC8B"
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
                               }
                             ]
                           ]

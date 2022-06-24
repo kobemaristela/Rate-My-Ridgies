@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 [{"bundle":{"format":"esm"},"handler":"profiles/createProfile.main","runtime":"nodejs16.x","srcPath":"backend"},{"bundle":{"format":"esm"},"handler":"profiles/getProfile.main","runtime":"nodejs16.x","srcPath":"backend"},{"bundle":{"format":"esm"},"handler":"profiles/updateProfile.main","runtime":"nodejs16.x","srcPath":"backend"},{"bundle":{"format":"esm"},"handler":"profiles/deleteProfile.main","runtime":"nodejs16.x","srcPath":"backend"}]
+=======
+<<<<<<< HEAD
+[{"bundle":{"format":"esm"},"handler":"profiles/createProfile.main","runtime":"nodejs16.x","srcPath":"backend"},{"bundle":{"format":"esm"},"handler":"profiles/getProfileList.main","runtime":"nodejs16.x","srcPath":"backend"},{"bundle":{"format":"esm"},"handler":"profiles/getProfile.main","runtime":"nodejs16.x","srcPath":"backend"}]
+=======
+[{"bundle":{"format":"esm"},"handler":"profiles/createProfile.main","runtime":"nodejs16.x","srcPath":"backend"},{"bundle":{"format":"esm"},"handler":"profiles/getProfile.main","runtime":"nodejs16.x","srcPath":"backend"},{"bundle":{"format":"esm"},"handler":"profiles/updateProfile.main","runtime":"nodejs16.x","srcPath":"backend"},{"bundle":{"format":"esm"},"handler":"profiles/deleteProfile.main","runtime":"nodejs16.x","srcPath":"backend"}]
+>>>>>>> 55678ac (deal with dynamo keywords)
+>>>>>>> cf2b96b73186ce40c0166ab37223d511679123d5
