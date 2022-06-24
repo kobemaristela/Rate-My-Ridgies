@@ -25,16 +25,11 @@ export const main = handler(async (event) => {
     }
 
     // Error Catching
-    db = await dynamoDb.scan(params); 
+    const db = await dynamoDb.scan(params); 
     if(!db.Items){
         console.log("Database not cleared | " + db.Items)
         throw "Error: Database not cleared"
     }
-
-
-
-    // await dynamoDb.deleteTable(del);
-    // await dynamoDb.createTable(create)
 
     return { status: true };
 });
