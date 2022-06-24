@@ -27,7 +27,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::215957796486:role/cdk-hnb659fds-deploy-role-215957796486-us-west-2",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::215957796486:role/cdk-hnb659fds-cfn-exec-role-215957796486-us-west-2",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-215957796486-us-west-2/87a51c63dc2d4d3ff56ce7e3d5e5e6238e11cd3eb9bd8af636b214ce5798efd4.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-215957796486-us-west-2/4fe0c65261e36102b9affc6f8c7832dec8e2a4310846299d79fef881412424bf.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -64,24 +64,62 @@
             "data": "SSTMetadata"
           }
         ],
-        "/dev-RMR-StorageStack/Uploads/Bucket/Resource": [
+        "/dev-RMR-StorageStack/Photos/Bucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "UploadsBucketC4B27CC7"
+            "data": "PhotosBucket4131342A"
           }
         ],
-        "/dev-RMR-StorageStack/Profile/Table": [
+        "/dev-RMR-StorageStack/Profiles/Table": [
           {
             "type": "aws:cdk:hasPhysicalName",
             "data": {
-              "Ref": "ProfileTable1E6F6C62"
+              "Ref": "ProfilesTable43079065"
             }
           }
         ],
-        "/dev-RMR-StorageStack/Profile/Table/Resource": [
+        "/dev-RMR-StorageStack/Profiles/Table/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "ProfileTable1E6F6C62"
+            "data": "ProfilesTable43079065"
+          }
+        ],
+        "/dev-RMR-StorageStack/Reviews/Table": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "ReviewsTable854B2DAD"
+            }
+          }
+        ],
+        "/dev-RMR-StorageStack/Reviews/Table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReviewsTable854B2DAD"
+          }
+        ],
+        "/dev-RMR-StorageStack/Exports/Output{\"Fn::GetAtt\":[\"ProfilesTable43079065\",\"Arn\"]}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850"
+          }
+        ],
+        "/dev-RMR-StorageStack/Exports/Output{\"Ref\":\"ProfilesTable43079065\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefProfilesTable43079065AF0BFE3F"
+          }
+        ],
+        "/dev-RMR-StorageStack/Exports/Output{\"Fn::GetAtt\":[\"ReviewsTable854B2DAD\",\"Arn\"]}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2"
+          }
+        ],
+        "/dev-RMR-StorageStack/Exports/Output{\"Ref\":\"ReviewsTable854B2DAD\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefReviewsTable854B2DAD5D6B8FD5"
           }
         ],
         "/dev-RMR-StorageStack/BootstrapVersion": [
@@ -98,6 +136,205 @@
         ]
       },
       "displayName": "dev-RMR-StorageStack"
+    },
+    "dev-RMR-ApiStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "dev-RMR-ApiStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "dev-RMR-ApiStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://215957796486/us-west-2",
+      "properties": {
+        "templateFile": "dev-RMR-ApiStack.template.json",
+        "tags": {
+          "sst:app": "RMR",
+          "sst:stage": "dev"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::215957796486:role/cdk-hnb659fds-deploy-role-215957796486-us-west-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::215957796486:role/cdk-hnb659fds-cfn-exec-role-215957796486-us-west-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-215957796486-us-west-2/a6f0dc77a34f22fe275aa879e02b75fb87635fc5a4b139aea63836c9348b55b6.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "dev-RMR-ApiStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::215957796486:role/cdk-hnb659fds-lookup-role-215957796486-us-west-2",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "dev-RMR-StorageStack",
+        "dev-RMR-ApiStack.assets"
+      ],
+      "metadata": {
+        "/dev-RMR-ApiStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "sst:app",
+                "Value": "RMR"
+              },
+              {
+                "Key": "sst:stage",
+                "Value": "dev"
+              }
+            ]
+          }
+        ],
+        "/dev-RMR-ApiStack/SSTMetadata": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSTMetadata"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApi7EB07B3F"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Api/DefaultStage/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiDefaultStage03EFC3DC"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLogGroupA902C092"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_POST_--profiles/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaPOSTprofilesServiceRoleDEA45234"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_POST_--profiles/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaPOSTprofilesServiceRoleDefaultPolicy2E3F0FF6"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_POST_--profiles/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaPOSTprofilesEE603927"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Lambda_POST_--profiles/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiLambdaPOSTprofilesEventInvokeConfig2130586D"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Route_POST_--profiles/Integration_POST_--profiles/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiRoutePOSTprofilesIntegrationPOSTprofilesFF12C094"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Route_POST_--profiles/Integration_POST_--profiles-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiRoutePOSTprofilesIntegrationPOSTprofilesPermissionBDB52DF6"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApi/Route_POST_--profiles/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiRoutePOSTprofiles9323EE43"
+          }
+        ],
+        "/dev-RMR-ApiStack/ReviewsApi/Api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReviewsApi00BAD234"
+          }
+        ],
+        "/dev-RMR-ApiStack/ReviewsApi/Api/DefaultStage/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReviewsApiDefaultStageA3125BDC"
+          }
+        ],
+        "/dev-RMR-ApiStack/ReviewsApi/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReviewsApiLogGroupA9FE9D0D"
+          }
+        ],
+        "/dev-RMR-ApiStack/ReviewsApi/Lambda_POST_--reviews/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReviewsApiLambdaPOSTreviewsServiceRole2699BC75"
+          }
+        ],
+        "/dev-RMR-ApiStack/ReviewsApi/Lambda_POST_--reviews/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReviewsApiLambdaPOSTreviewsServiceRoleDefaultPolicyB43F45AE"
+          }
+        ],
+        "/dev-RMR-ApiStack/ReviewsApi/Lambda_POST_--reviews/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReviewsApiLambdaPOSTreviews577FF643"
+          }
+        ],
+        "/dev-RMR-ApiStack/ReviewsApi/Lambda_POST_--reviews/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReviewsApiLambdaPOSTreviewsEventInvokeConfig8E5D9B95"
+          }
+        ],
+        "/dev-RMR-ApiStack/ReviewsApi/Route_POST_--reviews/Integration_POST_--reviews/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReviewsApiRoutePOSTreviewsIntegrationPOSTreviews012C0498"
+          }
+        ],
+        "/dev-RMR-ApiStack/ReviewsApi/Route_POST_--reviews/Integration_POST_--reviews-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReviewsApiRoutePOSTreviewsIntegrationPOSTreviewsPermission406BC86B"
+          }
+        ],
+        "/dev-RMR-ApiStack/ReviewsApi/Route_POST_--reviews/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReviewsApiRoutePOSTreviews7D4D56B3"
+          }
+        ],
+        "/dev-RMR-ApiStack/ProfilesApiEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProfilesApiEndpoint"
+          }
+        ],
+        "/dev-RMR-ApiStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/dev-RMR-ApiStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "dev-RMR-ApiStack"
     }
   }
 }
