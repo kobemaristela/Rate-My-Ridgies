@@ -4,12 +4,6 @@ import dynamoDb from "../util/dynamodb";
 export const main = handler(async () => {
   const params = {
     TableName: process.env.TABLE_NAME,
-
-    KeyConditionExpression: "profileName = :profileName",
-
-    ExpressionAttributeValues: {
-      ":profileName": "*",
-    },
   };
 
   const result = await dynamoDb.query(params);
