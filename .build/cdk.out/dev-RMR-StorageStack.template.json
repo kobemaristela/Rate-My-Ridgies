@@ -7,26 +7,38 @@
     "sst:version": "1.2.20",
     "sst:constructs": [
      {
-      "id": "Uploads",
-      "addr": "c823369913fbb9060e06f7228644691c2e90635727",
+      "id": "Photos",
+      "addr": "c87ba073e4a15d934642a3aaf5c89ce796c7ca0bc3",
       "stack": "dev-RMR-StorageStack",
       "type": "Bucket",
       "data": {
        "name": {
-        "Ref": "UploadsBucketC4B27CC7"
+        "Ref": "PhotosBucket4131342A"
        },
        "notifications": [],
        "notificationNames": []
       }
      },
      {
-      "id": "Profile",
-      "addr": "c8ffcdb143272e7bd0440518cf177eb46f61694eee",
+      "id": "Profiles",
+      "addr": "c8a6c2721e285bf4ac63deb145f62326d28ac4cc12",
       "stack": "dev-RMR-StorageStack",
       "type": "Table",
       "data": {
        "tableName": {
-        "Ref": "ProfileTable1E6F6C62"
+        "Ref": "ProfilesTable43079065"
+       },
+       "consumers": []
+      }
+     },
+     {
+      "id": "Reviews",
+      "addr": "c8f228ea1767577df2034a9c0ea3ed6ce6610cc6e9",
+      "stack": "dev-RMR-StorageStack",
+      "type": "Table",
+      "data": {
+       "tableName": {
+        "Ref": "ReviewsTable854B2DAD"
        },
        "consumers": []
       }
@@ -34,7 +46,7 @@
     ]
    }
   },
-  "UploadsBucketC4B27CC7": {
+  "PhotosBucket4131342A": {
    "Type": "AWS::S3::Bucket",
    "Properties": {
     "Tags": [
@@ -51,29 +63,21 @@
    "UpdateReplacePolicy": "Retain",
    "DeletionPolicy": "Retain",
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-StorageStack/Uploads/Bucket/Resource"
+    "aws:cdk:path": "dev-RMR-StorageStack/Photos/Bucket/Resource"
    }
   },
-  "ProfileTable1E6F6C62": {
+  "ProfilesTable43079065": {
    "Type": "AWS::DynamoDB::Table",
    "Properties": {
     "KeySchema": [
      {
       "AttributeName": "profileId",
       "KeyType": "HASH"
-     },
-     {
-      "AttributeName": "reviewId",
-      "KeyType": "RANGE"
      }
     ],
     "AttributeDefinitions": [
      {
       "AttributeName": "profileId",
-      "AttributeType": "S"
-     },
-     {
-      "AttributeName": "reviewId",
       "AttributeType": "S"
      }
     ],
@@ -81,7 +85,7 @@
     "PointInTimeRecoverySpecification": {
      "PointInTimeRecoveryEnabled": true
     },
-    "TableName": "dev-RMR-Profile",
+    "TableName": "dev-RMR-Profiles",
     "Tags": [
      {
       "Key": "sst:app",
@@ -96,7 +100,84 @@
    "UpdateReplacePolicy": "Retain",
    "DeletionPolicy": "Retain",
    "Metadata": {
-    "aws:cdk:path": "dev-RMR-StorageStack/Profile/Table/Resource"
+    "aws:cdk:path": "dev-RMR-StorageStack/Profiles/Table/Resource"
+   }
+  },
+  "ReviewsTable854B2DAD": {
+   "Type": "AWS::DynamoDB::Table",
+   "Properties": {
+    "KeySchema": [
+     {
+      "AttributeName": "reviewId",
+      "KeyType": "HASH"
+     }
+    ],
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "reviewId",
+      "AttributeType": "S"
+     }
+    ],
+    "BillingMode": "PAY_PER_REQUEST",
+    "PointInTimeRecoverySpecification": {
+     "PointInTimeRecoveryEnabled": true
+    },
+    "TableName": "dev-RMR-Reviews",
+    "Tags": [
+     {
+      "Key": "sst:app",
+      "Value": "RMR"
+     },
+     {
+      "Key": "sst:stage",
+      "Value": "dev"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "dev-RMR-StorageStack/Reviews/Table/Resource"
+   }
+  }
+ },
+ "Outputs": {
+  "ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850": {
+   "Value": {
+    "Fn::GetAtt": [
+     "ProfilesTable43079065",
+     "Arn"
+    ]
+   },
+   "Export": {
+    "Name": "dev-RMR-StorageStack:ExportsOutputFnGetAttProfilesTable43079065Arn0EE96850"
+   }
+  },
+  "ExportsOutputRefProfilesTable43079065AF0BFE3F": {
+   "Value": {
+    "Ref": "ProfilesTable43079065"
+   },
+   "Export": {
+    "Name": "dev-RMR-StorageStack:ExportsOutputRefProfilesTable43079065AF0BFE3F"
+   }
+  },
+  "ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2": {
+   "Value": {
+    "Fn::GetAtt": [
+     "ReviewsTable854B2DAD",
+     "Arn"
+    ]
+   },
+   "Export": {
+    "Name": "dev-RMR-StorageStack:ExportsOutputFnGetAttReviewsTable854B2DADArn2DB3DAE2"
+   }
+  },
+  "ExportsOutputRefReviewsTable854B2DAD5D6B8FD5": {
+   "Value": {
+    "Ref": "ReviewsTable854B2DAD"
+   },
+   "Export": {
+    "Name": "dev-RMR-StorageStack:ExportsOutputRefReviewsTable854B2DAD5D6B8FD5"
    }
   }
  },

@@ -1,0 +1,2 @@
+{"id":"dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles","handler":"backend/profiles/functions/create.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"/Users/kobe.maristela/Desktop/RMR"}
+{"id":"dev-RMR-ApiStack-ReviewsApi-Lambda_POST_-reviews","handler":"backend/reviews/functions/create.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"/Users/kobe.maristela/Desktop/RMR"}
