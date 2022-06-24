@@ -39,8 +39,8 @@ export function ApiStack({ stack, app }) {
       "POST /reviews": "reviews/createReview.main",
       
       "GET /reviews/{id}": "reviews/getReview.main",
-      "DELETE /reviews/{id}": "reviews/deleteReview.main",
       "PUT /reviews/{id}": "reviews/updateReview.main",
+      // "DELETE /reviews/{id}": "reviews/deleteReview.main",
     },
   });
 
