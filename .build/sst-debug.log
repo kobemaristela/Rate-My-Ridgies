@@ -6073,3 +6073,7 @@ SyntaxError: /Users/kobe.maristela/Desktop/RMR/.build/sst-merged.json: Unexpecte
 
 [2022-06-24T16:18:35.454] [TRACE] cdk - [31mSubprocess exited with error 1[39m
 
+[2022-06-24T16:21:12.296] [WARN] client - A new debug session has been started. This session will be closed...
+[2022-06-24T16:21:12.383] [DEBUG] websocket - Websocket connection closed { code: 4901, reason: <Buffer > }
+[2022-06-24T16:21:12.384] [DEBUG] websocket - Websocket connection closed due to new client connected
+[2022-06-24T16:23:47.855] [DEBUG] default - File changed:  [ '/Users/kobe.maristela/Desktop/RMR/backend/reviews/deleteReview.js' ]
