@@ -1,21 +1,31 @@
 import handler from "../util/handler";
 import dynamoDb from "../util/dynamodb";
 
+// { "reviewBody" : "This is a change to the review" }
 export const main = handler(async (event) => {
     const data = JSON.parse(event.body);
+
+    const keys = Object.keys(data);
+
+    // check to make sure only changing body or likes
+    keys.forEach((key) => {
+        if (key !== "reviewBody" || key !== "likes"){
+            throw "ERROR: Only allowed to change body and num likes"
+        };
+    })
+
     const params = {
         TableName: process.env.TABLE_NAME,
         // 'Key' defines the partition key and sort key of the item to be updated
         Key: {
-            profileId: event.pathParameters.id, // The id of the note from the path
+            reviewId: event.pathParameters.id, // The id of the note from the path
         },
         // 'UpdateExpression' defines the attributes to be updated
         // 'ExpressionAttributeValues' defines the value in the update expression
-        UpdateExpression: "SET profileName = :profileName, profileRole = :profileRole, photo = :photo",
+        UpdateExpression: "SET reviewBody = :reviewBody, likes = :likes",
         ExpressionAttributeValues: {
-            ":profileName": data.profileName || null,
-            ":profileRole": data.profileRole || null,
-            ":photo": data.photo || null,
+            ":reviewBody": data.reviewBody || null,
+            ":likes": data.likes || null,
         },
         // 'ReturnValues' specifies if and how to return the item's attributes,
         // where ALL_NEW returns all attributes of the item after the update; you
