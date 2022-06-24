@@ -4039,3 +4039,573 @@ Stack dev-RMR-ApiStack
 [2022-06-24T13:31:36.097] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
 [2022-06-24T13:31:36.097] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}
 [2022-06-24T13:31:36.097] [INFO] client - [90mStacks: No changes to deploy.[39m
+[2022-06-24T13:36:01.123] [INFO] client - [90mStacks: Building changes...[39m
+[2022-06-24T13:36:01.132] [DEBUG] default - synth {
+  app: 'node .build/run.mjs',
+  output: '.build/cdk.out',
+  rollback: true,
+  roleArn: undefined,
+  verbose: 0,
+  noColor: false
+}
+[2022-06-24T13:36:01.141] [INFO] client - [90mStacks: Synthesizing changes...[39m
+[2022-06-24T13:36:05.467] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/michael.moschitto/Desktop/RateMyRidgeliners/.build/cdk.out[39m[32m[39m
+
+[2022-06-24T13:36:05.467] [TRACE] cdk - Supply a stack id ([32mdev-RMR-StorageStack[39m, [32mdev-RMR-ApiStack[39m) to display its template.
+
+[2022-06-24T13:36:05.473] [TRACE] cdk - 
+
+[2022-06-24T13:36:05.513] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:36:05.513] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}
+[2022-06-24T13:36:05.514] [INFO] client - [90mStacks: No changes to deploy.[39m
+[2022-06-24T13:36:14.855] [DEBUG] default - File changed:  [
+  '/Users/michael.moschitto/Desktop/RateMyRidgeliners/backend/profiles/functions/get.js'
+]
+[2022-06-24T13:36:14.858] [INFO] client - [90mFunctions: Building backend profiles/functions/get.main...[39m
+[2022-06-24T13:36:15.102] [INFO] client - [90mFunctions: Done building backend profiles/functions/get.main (245ms)[39m
+[2022-06-24T13:36:15.103] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}
+[2022-06-24T13:36:29.841] [INFO] client - [90mStacks: Building changes...[39m
+[2022-06-24T13:36:29.848] [DEBUG] default - synth {
+  app: 'node .build/run.mjs',
+  output: '.build/cdk.out',
+  rollback: true,
+  roleArn: undefined,
+  verbose: 0,
+  noColor: false
+}
+[2022-06-24T13:36:29.857] [INFO] client - [90mStacks: Synthesizing changes...[39m
+[2022-06-24T13:36:32.806] [INFO] client - [90mStacks: Synthesizing changes...[39m
+[2022-06-24T13:36:34.399] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/michael.moschitto/Desktop/RateMyRidgeliners/.build/cdk.out[39m[32m[39m
+
+[2022-06-24T13:36:34.399] [TRACE] cdk - Supply a stack id ([32mdev-RMR-StorageStack[39m, [32mdev-RMR-ApiStack[39m) to display its template.
+
+[2022-06-24T13:36:34.406] [TRACE] cdk - 
+
+[2022-06-24T13:36:34.463] [INFO] client - [90mStacks: Building changes...[39m
+[2022-06-24T13:36:34.471] [DEBUG] default - synth {
+  app: 'node .build/run.mjs',
+  output: '.build/cdk.out',
+  rollback: true,
+  roleArn: undefined,
+  verbose: 0,
+  noColor: false
+}
+[2022-06-24T13:36:34.488] [INFO] client - [90mStacks: Synthesizing changes...[39m
+[2022-06-24T13:36:38.892] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/michael.moschitto/Desktop/RateMyRidgeliners/.build/cdk.out[39m[32m[39m
+
+[2022-06-24T13:36:38.893] [TRACE] cdk - Supply a stack id ([32mdev-RMR-StorageStack[39m, [32mdev-RMR-ApiStack[39m) to display its template.
+
+[2022-06-24T13:36:38.899] [TRACE] cdk - 
+
+[2022-06-24T13:36:38.948] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:36:38.948] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_GET_-profiles-{id}
+[2022-06-24T13:36:38.948] [INFO] client - [90mStacks: No changes to deploy.[39m
+[2022-06-24T13:41:51.624] [INFO] client - [90m6e73bc36-255a-4eac-a0ba-483129ec4eaf REQUEST dev-RMR-ApiStack-ProfilesApiLambdaPOSTprofilesEE60-85qQUU0pjiJi [profiles/functions/create.main] invoked by API POST /profiles[39m
+[2022-06-24T13:41:51.627] [DEBUG] client - Invoking local function...
+[2022-06-24T13:41:51.628] [DEBUG] client - Triggering {
+  id: 'dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles',
+  handler: 'profiles/functions/create.main',
+  runtime: 'nodejs16.x',
+  srcPath: 'backend',
+  bundle: { format: 'esm' },
+  root: '/Users/michael.moschitto/Desktop/RateMyRidgeliners'
+}
+[2022-06-24T13:41:51.629] [DEBUG] client - Spawning {
+  command: '/usr/local/bin/node',
+  args: [
+    '/Users/michael.moschitto/Desktop/RateMyRidgeliners/node_modules/@serverless-stack/aws-lambda-ric/bin/index.js',
+    '/Users/michael.moschitto/Desktop/RateMyRidgeliners/.sst/artifacts/dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles/backend/profiles/functions/create.main'
+  ],
+  env: { AWS_LAMBDA_NODEJS_USE_ALTERNATIVE_CLIENT_1: 'true' }
+}
+[2022-06-24T13:41:52.034] [DEBUG] client - Worker waiting for function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:41:52.034] [DEBUG] client - Sending next payload 6e73bc36-255a-4eac-a0ba-483129ec4eaf dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles {
+  version: '2.0',
+  routeKey: 'POST /profiles',
+  rawPath: '/profiles',
+  rawQueryString: '',
+  headers: {
+    accept: '*/*',
+    'accept-encoding': 'gzip, deflate, br',
+    'accept-language': 'en-US,en;q=0.9',
+    'content-length': '33',
+    'content-type': 'text/plain;charset=UTF-8',
+    host: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
+    origin: 'https://console.serverless-stack.com',
+    referer: 'https://console.serverless-stack.com/',
+    'sec-ch-ua': '".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"macOS"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'cross-site',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+    'x-amzn-trace-id': 'Root=1-62b6218e-68b97d2b47d536e767d5fd13',
+    'x-forwarded-for': '163.116.139.116',
+    'x-forwarded-port': '443',
+    'x-forwarded-proto': 'https'
+  },
+  requestContext: {
+    accountId: '215957796486',
+    apiId: 'u4g7ienpbd',
+    domainName: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
+    domainPrefix: 'u4g7ienpbd',
+    http: {
+      method: 'POST',
+      path: '/profiles',
+      protocol: 'HTTP/1.1',
+      sourceIp: '163.116.139.116',
+      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+    },
+    requestId: 'UPouSjmcPHcEPtQ=',
+    routeKey: 'POST /profiles',
+    stage: '$default',
+    time: '24/Jun/2022:20:41:50 +0000',
+    timeEpoch: 1656103310493
+  },
+  body: '{"name" : "mike", "role" : "P&E"}',
+  isBase64Encoded: false
+}
+[2022-06-24T13:41:52.700] [DEBUG] client - Received response for 6e73bc36-255a-4eac-a0ba-483129ec4eaf dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:41:52.701] [DEBUG] client - Response {
+  type: 'success',
+  data: {
+    statusCode: 200,
+    body: '{"profileId":"13c2a990-f3fe-11ec-8d19-ff3d7a1ad505","role":"P&E","profileName":"mike","likes":0,"createdAt":1656103312041}',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true
+    }
+  }
+}
+[2022-06-24T13:41:52.701] [INFO] client - [90m6e73bc36-255a-4eac-a0ba-483129ec4eaf RESPONSE {"statusCode":200,"body":"{\"profileId\":\"13c2a990-f3fe-11ec-8d19-ff3d7a1ad505\",\"role\":\"P&E\",\"profileName\":\"mike\",\"likes\":0,\"cre... 22 more characters","headers":{"Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":true}}[39m
+[2022-06-24T13:41:52.703] [DEBUG] client - Worker waiting for function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:42:46.699] [DEBUG] default - File changed:  [
+  '/Users/michael.moschitto/Desktop/RateMyRidgeliners/backend/profiles/functions/create.js'
+]
+[2022-06-24T13:42:46.703] [INFO] client - [90mFunctions: Building backend profiles/functions/create.main...[39m
+[2022-06-24T13:42:46.933] [INFO] client - [90mFunctions: Done building backend profiles/functions/create.main (232ms)[39m
+[2022-06-24T13:42:46.933] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:42:52.574] [INFO] client - [90m983a9cd1-7d33-4040-8733-082403dc8d47 REQUEST dev-RMR-ApiStack-ProfilesApiLambdaPOSTprofilesEE60-85qQUU0pjiJi [profiles/functions/create.main] invoked by API POST /profiles[39m
+[2022-06-24T13:42:52.576] [DEBUG] client - Invoking local function...
+[2022-06-24T13:42:52.578] [DEBUG] client - Triggering {
+  id: 'dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles',
+  handler: 'profiles/functions/create.main',
+  runtime: 'nodejs16.x',
+  srcPath: 'backend',
+  bundle: { format: 'esm' },
+  root: '/Users/michael.moschitto/Desktop/RateMyRidgeliners'
+}
+[2022-06-24T13:42:52.579] [DEBUG] client - Spawning {
+  command: '/usr/local/bin/node',
+  args: [
+    '/Users/michael.moschitto/Desktop/RateMyRidgeliners/node_modules/@serverless-stack/aws-lambda-ric/bin/index.js',
+    '/Users/michael.moschitto/Desktop/RateMyRidgeliners/.sst/artifacts/dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles/backend/profiles/functions/create.main'
+  ],
+  env: { AWS_LAMBDA_NODEJS_USE_ALTERNATIVE_CLIENT_1: 'true' }
+}
+[2022-06-24T13:42:52.974] [DEBUG] client - Worker waiting for function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:42:52.975] [DEBUG] client - Sending next payload 983a9cd1-7d33-4040-8733-082403dc8d47 dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles {
+  version: '2.0',
+  routeKey: 'POST /profiles',
+  rawPath: '/profiles',
+  rawQueryString: '',
+  headers: {
+    accept: '*/*',
+    'accept-encoding': 'gzip, deflate, br',
+    'accept-language': 'en-US,en;q=0.9',
+    'content-length': '31',
+    'content-type': 'text/plain;charset=UTF-8',
+    host: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
+    origin: 'https://console.serverless-stack.com',
+    referer: 'https://console.serverless-stack.com/',
+    'sec-ch-ua': '".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"macOS"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'cross-site',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+    'x-amzn-trace-id': 'Root=1-62b621cc-6c42c3392c1a13236cce7e2c',
+    'x-forwarded-for': '163.116.139.116',
+    'x-forwarded-port': '443',
+    'x-forwarded-proto': 'https'
+  },
+  requestContext: {
+    accountId: '215957796486',
+    apiId: 'u4g7ienpbd',
+    domainName: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
+    domainPrefix: 'u4g7ienpbd',
+    http: {
+      method: 'POST',
+      path: '/profiles',
+      protocol: 'HTTP/1.1',
+      sourceIp: '163.116.139.116',
+      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+    },
+    requestId: 'UPo3-jmRPHcEPRg=',
+    routeKey: 'POST /profiles',
+    stage: '$default',
+    time: '24/Jun/2022:20:42:52 +0000',
+    timeEpoch: 1656103372495
+  },
+  body: '{"name" : "mike", "role" : P&E}',
+  isBase64Encoded: false
+}
+[2022-06-24T13:42:52.983] [INFO] client - SyntaxError: Unexpected token P in JSON at position 27
+    at JSON.parse (<anonymous>)
+    at file:///Users/michael.moschitto/Desktop/RateMyRidgeliners/.sst/artifacts/dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles/backend/profiles/functions/create.js:619029:21
+    at Runtime.handler (file:///Users/michael.moschitto/Desktop/RateMyRidgeliners/.sst/artifacts/dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles/backend/profiles/functions/create.js:618998:20)
+    at Runtime.handleOnce (file:///Users/michael.moschitto/Desktop/RateMyRidgeliners/node_modules/@serverless-stack/aws-lambda-ric/lib/Runtime/Runtime.js:53:33)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-06-24T13:42:52.985] [DEBUG] client - Received response for 983a9cd1-7d33-4040-8733-082403dc8d47 dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:42:52.985] [DEBUG] client - Response {
+  type: 'success',
+  data: {
+    statusCode: 500,
+    body: '{"error":"Unexpected token P in JSON at position 27"}',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true
+    }
+  }
+}
+[2022-06-24T13:42:52.986] [INFO] client - [90m983a9cd1-7d33-4040-8733-082403dc8d47 RESPONSE {"statusCode":500,"body":"{\"error\":\"Unexpected token P in JSON at position 27\"}","headers":{"Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":true}}[39m
+[2022-06-24T13:42:52.987] [DEBUG] client - Worker waiting for function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:43:24.738] [INFO] client - [90ma3039dfc-5704-48fd-a857-52c7ebe0609f REQUEST dev-RMR-ApiStack-ProfilesApiLambdaPOSTprofilesEE60-85qQUU0pjiJi [profiles/functions/create.main] invoked by API POST /profiles[39m
+[2022-06-24T13:43:24.739] [DEBUG] client - Invoking local function...
+[2022-06-24T13:43:24.740] [DEBUG] client - Triggering {
+  id: 'dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles',
+  handler: 'profiles/functions/create.main',
+  runtime: 'nodejs16.x',
+  srcPath: 'backend',
+  bundle: { format: 'esm' },
+  root: '/Users/michael.moschitto/Desktop/RateMyRidgeliners'
+}
+[2022-06-24T13:43:24.740] [DEBUG] client - Sending next payload a3039dfc-5704-48fd-a857-52c7ebe0609f dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles {
+  version: '2.0',
+  routeKey: 'POST /profiles',
+  rawPath: '/profiles',
+  rawQueryString: '',
+  headers: {
+    accept: '*/*',
+    'accept-encoding': 'gzip, deflate, br',
+    'accept-language': 'en-US,en;q=0.9',
+    'content-length': '31',
+    'content-type': 'text/plain;charset=UTF-8',
+    host: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
+    origin: 'https://console.serverless-stack.com',
+    referer: 'https://console.serverless-stack.com/',
+    'sec-ch-ua': '".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"macOS"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'cross-site',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+    'x-amzn-trace-id': 'Root=1-62b621ec-059d102102858d48672dbfcc',
+    'x-forwarded-for': '163.116.139.116',
+    'x-forwarded-port': '443',
+    'x-forwarded-proto': 'https'
+  },
+  requestContext: {
+    accountId: '215957796486',
+    apiId: 'u4g7ienpbd',
+    domainName: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
+    domainPrefix: 'u4g7ienpbd',
+    http: {
+      method: 'POST',
+      path: '/profiles',
+      protocol: 'HTTP/1.1',
+      sourceIp: '163.116.139.116',
+      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+    },
+    requestId: 'UPo9AhHuPHcEP6Q=',
+    routeKey: 'POST /profiles',
+    stage: '$default',
+    time: '24/Jun/2022:20:43:24 +0000',
+    timeEpoch: 1656103404697
+  },
+  body: '{"name" : "mike", "role" : "0"}',
+  isBase64Encoded: false
+}
+[2022-06-24T13:43:25.162] [DEBUG] client - Received response for a3039dfc-5704-48fd-a857-52c7ebe0609f dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:43:25.163] [DEBUG] client - Response {
+  type: 'success',
+  data: {
+    statusCode: 200,
+    body: '{"profileId":"4b03dd70-f3fe-11ec-95f0-c72bce37db81","role":"0","profileName":"mike","likes":0,"createdAt":1656103404743}',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true
+    }
+  }
+}
+[2022-06-24T13:43:25.163] [INFO] client - [90ma3039dfc-5704-48fd-a857-52c7ebe0609f RESPONSE {"statusCode":200,"body":"{\"profileId\":\"4b03dd70-f3fe-11ec-95f0-c72bce37db81\",\"role\":\"0\",\"profileName\":\"mike\",\"likes\":0,\"creat... 20 more characters","headers":{"Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":true}}[39m
+[2022-06-24T13:43:25.164] [DEBUG] client - Worker waiting for function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:43:35.977] [INFO] client - [90me5365285-7c0b-451b-9c5a-e9e3e9562379 REQUEST dev-RMR-ApiStack-ProfilesApiLambdaPOSTprofilesEE60-85qQUU0pjiJi [profiles/functions/create.main] invoked by API POST /profiles[39m
+[2022-06-24T13:43:35.978] [DEBUG] client - Invoking local function...
+[2022-06-24T13:43:35.978] [DEBUG] client - Triggering {
+  id: 'dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles',
+  handler: 'profiles/functions/create.main',
+  runtime: 'nodejs16.x',
+  srcPath: 'backend',
+  bundle: { format: 'esm' },
+  root: '/Users/michael.moschitto/Desktop/RateMyRidgeliners'
+}
+[2022-06-24T13:43:35.979] [DEBUG] client - Sending next payload e5365285-7c0b-451b-9c5a-e9e3e9562379 dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles {
+  version: '2.0',
+  routeKey: 'POST /profiles',
+  rawPath: '/profiles',
+  rawQueryString: '',
+  headers: {
+    accept: '*/*',
+    'accept-encoding': 'gzip, deflate, br',
+    'accept-language': 'en-US,en;q=0.9',
+    'content-length': '29',
+    'content-type': 'text/plain;charset=UTF-8',
+    host: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
+    origin: 'https://console.serverless-stack.com',
+    referer: 'https://console.serverless-stack.com/',
+    'sec-ch-ua': '".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"macOS"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'cross-site',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+    'x-amzn-trace-id': 'Root=1-62b621f7-327c25781dc01f6003b4c7aa',
+    'x-forwarded-for': '163.116.139.116',
+    'x-forwarded-port': '443',
+    'x-forwarded-proto': 'https'
+  },
+  requestContext: {
+    accountId: '215957796486',
+    apiId: 'u4g7ienpbd',
+    domainName: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
+    domainPrefix: 'u4g7ienpbd',
+    http: {
+      method: 'POST',
+      path: '/profiles',
+      protocol: 'HTTP/1.1',
+      sourceIp: '163.116.139.116',
+      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+    },
+    requestId: 'UPo-xjXLPHcEPxQ=',
+    routeKey: 'POST /profiles',
+    stage: '$default',
+    time: '24/Jun/2022:20:43:35 +0000',
+    timeEpoch: 1656103415948
+  },
+  body: '{"name" : "mike", "role" : 0}',
+  isBase64Encoded: false
+}
+[2022-06-24T13:43:36.085] [DEBUG] client - Received response for e5365285-7c0b-451b-9c5a-e9e3e9562379 dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:43:36.085] [DEBUG] client - Response {
+  type: 'success',
+  data: {
+    statusCode: 200,
+    body: '{"profileId":"51b67ec0-f3fe-11ec-95f0-c72bce37db81","role":0,"profileName":"mike","likes":0,"createdAt":1656103415980}',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true
+    }
+  }
+}
+[2022-06-24T13:43:36.086] [INFO] client - [90me5365285-7c0b-451b-9c5a-e9e3e9562379 RESPONSE {"statusCode":200,"body":"{\"profileId\":\"51b67ec0-f3fe-11ec-95f0-c72bce37db81\",\"role\":0,\"profileName\":\"mike\",\"likes\":0,\"created... 18 more characters","headers":{"Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":true}}[39m
+[2022-06-24T13:43:36.086] [DEBUG] client - Worker waiting for function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:43:42.271] [INFO] client - [90m61a53e50-b82e-442c-b1ed-f2c64067c6b9 REQUEST dev-RMR-ApiStack-ProfilesApiLambdaPOSTprofilesEE60-85qQUU0pjiJi [profiles/functions/create.main] invoked by API POST /profiles[39m
+[2022-06-24T13:43:42.273] [DEBUG] client - Invoking local function...
+[2022-06-24T13:43:42.273] [DEBUG] client - Triggering {
+  id: 'dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles',
+  handler: 'profiles/functions/create.main',
+  runtime: 'nodejs16.x',
+  srcPath: 'backend',
+  bundle: { format: 'esm' },
+  root: '/Users/michael.moschitto/Desktop/RateMyRidgeliners'
+}
+[2022-06-24T13:43:42.274] [DEBUG] client - Sending next payload 61a53e50-b82e-442c-b1ed-f2c64067c6b9 dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles {
+  version: '2.0',
+  routeKey: 'POST /profiles',
+  rawPath: '/profiles',
+  rawQueryString: '',
+  headers: {
+    accept: '*/*',
+    'accept-encoding': 'gzip, deflate, br',
+    'accept-language': 'en-US,en;q=0.9',
+    'content-length': '29',
+    'content-type': 'text/plain;charset=UTF-8',
+    host: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
+    origin: 'https://console.serverless-stack.com',
+    referer: 'https://console.serverless-stack.com/',
+    'sec-ch-ua': '".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"macOS"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'cross-site',
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+    'x-amzn-trace-id': 'Root=1-62b621fe-41e6fbac3325aba41b6c707b',
+    'x-forwarded-for': '163.116.139.116',
+    'x-forwarded-port': '443',
+    'x-forwarded-proto': 'https'
+  },
+  requestContext: {
+    accountId: '215957796486',
+    apiId: 'u4g7ienpbd',
+    domainName: 'u4g7ienpbd.execute-api.us-west-2.amazonaws.com',
+    domainPrefix: 'u4g7ienpbd',
+    http: {
+      method: 'POST',
+      path: '/profiles',
+      protocol: 'HTTP/1.1',
+      sourceIp: '163.116.139.116',
+      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+    },
+    requestId: 'UPo_whiHvHcEPDQ=',
+    routeKey: 'POST /profiles',
+    stage: '$default',
+    time: '24/Jun/2022:20:43:42 +0000',
+    timeEpoch: 1656103422202
+  },
+  body: '{"name" : "mike", "role" : 0}',
+  isBase64Encoded: false
+}
+[2022-06-24T13:43:42.371] [DEBUG] client - Received response for 61a53e50-b82e-442c-b1ed-f2c64067c6b9 dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:43:42.371] [DEBUG] client - Response {
+  type: 'success',
+  data: {
+    statusCode: 200,
+    body: '{"profileId":"55770930-f3fe-11ec-95f0-c72bce37db81","role":0,"profileName":"mike","likes":0,"createdAt":1656103422275}',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true
+    }
+  }
+}
+[2022-06-24T13:43:42.372] [INFO] client - [90m61a53e50-b82e-442c-b1ed-f2c64067c6b9 RESPONSE {"statusCode":200,"body":"{\"profileId\":\"55770930-f3fe-11ec-95f0-c72bce37db81\",\"role\":0,\"profileName\":\"mike\",\"likes\":0,\"created... 18 more characters","headers":{"Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":true}}[39m
+[2022-06-24T13:43:42.373] [DEBUG] client - Worker waiting for function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:48:06.307] [DEBUG] default - File changed:  [
+  '/Users/michael.moschitto/Desktop/RateMyRidgeliners/backend/profiles/functions/create.js'
+]
+[2022-06-24T13:48:06.310] [INFO] client - [90mFunctions: Building backend profiles/functions/create.main...[39m
+[2022-06-24T13:48:06.549] [INFO] client - [90mFunctions: Done building backend profiles/functions/create.main (240ms)[39m
+[2022-06-24T13:48:06.549] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:48:09.332] [DEBUG] default - File changed:  [
+  '/Users/michael.moschitto/Desktop/RateMyRidgeliners/backend/profiles/functions/create.js'
+]
+[2022-06-24T13:48:09.335] [INFO] client - [90mFunctions: Building backend profiles/functions/create.main...[39m
+[2022-06-24T13:48:09.580] [INFO] client - [90mFunctions: Done building backend profiles/functions/create.main (246ms)[39m
+[2022-06-24T13:48:09.580] [DEBUG] client - Draining function dev-RMR-ApiStack-ProfilesApi-Lambda_POST_-profiles
+[2022-06-24T13:55:26.561] [INFO] client - [90mStacks: Building changes...[39m
+[2022-06-24T13:55:26.568] [DEBUG] default - synth {
+  app: 'node .build/run.mjs',
+  output: '.build/cdk.out',
+  rollback: true,
+  roleArn: undefined,
+  verbose: 0,
+  noColor: false
+}
+[2022-06-24T13:55:26.577] [INFO] client - [90mStacks: Synthesizing changes...[39m
+[2022-06-24T13:55:31.825] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/michael.moschitto/Desktop/RateMyRidgeliners/.build/cdk.out[39m[32m[39m
+
+[2022-06-24T13:55:31.825] [TRACE] cdk - Supply a stack id ([32mdev-RMR-StorageStack[39m, [32mdev-RMR-ApiStack[39m) to display its template.
+
+[2022-06-24T13:55:31.831] [TRACE] cdk - 
+
+[2022-06-24T13:55:31.880] [INFO] client - [36mStacks: There are new infrastructure changes. Press ENTER to redeploy.[39m
+[2022-06-24T13:55:32.167] [INFO] client - [90mStacks: Building changes...[39m
+[2022-06-24T13:55:32.171] [DEBUG] default - synth {
+  app: 'node .build/run.mjs',
+  output: '.build/cdk.out',
+  rollback: true,
+  roleArn: undefined,
+  verbose: 0,
+  noColor: false
+}
+[2022-06-24T13:55:32.186] [INFO] client - [90mStacks: Synthesizing changes...[39m
+[2022-06-24T13:55:36.363] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/michael.moschitto/Desktop/RateMyRidgeliners/.build/cdk.out[39m[32m[39m
+
+[2022-06-24T13:55:36.364] [TRACE] cdk - Supply a stack id ([32mdev-RMR-StorageStack[39m, [32mdev-RMR-ApiStack[39m) to display its template.
+
+[2022-06-24T13:55:36.370] [TRACE] cdk - 
+
+[2022-06-24T13:55:36.418] [INFO] client - [36mStacks: There are new infrastructure changes. Press ENTER to redeploy.[39m
+[2022-06-24T13:55:53.335] [INFO] client - [90mStacks: Building changes...[39m
+[2022-06-24T13:55:53.339] [DEBUG] default - synth {
+  app: 'node .build/run.mjs',
+  output: '.build/cdk.out',
+  rollback: true,
+  roleArn: undefined,
+  verbose: 0,
+  noColor: false
+}
+[2022-06-24T13:55:53.348] [INFO] client - [90mStacks: Synthesizing changes...[39m
+[2022-06-24T13:55:57.467] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/michael.moschitto/Desktop/RateMyRidgeliners/.build/cdk.out[39m[32m[39m
+
+[2022-06-24T13:55:57.467] [TRACE] cdk - Supply a stack id ([32mdev-RMR-StorageStack[39m, [32mdev-RMR-ApiStack[39m) to display its template.
+
+[2022-06-24T13:55:57.474] [TRACE] cdk - 
+
+[2022-06-24T13:55:57.515] [INFO] client - [36mStacks: There are new infrastructure changes. Press ENTER to redeploy.[39m
+[2022-06-24T13:56:01.472] [INFO] client - [90mStacks: Building changes...[39m
+[2022-06-24T13:56:01.476] [DEBUG] default - synth {
+  app: 'node .build/run.mjs',
+  output: '.build/cdk.out',
+  rollback: true,
+  roleArn: undefined,
+  verbose: 0,
+  noColor: false
+}
+[2022-06-24T13:56:01.493] [INFO] client - [90mStacks: Synthesizing changes...[39m
+[2022-06-24T13:56:05.572] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/michael.moschitto/Desktop/RateMyRidgeliners/.build/cdk.out[39m[32m[39m
+
+[2022-06-24T13:56:05.572] [TRACE] cdk - Supply a stack id ([32mdev-RMR-StorageStack[39m, [32mdev-RMR-ApiStack[39m) to display its template.
+
+[2022-06-24T13:56:05.580] [TRACE] cdk - 
+
+[2022-06-24T13:56:05.621] [INFO] client - [36mStacks: There are new infrastructure changes. Press ENTER to redeploy.[39m
+[2022-06-24T13:56:13.212] [INFO] client - [90mStacks: Building changes...[39m
+[2022-06-24T13:56:13.218] [DEBUG] default - synth {
+  app: 'node .build/run.mjs',
+  output: '.build/cdk.out',
+  rollback: true,
+  roleArn: undefined,
+  verbose: 0,
+  noColor: false
+}
+[2022-06-24T13:56:13.227] [INFO] client - [90mStacks: Synthesizing changes...[39m
+[2022-06-24T13:56:16.479] [INFO] client - [90mStacks: Synthesizing changes...[39m
+[2022-06-24T13:56:17.441] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/michael.moschitto/Desktop/RateMyRidgeliners/.build/cdk.out[39m[32m[39m
+
+[2022-06-24T13:56:17.441] [TRACE] cdk - Supply a stack id ([32mdev-RMR-StorageStack[39m, [32mdev-RMR-ApiStack[39m) to display its template.
+
+[2022-06-24T13:56:17.448] [TRACE] cdk - 
+
+[2022-06-24T13:56:17.489] [INFO] client - [90mStacks: Building changes...[39m
+[2022-06-24T13:56:17.494] [DEBUG] default - synth {
+  app: 'node .build/run.mjs',
+  output: '.build/cdk.out',
+  rollback: true,
+  roleArn: undefined,
+  verbose: 0,
+  noColor: false
+}
+[2022-06-24T13:56:17.528] [INFO] client - [90mStacks: Synthesizing changes...[39m
+[2022-06-24T13:56:21.384] [TRACE] cdk - [32mSuccessfully synthesized to [34m/Users/michael.moschitto/Desktop/RateMyRidgeliners/.build/cdk.out[39m[32m[39m
+
+[2022-06-24T13:56:21.385] [TRACE] cdk - Supply a stack id ([32mdev-RMR-StorageStack[39m, [32mdev-RMR-ApiStack[39m) to display its template.
+
+[2022-06-24T13:56:21.392] [TRACE] cdk - 
+
+[2022-06-24T13:56:21.440] [INFO] client - [36mStacks: There are new infrastructure changes. Press ENTER to redeploy.[39m
+[2022-06-24T13:57:44.995] [INFO] client - [90mStacks: Building changes...[39m
+[2022-06-24T13:57:44.999] [DEBUG] default - synth {
+  app: 'node .build/run.mjs',
+  output: '.build/cdk.out',
+  rollback: true,
+  roleArn: undefined,
+  verbose: 0,
+  noColor: false
+}
+[2022-06-24T13:57:45.010] [INFO] client - [90mStacks: Synthesizing changes...[39m
