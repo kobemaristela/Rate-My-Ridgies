@@ -12,15 +12,19 @@ export function StorageStack({ stack }) {
       profileRole: "string",
       profilePhoto: "string",
       profileLikes: "number",
+      createdAt: "number"
     },
     primaryIndex: { partitionKey: "profileId" },
   });
 
   const reviews = new Table(stack, "Reviews", {
     fields: {
-      profileId: "string",
+      revieweeProfileId: "string",
+      revieweeName: "string",
       reviewId: "string",
-      body: "string"
+      reviewBody: "string",
+      likes: "number",
+      createdAt: "number"
     },
     primaryIndex: { partitionKey: "reviewId"},
   });

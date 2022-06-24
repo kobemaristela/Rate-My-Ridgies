@@ -27,29 +27,33 @@ export function ApiStack({ stack, app }) {
   });
 
   // Create the API
-  // const reviewsApi = new Api(stack, "ReviewsApi", {
-  //   defaults: {
-  //     function: {
-  //       permissions: [reviews],
-  //       environment: {
-  //         TABLE_NAME: reviews.tableName,
-  //       },
-  //     },
-  //   },
-  //   routes: {
-  //     "POST /reviews": "reviews/functions/create.main",
-  //   },
-  // });
+  const reviewsApi = new Api(stack, "ReviewsApi", {
+    defaults: {
+      function: {
+        permissions: [reviews],
+        environment: {
+          TABLE_NAME: reviews.tableName,
+        },
+      },
+    },
+    routes: {
+      "POST /reviews": "reviews/createReview.main",
+      
+      "GET /reviews/{id}": "reviews/getReview.main",
+      "DELETE /reviews/{id}": "reviews/deleteReview.main",
+      "PUT /reviews/{id}": "reviews/updateReview.main",
+    },
+  });
 
   // Show the API endpoint in the output
   stack.addOutputs({
     ProfilesApiEndpoint: profilesApi.url,
-    // ReviewsApiEndpoint: reviewsApi.url,
+    ReviewsApiEndpoint: reviewsApi.url,
   });
 
   // Return the API resource
   return {
     profilesApi,
-    // reviewsApi,
+    reviewsApi,
   };
 }
