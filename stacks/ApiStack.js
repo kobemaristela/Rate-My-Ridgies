@@ -15,12 +15,12 @@ export function ApiStack({ stack, app }) {
       },
     },
     routes: {
-      "POST /profiles": "profiles/create.main",
+      "POST /profiles": "profiles/createProfile.main",
 
 
       "GET /profiles/{id}": "profiles/getProfile.main",
-      "DELETE /profiles/{id}": "profiles/deleteProfile.main",
       "PUT /profiles/{id}": "profiles/updateProfile.main",
+      "DELETE /profiles/{id}": "profiles/deleteProfile.main",
     },
   });
 
