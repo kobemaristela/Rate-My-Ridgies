@@ -5,7 +5,7 @@ import { ApiStack } from "./ApiStack";
 
 export function AuthStack({ stack, app }) {
   const { bucket } = use(StorageStack);
-  const { profilesApi,reviewsApi } = use(ApiStack);
+  const { profilesApi, reviewsApi } = use(ApiStack);
 
   // Create a Cognito User Pool and Identity Pool
   const auth = new Auth(stack, "Auth", {
