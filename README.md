@@ -11,7 +11,7 @@ It's a single-page React app powered by a serverless CRUD API. We also cover how
 Clone this repo.
 
 ```bash
-$ git clone https://github.com/kobemaristela/RateMyRidgies.git
+$ git clone https://github.com/kobemaristela/Rate-My-Ridgies.git
 ```
 
 Install dependencies.
