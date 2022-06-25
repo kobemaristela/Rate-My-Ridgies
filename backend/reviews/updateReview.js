@@ -18,6 +18,7 @@ export const main = handler(async (event) => {
         TableName: process.env.TABLE_NAME,
         // 'Key' defines the partition key and sort key of the item to be updated
         Key: {
+            revieweeProfileId: event.requestContext.authorizer.iam.cognitoIdentity.identityId,
             reviewId: event.pathParameters.id, // The id of the note from the path
         },
         // 'UpdateExpression' defines the attributes to be updated
