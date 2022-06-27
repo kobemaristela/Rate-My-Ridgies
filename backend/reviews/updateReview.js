@@ -9,7 +9,7 @@ export const main = handler(async (event) => {
 
     // check to make sure only changing body or likes
     keys.forEach((key) => {
-        if (key !== "reviewBody" || key !== "profileLikes"){
+        if (key !== "reviewBody" || key !== "likes"){
             throw "ERROR: Only allowed to change body and num likes"
         };
     })
@@ -23,10 +23,10 @@ export const main = handler(async (event) => {
         },
         // 'UpdateExpression' defines the attributes to be updated
         // 'ExpressionAttributeValues' defines the value in the update expression
-        UpdateExpression: "SET reviewBody = :reviewBody, profileLikes = :profileLikes",
+        UpdateExpression: "SET reviewBody = :reviewBody, likes = :likes",
         ExpressionAttributeValues: {
             ":reviewBody": data.reviewBody || null,
-            ":profileLikes": data.likes || null,
+            ":likes": data.likes || null,
         },
         // 'ReturnValues' specifies if and how to return the item's attributes,
         // where ALL_NEW returns all attributes of the item after the update; you
