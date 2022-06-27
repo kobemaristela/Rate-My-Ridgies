@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-{"name":"RMR","region":"us-west-2","main":"stacks/index.js","stage":"dev","lint":true,"typeCheck":true,"debugEndpoint":"wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev","debugBucketArn":"arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80","debugBucketName":"dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80","debugStartedAt":1656112402226,"debugIncreaseTimeout":false}
-=======
-{"name":"RMR","region":"us-west-2","main":"stacks/index.js","stage":"dev","lint":true,"typeCheck":true,"debugEndpoint":"wss://cncf2d4l1i.execute-api.us-west-2.amazonaws.com/dev","debugBucketArn":"arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92","debugBucketName":"dev-rmr-debug-stack-bucket83908e77-zvkjtmu1zl92","debugStartedAt":1656108189507,"debugIncreaseTimeout":false}
->>>>>>> 2455c0a031fa436a86eeca8451501fba41b4b07d
-=======
-{"name":"RMR","region":"us-west-2","main":"stacks/index.js","stage":"dev","lint":true,"typeCheck":true,"debugEndpoint":"wss://co069z9cxh.execute-api.us-west-2.amazonaws.com/dev","debugBucketArn":"arn:aws:s3:::dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80","debugBucketName":"dev-rmr-debug-stack-bucket83908e77-5wwbole4kb80","debugStartedAt":1656112698915,"debugIncreaseTimeout":false}
->>>>>>> 9dfaa5181aa5b06e54a115fca032a010bbd17c89
+{"name":"RMR","region":"us-west-1","main":"stacks/index.js","stage":"dev","lint":true,"typeCheck":true}

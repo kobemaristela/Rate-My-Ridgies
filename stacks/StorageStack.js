@@ -2,7 +2,15 @@ import { Bucket, Table } from "@serverless-stack/resources";
 
 export function StorageStack({ stack }) {
   // Create an S3 bucket
-  const bucket = new Bucket(stack, "Photos");
+  const bucket = new Bucket(stack, "Photos", {
+    cors: [     // Enabled CORS to allow access in a different domain (populated by frontend)
+      {
+        allowedOrigins: ["*"],
+        allowedHeaders: ["*"],
+        allowedMethods: ["GET", "PUT", "POST", "DELETE", "HEAD"],
+      },
+    ],
+  });
 
   // Create the DynamoDB table
   const profiles = new Table(stack, "Profiles", {

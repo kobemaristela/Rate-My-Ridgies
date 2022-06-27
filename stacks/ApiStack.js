@@ -7,6 +7,7 @@ export function ApiStack({ stack, app }) {
   // Create the API
   const profilesApi = new Api(stack, "ProfilesApi", {
     defaults: {
+      authorizer: "iam",
       function: {
         permissions: [profiles],
         environment: {
@@ -29,6 +30,7 @@ export function ApiStack({ stack, app }) {
   // Create the API
   const reviewsApi = new Api(stack, "ReviewsApi", {
     defaults: {
+      authorizer: "iam",
       function: {
         permissions: [reviews],
         environment: {
@@ -38,6 +40,7 @@ export function ApiStack({ stack, app }) {
     },
     routes: {
       "POST /reviews": "reviews/createReview.main",
+      "DELETE /reviews": "reviews/deleteReviewList.main",
       
       "GET /reviews/{id}": "reviews/getReview.main",
       "PUT /reviews/{id}": "reviews/updateReview.main",
