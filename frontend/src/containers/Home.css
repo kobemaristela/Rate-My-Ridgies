@@ -7,3 +7,37 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
+
+.flexbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  
+}
+
+.flex-items {
+  /* background-color: #f4f4f4; */
+  /* width: 100px;
+  height: 50px; */
+  margin: 10px;
+  text-align: center;
+  vertical-align: middle
+  /* font-size: 40px; */
+}
+
+.profile-image{
+    background-color: #101212;
+    width: 100px;
+    height: 100px;
+}
+
+.member-since{
+  font-size: 12px;
+}
+
+.num-likes{
+  text-align: right;
+  justify-content: right;
+  flex: 1;
+}
