@@ -24,7 +24,8 @@ export default function Home() {
         console.log(profiles)
         setprofiles(profiles);
 
-        
+        const reviews = await loadReviews();
+        console.log(reviews)
       } catch (e) {
         onError(e);
       }
