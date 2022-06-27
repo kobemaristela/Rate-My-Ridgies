@@ -3,3 +3,7 @@ node_modules
 .sst*
 .build/
 .sst/
+**/.build
+**/.sst
+.build
+.sst
