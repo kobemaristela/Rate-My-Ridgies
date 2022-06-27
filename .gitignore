@@ -7,3 +7,4 @@ node_modules
 **/.sst
 .build
 .sst
+backend/.DS_Store
