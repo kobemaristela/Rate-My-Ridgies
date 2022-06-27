@@ -8,10 +8,11 @@ import { API } from "aws-amplify";
 import "./Home.css";
 
 export default function Home() {
-  const [notes, setNotes] = useState([]);
+  const [profiles, setprofiles] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const { isAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(true);
-
+  let DATESTRING_OPTIONS = { year: 'numeric', month: 'numeric', day: 'numeric' };
   useEffect(() => {
     async function onLoad() {
       if (!isAuthenticated) {
@@ -19,9 +20,11 @@ export default function Home() {
       }
 
       try {
-        const notes = await loadProfiles();
-        console.log(notes)
-        setNotes(notes);
+        const profiles = await loadProfiles();
+        console.log(profiles)
+        setprofiles(profiles);
+
+        
       } catch (e) {
         onError(e);
       }
@@ -33,11 +36,14 @@ export default function Home() {
   }, [isAuthenticated]);
 
   function loadProfiles() {
-    const allProfiles = API.get("profiles", "/profiles");
-    return allProfiles;
+    return API.get("profiles", "/profiles");
   }
 
-  function renderNotesList(notes) {
+  let loadReviews = () => {
+    return API.get("reviews", "/reviews")
+  }
+
+  function renderProfilesList(profiles) {
     return (
       <>
         <LinkContainer to="/notes/new">
@@ -46,18 +52,42 @@ export default function Home() {
             <span className="ml-2 font-weight-bold">Create a new note</span>
           </ListGroup.Item>
         </LinkContainer>
-        {notes.map(({ noteId, content, createdAt }) => (
-          <LinkContainer key={noteId} to={`/notes/${noteId}`}>
+
+        {/* create the list of profiles */}
+        {profiles.map(({ profileLikes, profileName, profileRole, profilePhoto,
+        profileId, createdAt}) => (
+          // <LinkContainer key={profileId} to={`/notes/${noteId}`}>
+          // <LinkContainer key={profileId} >
             <ListGroup.Item action>
-              <span className="font-weight-bold">
-                {content.trim().split("\n")[0]}
-              </span>
-              <br />
-              <span className="text-muted">
-                Created: {new Date(createdAt).toLocaleString()}
-              </span>
+              <div class="flexbox-container">
+                
+                <div class="flex-items profile-image">Image Placeholder</div>
+                <div class="flex-items" >
+                    {/* {content.trim().split("\n")[0]}
+                    */}
+                  {profileName}
+                  <br></br>
+                  <p class="member-since">
+                    Member Since: {new Date(createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}
+                  </p>
+                </div>
+
+                <div class="flex-items">
+                    Role: {profileRole}
+                </div>
+                
+                <div class="num-likes">
+                    Reviews: {profileLikes}
+                </div>
+
+                <div class="num-likes" >
+                    Likes: {profileLikes}
+                </div>
+              </div>
             </ListGroup.Item>
-          </LinkContainer>
+          // </LinkContainer>
+
+          // <div> This is a new profile</div>
         ))}
       </>
     );
@@ -76,7 +106,7 @@ export default function Home() {
     return (
       <div className="notes">
         <h2 className="pb-3 mt-4 mb-3 border-bottom">Your Notes</h2>
-        <ListGroup>{!isLoading && renderNotesList(notes)}</ListGroup>
+        <ListGroup>{!isLoading && renderProfilesList(profiles)}</ListGroup>
       </div>
     );
   }
