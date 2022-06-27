@@ -8,6 +8,14 @@ const config = {
     BUCKET: process.env.REACT_APP_BUCKET,
   },
   apiGateway: {
+    profiles : {
+      REGION: process.env.REACT_APP_REGION,
+      URL: process.env.REACT_APP_PROFILES_API_URL,
+    },
+    reviews : {
+      REGION: process.env.REACT_APP_REGION,
+      URL: process.env.REACT_APP_REVIEWS_API_URL,
+    },
     REGION: process.env.REACT_APP_REGION,
     URL: process.env.REACT_APP_API_URL,
   },

@@ -19,7 +19,8 @@ export default function Home() {
       }
 
       try {
-        const notes = await loadNotes();
+        const notes = await loadProfiles();
+        console.log(notes)
         setNotes(notes);
       } catch (e) {
         onError(e);
@@ -31,8 +32,9 @@ export default function Home() {
     onLoad();
   }, [isAuthenticated]);
 
-  function loadNotes() {
-    return API.get("notes", "/notes");
+  function loadProfiles() {
+    const allProfiles = API.get("profiles", "/profiles");
+    return allProfiles;
   }
 
   function renderNotesList(notes) {
