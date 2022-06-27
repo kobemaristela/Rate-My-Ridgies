@@ -41,6 +41,8 @@ export function ApiStack({ stack, app }) {
     routes: {
       "POST /reviews": "reviews/createReview.main",
       "DELETE /reviews": "reviews/deleteReviewList.main",
+      "GET /reviewss": "reviews/getReviewList.main",
+      
       
       "GET /reviews/{id}": "reviews/getReview.main",
       "PUT /reviews/{id}": "reviews/updateReview.main",
