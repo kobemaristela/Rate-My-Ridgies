@@ -8,3 +8,4 @@ node_modules
 .build
 .sst
 backend/.DS_Store
+.DS_Store
