@@ -107,7 +107,7 @@ export default function Home() {
         </LinkContainer>
 
         {/* create the list of profiles */}
-        {profiles.map(({ profileLikes, profileName, profileRole, profilePhoto,
+        {profiles? profiles.map(({ profileLikes, profileName, profileRole, profilePhoto,
         profileId, createdAt}) => (
           <LinkContainer key={profileId} to={`/notes/${profileId}`}>
           
@@ -146,7 +146,11 @@ export default function Home() {
           </LinkContainer>
 
           // <div> This is a new profile</div>
-        ))}
+        )) : 
+          <div> no profiles yet</div>
+          
+
+        }
       </>
     );
   }
