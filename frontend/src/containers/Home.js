@@ -103,8 +103,8 @@ export default function Home() {
       <>
         <LinkContainer to="/profiles/new">
           <ListGroup.Item action className="py-3 text-nowrap text-truncate">
-            <BsPencilSquare size={17} />
-            <span className="ml-2 font-weight-bold">Create a new profile</span>
+            <BsPencilSquare size={30} />
+            <span className="ml-10 font-weight-bold create-new-prof"> Create a new profile</span>
           </ListGroup.Item>
         </LinkContainer>
 
