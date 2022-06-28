@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Auth } from "aws-amplify";
-import { useNavigate } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { AppContext } from "./lib/contextLib";
 import { onError } from "./lib/errorLib";
@@ -8,7 +7,6 @@ import Routes from "./Routes";
 import "./App.css";
 
 function App() {
-  const nav = useNavigate();
   const [isAuthenticating, setIsAuthenticating] = useState(true);
   const [isAuthenticated, userHasAuthenticated] = useState(false);
 

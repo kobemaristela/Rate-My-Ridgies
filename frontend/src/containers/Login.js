@@ -47,7 +47,6 @@ export default function Login() {
             type="email"
             value={fields.email}
             onChange={handleFieldChange}
-            placeholder="daveduffield"
           />
         </Form.Group>
 
