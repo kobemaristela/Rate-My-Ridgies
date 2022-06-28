@@ -23,8 +23,8 @@ export default function Home() {
   const { isAuthenticated, userHasAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(true);
   let DATESTRING_OPTIONS = { year: 'numeric', month: 'numeric', day: 'numeric' };
-  const BUCKETURL = "https://dev-rmr-storagestack-photosbucket4131342a-1ik1ict6zmone.s3.us-west-2.amazonaws.com/private/us-west-2%3A84c264a5-fc9f-4988-adeb-0c97eb72beaf/"
-  const DEFAULTPROFILEURL = "https://dev-rmr-storagestack-photosbucket4131342a-1ik1ict6zmone.s3.us-west-2.amazonaws.com/default.jpg"
+  const BUCKETURL = "https://dev-rmr-storagestack-photosbucket4131342a-1hl6bc03sa6kc.s3.us-west-2.amazonaws.com/"
+  const DEFAULTPROFILEURL = "https://dev-rmr-storagestack-photosbucket4131342a-1hl6bc03sa6kc.s3.us-west-2.amazonaws.com/default.jpg"
   
   useEffect(() => {
     async function onLoad() {
