@@ -7,6 +7,9 @@ import { useFormFields } from "../lib/hooksLib";
 import { onError } from "../lib/errorLib";
 import ParticlesBg from 'particles-bg';
 import "./Login.css";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { LinkContainer } from "react-router-bootstrap";
 
 export default function Login() {
   const { userHasAuthenticated } = useAppContext();
@@ -35,42 +38,72 @@ export default function Login() {
   }
 
   return (
-    <div className="Login">
+    <>
+      <div className="banner-text">
+        <Navbar collapseOnSelect bg="light" expand="lg" className="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top">
+          <LinkContainer to="/">
+            <Navbar.Brand className="font-weight-bold">
+              {' '}
+              <img
+                  src="./ridgeline-icon.svg"
+                  width="30"
+                  height="30"
+                  className="d-inline-block align-top"
+                  alt="ridgeline-icon"
+              />{' '}
+              Rate My Ridgies
+            </Navbar.Brand>
+          </LinkContainer>
 
-      <ParticlesBg type="circles" bg={true} />
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end">
+            <Nav activeKey={window.location.pathname}>
+              <LinkContainer to="/">
+                <Nav.Link>Home</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/signup">
+                <Nav.Link>Signup</Nav.Link>
+              </LinkContainer>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </div>
 
-      <Form onSubmit={handleSubmit}>
-        <Form.Group size="lg" controlId="email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            autoFocus
-            type="email"
-            value={fields.email}
-            onChange={handleFieldChange}
-            placeholder="daveduffield"
-          />
-        </Form.Group>
+      {/* Original code down below */}
+      <div className="Login">
+        <ParticlesBg type="cobweb" bg={true} />
+        <Form onSubmit={handleSubmit}>
+          <Form.Group size="lg" controlId="email">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              autoFocus
+              type="email"
+              value={fields.email}
+              onChange={handleFieldChange}
+            />
+          </Form.Group>
 
-        <Form.Group size="lg" controlId="password">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            value={fields.password}
-            onChange={handleFieldChange}
-            // as="textarea" rows={1}
-          />
-        </Form.Group>
-        
-        <LoaderButton
-          block="true"
-          size="lg"
-          type="submit"
-          isLoading={isLoading}
-          disabled={!validateForm()}
-        >
-          Login
-        </LoaderButton>
-      </Form>
-    </div>
+          <Form.Group size="lg" controlId="password">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              value={fields.password}
+              onChange={handleFieldChange}
+              // as="textarea" rows={1}
+            />
+          </Form.Group>
+          
+          <LoaderButton
+            block="true"
+            size="lg"
+            type="submit"
+            isLoading={isLoading}
+            disabled={!validateForm()}
+          >
+            Login
+          </LoaderButton>
+        </Form>
+      </div>
+    </>
   );
 }

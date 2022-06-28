@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BsPencilSquare } from "react-icons/bs";
+import { BsPencilSquare, BsSlack } from "react-icons/bs";
 import ListGroup from "react-bootstrap/ListGroup";
 import { LinkContainer } from "react-router-bootstrap";
 import { useAppContext } from "../lib/contextLib";
@@ -168,8 +168,10 @@ export default function Home() {
         <div className="row banner">
           <div className="banner-text">
             <Fade bottom>
+
               <h1 className="responsive-headline">Rate My Ridgies</h1>
             </Fade>
+
             <Fade bottom duration={1200}>
               <h3>A site where you can rate your ridgies.</h3>
             </Fade>
@@ -249,7 +251,7 @@ export default function Home() {
 
   return (
     <div className="Home">
-      <ParticlesBg type="circles" bg={true} />
+      <ParticlesBg type="cobweb" bg={true} />
       {isAuthenticated ? renderProfiles() : renderLander()}
     </div>
   );

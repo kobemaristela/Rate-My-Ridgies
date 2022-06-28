@@ -3,9 +3,18 @@
   text-align: center;
 }
 
+.particles-bg-canvas-self{
+  background: rgb(51, 72, 147);
+}
+
 .Home .lander h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: 2;
+  color: black;
+}
+
+.responsive-headline h1{
+  color: black; /* or hexidecimal */
 }
 
 .flexbox-container {
@@ -58,4 +67,8 @@
   align-items: left;
   justify-content: left;
 
+}
+
+h1 {
+  color:black; 
 }
