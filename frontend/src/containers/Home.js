@@ -119,7 +119,7 @@ export default function Home() {
         {/* create the list of profiles */}
         {profiles? profiles.map(({ profileLikes, profileName, profileRole, profilePhoto,
         profileId, createdAt}) => (
-          <LinkContainer key={profileId} to={`/notes/${profileId}`}>
+          <LinkContainer key={profileId} to={`/profile/${profileId}`}>
           
           <ListGroup.Item action key={profileId}>
               <div className="flexbox-container">

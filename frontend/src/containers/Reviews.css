@@ -1,0 +1,55 @@
+.Notes form textarea {
+  height: 300px;
+  font-size: 1.5rem;
+}
+
+.flexbox-container {
+  display: flex;
+  /* flex-direction: row; */
+  /* align-items: center; */
+  /* justify-content: left; */
+  /* flex-basis: 50%; */
+  width: 50%;
+  border: 1px solid;
+}
+.flex-items {
+  /* background-color: #f4f4f4; */
+  /* width: 100px;
+  height: 50px; */
+  margin: 10px;
+  text-align: center;
+  vertical-align: middle
+  
+    /* font-size: 40px; */
+}
+
+.profile-image {
+  background-color: #101212;
+  width: 100px;
+  height: 100px;
+}
+
+.profile-name{
+  text-align: left;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.member-since {
+  text-align: left;
+  font-size: 12px;
+}
+
+.profile-role {
+  text-align: left;
+  font-size: 12px;
+}
+
+.num-likes {
+  font-size: 12px;
+  text-align: left;
+}
+
+.reviews {
+  flex: 1;
+}

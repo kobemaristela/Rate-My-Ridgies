@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./containers/Home";
 import Login from "./containers/Login";
-import Notes from "./containers/Notes";
+import Reviews from "./containers/Reviews";
 import Signup from "./containers/Signup";
 import NewProfile from "./containers/NewProfile";
 import NotFound from "./containers/NotFound";
@@ -39,10 +39,10 @@ export default function Links() {
       />
 
       <Route
-        path="/notes/:id"
+        path="/profile/:id"
         element={
           <AuthenticatedRoute>
-            <Notes />
+            <Reviews />
           </AuthenticatedRoute>
         }
       />
