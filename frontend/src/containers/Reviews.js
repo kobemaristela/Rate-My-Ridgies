@@ -7,6 +7,7 @@ import { onError } from "../lib/errorLib";
 import { s3Upload } from "../lib/awsLib";
 import config from "../config";
 import "./Reviews.css";
+
 import ListGroup from "react-bootstrap/ListGroup";
 
 export default function Reviews() {
@@ -20,7 +21,7 @@ export default function Reviews() {
   const [profile, setProfile] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
-  let DATESTRING_OPTIONS = { year: 'numeric', month: 'numeric', day: 'numeric' };
+  let DATESTRING_OPTIONS = { year: 'numeric', month: 'numeric', day: 'numeric',  };
 
   useEffect(() => {
     function loadNote() {
@@ -28,7 +29,7 @@ export default function Reviews() {
     }
 
     function loadProfile() {
-      return API.get("profiles", `/profiles/0c3d86b0-f717-11ec-9bc6-c9cba5ece645`);
+      return API.get("profiles", `/profiles/${id}`);
     }
 
     async function onLoad() {
@@ -38,7 +39,7 @@ export default function Reviews() {
         setReviews(filteredReviews)
 
         const prof = await loadProfile();
-        console.log("prof", prof);
+        
         setProfile(prof);
         // const { content, attachment } = note;
         // if (attachment) {
@@ -124,10 +125,21 @@ export default function Reviews() {
   }
 
   const renderReviews = () => {
-    return reviews.length !== 0 ? reviews.map(({ reviewId, revieweeProfileId, reviewBody }, index) =>
+    
+    
+    return reviews.length !== 0 ? reviews.map(({ reviewId, revieweeProfileId, reviewBody, createdAt}, index) =>
     (
 
-      <div className="review-preview text-area" key={reviewId}>{index + 1}: {reviewBody}</div>
+      <div class="toast fade show">
+        <div class="toast-header">
+          <strong class="me-auto"><i class="bi-globe"></i> Review {index + 1}</strong>
+          <small> {new Date(createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body ">
+          {reviewBody}
+        </div>
+      </div>
     ))
 
       :
@@ -139,7 +151,7 @@ export default function Reviews() {
     
     <div>
       
-      <span className="flexbox-container flex-items">
+      <span className="flexbox-container-rv flex-items">
 
         {/* <div className="flex-items profile-image">{matchProfileIdWithPhoto(profile.profileId)}</div> */}
         <div className="flex-items profile-image">place holder</div>
@@ -158,12 +170,23 @@ export default function Reviews() {
             Member Since: {new Date(profile.createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}
           </p>
 
-          <p className="num-likes">
+          <p className="num-likes-rv">
             Likes: {profile.profileLikes}
           </p>
         </div>
-        <div className="flex-items reviews">{renderReviews()}</div>
+        <div className="flex-items reviews">
+
+          <div class="m-4">
+            <div class="toast-container container-right">
+              {renderReviews()}
+            </div>
+          </div>
+
+        </div>
+
+        
       </span>
+
       
       <br></br>
       <br></br>

@@ -3,14 +3,16 @@
   font-size: 1.5rem;
 }
 
-.flexbox-container {
+.flexbox-container-rv {
   display: flex;
   /* flex-direction: row; */
   /* align-items: center; */
   /* justify-content: left; */
   /* flex-basis: 50%; */
-  width: 50%;
+  width: 80%;
   border: 1px solid;
+  /* padding: 10%; */
+  margin: 10%;
 }
 .flex-items {
   /* background-color: #f4f4f4; */
@@ -24,32 +26,42 @@
 }
 
 .profile-image {
-  background-color: #101212;
+  background-color: #102012;
   width: 100px;
   height: 100px;
 }
 
 .profile-name{
   text-align: left;
-  font-size: 18px;
+  font-size: 40px;
   font-weight: 900;
 }
 
 .member-since {
   text-align: left;
-  font-size: 12px;
+  font-size: 20px;
 }
 
 .profile-role {
   text-align: left;
-  font-size: 12px;
+  font-size: 20px;
 }
 
-.num-likes {
-  font-size: 12px;
+.num-likes-rv {
+  font-size: 20px;
   text-align: left;
+  flex: 1;
 }
 
 .reviews {
   flex: 1;
+}
+
+.container-right{
+  flex: 1;
+}
+
+.toast-body{
+  font-size: 20px;
+  font-weight: 400;
 }

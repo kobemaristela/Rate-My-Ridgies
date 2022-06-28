@@ -6,7 +6,6 @@ export const main = handler(async () => {
     TableName: process.env.TABLE_NAME,
   };
 
-  console.log("get here---!!")
   const result = await dynamoDb.scan(params);
 
   // Return the matching list of items in response body
