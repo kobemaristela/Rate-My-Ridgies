@@ -35,6 +35,7 @@ export function StorageStack({ stack }) {
       createdAt: "number"
     },
     primaryIndex: { partitionKey: "reviewId"},
+    
   });
 
   // Return the bucket and table resources

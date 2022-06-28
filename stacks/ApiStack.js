@@ -15,6 +15,7 @@ export function ApiStack({ stack, app }) {
         },
       },
     },
+    cors: true,
     routes: {
       "POST /profiles": "profiles/createProfile.main",
       "GET /profiles": "profiles/getProfileList.main",
@@ -38,10 +39,12 @@ export function ApiStack({ stack, app }) {
         },
       },
     },
+    cors: true,
     routes: {
       "POST /reviews": "reviews/createReview.main",
       "DELETE /reviews": "reviews/deleteReviewList.main",
       "GET /reviews": "reviews/getReviewList.main",
+      // "GET /reviews": "profiles/getProfileList.main",
       
       
       "GET /reviews/{id}": "reviews/getReview.main",

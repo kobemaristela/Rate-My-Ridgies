@@ -3,14 +3,14 @@ import handler from "../util/handler";
 import dynamoDb from "../util/dynamodb";
 
 
-// {"aboutProfileId" : "9f905ef0-f407-11ec-8edb-ef51f029ab5f", "revieweeName" : "Mike" , "reviewBody" : "good review"}
+// {"revieweeProfileId" : "3805c230-f654-11ec-bf0b-155e61573ec8", "revieweeName" : "Mike" , "reviewBody" : "good review"}
 export const main = handler(async (event) => {
   const data = JSON.parse(event.body);
   
   const params = {
     TableName: process.env.TABLE_NAME,
     Item: {
-      revieweeProfileId: event.requestContext.authorizer.iam.cognitoIdentity.identityId,
+      revieweeProfileId: data.revieweeProfileId,
       // could also be cognito pool
       revieweeName: data.revieweeName, 
       reviewId: uuid.v1(),
