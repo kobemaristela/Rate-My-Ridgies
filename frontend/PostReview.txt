@@ -1,12 +1,12 @@
 npx aws-api-gateway-cli-test \
---username='test123' \
---password='Password!1' \
---user-pool-id='us-west-2_5um5375Gv' \
---app-client-id='10m8hd4qgkpgl35pm82i9cdifk' \
+--username='michael.moschitto@ridgelineapps.com' \
+--password='Password1!' \
+--user-pool-id='us-west-2_2bHqO7rth' \
+--app-client-id='4pgu3ki06cjcj7bdq86apcqp8q' \
 --cognito-region='us-west-2' \
---identity-pool-id='us-west-2:ac22690a-92eb-4cb6-8b52-38fe267af15d' \
---invoke-url='https://82n1rnnia4.execute-api.us-west-2.amazonaws.com' \
+--identity-pool-id='us-west-2:59a0905d-eacb-4105-ad3e-dc49fc11bff4' \
+--invoke-url='https://h6ngdge3zj.execute-api.us-west-2.amazonaws.com' \
 --api-gateway-region='us-west-2' \
 --path-template='/reviews' \
 --method='POST' \
---body='{"revieweeProfileId" : "3805c230-f654-11ec-bf0b-155e61573ec8", "revieweeName" : "Mike" , "reviewBody" : "good review"}'
+--body='{"revieweeProfileId" : "0c3d86b0-f717-11ec-9bc6-c9cba5ece645", "revieweeName" : "Mike" , "reviewBody" : "good review 2"}'
