@@ -103,7 +103,6 @@ export default function Home() {
       </div>
       )
 
-
   };
   
   function renderProfilesList(profiles, reviews) {

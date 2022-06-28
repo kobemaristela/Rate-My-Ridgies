@@ -15,7 +15,7 @@ export default function Reviews() {
   const nav = useNavigate();
   const [note, setNote] = useState(null);
   // const id = useParams();
-  const [content, setContent] = useState("");
+  const [reviewBody, setReviewBody] = useState("");
   const [reviews, setReviews] = useState([]);
   const [profile, setProfile] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -55,7 +55,7 @@ export default function Reviews() {
   }, [id]);
 
   function validateForm() {
-    return content.length > 0;
+    return reviewBody.length > 0;
   }
 
   function formatFilename(str) {
@@ -66,37 +66,31 @@ export default function Reviews() {
     file.current = event.target.files[0];
   }
 
-  function saveNote(note) {
-    return API.put("notes", `/notes/${id}`, {
+  function saveReview(note) {
+    return API.post("reviews", `/reviews`, {
       body: note,
     });
+  }
+
+  function refreshPage() {
+    window.location.reload(false);
   }
 
   async function handleSubmit(event) {
     let attachment;
 
     event.preventDefault();
-
-    if (file.current && file.current.size > config.MAX_ATTACHMENT_SIZE) {
-      alert(
-        `Please pick a file smaller than ${config.MAX_ATTACHMENT_SIZE / 1000000
-        } MB.`
-      );
-      return;
-    }
-
     setIsLoading(true);
 
     try {
-      if (file.current) {
-        attachment = await s3Upload(file.current);
-      }
-
-      await saveNote({
-        content,
-        attachment: attachment || note.attachment,
+      
+      await saveReview({
+        revieweeProfileId: id,
+        reviewBody : reviewBody,
+        revieweeName : profile.revieweeName
       });
-      nav("/");
+      nav(`/`);
+      // refreshPage();
     } catch (e) {
       onError(e);
       setIsLoading(false);
@@ -130,58 +124,19 @@ export default function Reviews() {
   }
 
   const renderReviews = () => {
-    return reviews.map(() => {
-      
-    })
+    return reviews.length !== 0 ? reviews.map(({ reviewId, revieweeProfileId, reviewBody }, index) =>
+    (
+
+      <div className="review-preview text-area" key={reviewId}>{index + 1}: {reviewBody}</div>
+    ))
+
+      :
+
+      <div className="review-preview">No Reviews Yet </div>
   };
 
   return (
-    //   <div className="Notes">
-    //     {note && (
-    //       <Form onSubmit={handleSubmit}>
-    //         <Form.Group controlId="content">
-    //           <Form.Control
-    //             as="textarea"
-    //             value={content}
-    //             onChange={(e) => setContent(e.target.value)}
-    //           />
-    //         </Form.Group>
-    //         <Form.Group controlId="file">
-    //           <Form.Label>Attachment</Form.Label>
-    //           {note.attachment && (
-    //             <p>
-    //               <a
-    //                 target="_blank"
-    //                 rel="noopener noreferrer"
-    //                 href={note.attachmentURL}
-    //               >
-    //                 {formatFilename(note.attachment)}
-    //               </a>
-    //             </p>
-    //           )}
-    //           <Form.Control onChange={handleFileChange} type="file" />
-    //         </Form.Group>
-    //         <LoaderButton
-    //           block="true"
-    //           size="lg"
-    //           type="submit"
-    //           isLoading={isLoading}
-    //           disabled={!validateForm()}
-    //         >
-    //           Save
-    //         </LoaderButton>
-    //         <LoaderButton
-    //           block="true"
-    //           size="lg"
-    //           variant="danger"
-    //           onClick={handleDelete}
-    //           isLoading={isDeleting}
-    //         >
-    //           Delete
-    //         </LoaderButton>
-    //       </Form>
-    //     )}
-    // <ListGroup.Item  action key={profile.profileId}>
+    
     <div>
       
       <span className="flexbox-container flex-items">
@@ -207,11 +162,64 @@ export default function Reviews() {
             Likes: {profile.profileLikes}
           </p>
         </div>
-        <div className="flex-items reviews">second div</div>
+        <div className="flex-items reviews">{renderReviews()}</div>
       </span>
       
+      <br></br>
+      <br></br>
+      <br></br>
+      <h2>Create a new review for {profile.profileName}</h2>
+                  
+      <div className="Notes">
+
+        <Form onSubmit={handleSubmit}>
+          <Form.Group controlId="content">
+            <Form.Control
+              as="textarea"
+              value={reviewBody}
+              onChange={(e) => setReviewBody(e.target.value)}
+            />
+          </Form.Group>
+          {/* <Form.Group controlId="file">
+            <Form.Label>Attachment</Form.Label>
+            {note.attachment && (
+              <p>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={note.attachmentURL}
+                >
+                  {formatFilename(note.attachment)}
+                </a>
+              </p>
+            )}
+            <Form.Control onChange={handleFileChange} type="file" />
+          </Form.Group> */}
+          <LoaderButton
+            block="true"
+            size="lg"
+            type="submit"
+            isLoading={isLoading}
+            disabled={!validateForm()}
+          >
+            Save
+          </LoaderButton>
+          <LoaderButton
+            block="true"
+            size="lg"
+            variant="danger"
+            onClick={handleDelete}
+            isLoading={isDeleting}
+          >
+            Delete
+          </LoaderButton>
+        </Form>
+      </div>
+            
 
     </div>
-    // </ListGroup.Item>
+    
+    
   );
 }
+
