@@ -41,3 +41,19 @@
   justify-content: right;
   flex: 1;
 }
+
+.review-preview{
+  text-align: right;
+  flex: 1;
+  justify-content: left;
+}
+
+.review-preview-container{
+  text-align: left;
+  flex: 1;
+  height: 50px;
+  width: 150px;
+  align-items: left;
+  justify-content: left;
+
+}
