@@ -21,7 +21,6 @@ export function ApiStack({ stack, app }) {
       "GET /profiles": "profiles/getProfileList.main",
       "DELETE /profiles": "profiles/deleteProfileList.main",
 
-
       "GET /profiles/{id}": "profiles/getProfile.main",
       "PUT /profiles/{id}": "profiles/updateProfile.main",
       "DELETE /profiles/{id}": "profiles/deleteProfile.main",
@@ -46,15 +45,28 @@ export function ApiStack({ stack, app }) {
       "GET /reviews": "reviews/getReviewList.main",
       // "GET /reviews": "profiles/getProfileList.main",
       
-      
       "GET /reviews/{id}": "reviews/getReview.main",
       "PUT /reviews/{id}": "reviews/updateReview.main",
       "DELETE /reviews/{id}": "reviews/deleteReview.main",
     },
   });
 
+  const testApi = new Api(stack, "Test", {
+    defaults: {
+      authorizer: "iam",
+    },
+    routes: {
+      "GET /private": "functions/private.handler",
+      "GET /public": {
+        function: "functions/public.handler",
+        authorizer: "none",
+      },
+    },
+  });
+
   // Show the API endpoint in the output
   stack.addOutputs({
+    testApiEndpoint: testApi.url,
     ProfilesApiEndpoint: profilesApi.url,
     ReviewsApiEndpoint: reviewsApi.url,
   });
@@ -63,5 +75,6 @@ export function ApiStack({ stack, app }) {
   return {
     profilesApi,
     reviewsApi,
+    testApi,
   };
 }

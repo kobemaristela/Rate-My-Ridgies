@@ -5,18 +5,19 @@ import LoaderButton from "../components/LoaderButton";
 import { useAppContext } from "../lib/contextLib";
 import { useFormFields } from "../lib/hooksLib";
 import { onError } from "../lib/errorLib";
+import ParticlesBg from 'particles-bg';
 import "./Login.css";
 
 export default function Login() {
   const { userHasAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(false);
   const [fields, handleFieldChange] = useFormFields({
-    username: "",
+    email: "",
     password: "",
   });
 
   function validateForm() {
-    return fields.username.length > 0 && fields.password.length > 0;
+    return fields.email.length > 0 && fields.password.length > 0;
   }
 
   async function handleSubmit(event) {
@@ -25,7 +26,7 @@ export default function Login() {
     setIsLoading(true);
 
     try {
-      await Auth.signIn(fields.username, fields.password);
+      await Auth.signIn(fields.email, fields.password);
       userHasAuthenticated(true);
     } catch (e) {
       onError(e);
@@ -35,24 +36,31 @@ export default function Login() {
 
   return (
     <div className="Login">
+
+      <ParticlesBg type="circles" bg={true} />
+
       <Form onSubmit={handleSubmit}>
-        <Form.Group size="lg" controlId="username">
-          <Form.Label>username</Form.Label>
+        <Form.Group size="lg" controlId="email">
+          <Form.Label>Email</Form.Label>
           <Form.Control
             autoFocus
-            type="username"
-            value={fields.username}
+            type="email"
+            value={fields.email}
             onChange={handleFieldChange}
+            placeholder="daveduffield"
           />
         </Form.Group>
+
         <Form.Group size="lg" controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
             value={fields.password}
             onChange={handleFieldChange}
+            // as="textarea" rows={1}
           />
         </Form.Group>
+        
         <LoaderButton
           block="true"
           size="lg"
