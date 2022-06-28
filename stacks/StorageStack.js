@@ -1,4 +1,5 @@
 import { Bucket, Table } from "@serverless-stack/resources";
+import { RemovalPolicy } from "aws-cdk-lib";
 
 export function StorageStack({ stack }) {
   // Create an S3 bucket
@@ -10,6 +11,12 @@ export function StorageStack({ stack }) {
         allowedMethods: ["GET", "PUT", "POST", "DELETE", "HEAD"],
       },
     ],
+    cdk: {
+      bucket: {
+        autoDeleteObjects: true,
+        removalPolicy: RemovalPolicy.DESTROY,
+      },
+    },
   });
 
   // Create the DynamoDB table
@@ -23,6 +30,11 @@ export function StorageStack({ stack }) {
       createdAt: "number"
     },
     primaryIndex: { partitionKey: "profileId" },
+    cdk: {
+      table: {
+        removalPolicy: RemovalPolicy.DESTROY,
+      },
+    },
   });
 
   const reviews = new Table(stack, "Reviews", {
@@ -35,7 +47,11 @@ export function StorageStack({ stack }) {
       createdAt: "number"
     },
     primaryIndex: { partitionKey: "reviewId"},
-    
+    cdk: {
+      table: {
+        removalPolicy: RemovalPolicy.DESTROY,
+      },
+    },
   });
 
   // Return the bucket and table resources

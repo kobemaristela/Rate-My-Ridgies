@@ -207,6 +207,7 @@ export default function Home() {
                   width="30"
                   height="30"
                   className="d-inline-block align-top"
+                  alt="ridgeline-icon"
               />{' '}
               Rate My Ridgies
             </Navbar.Brand>
