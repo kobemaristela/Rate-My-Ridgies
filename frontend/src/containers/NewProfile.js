@@ -26,7 +26,6 @@ export default function NewProfile() {
 
   function handleFileChange(event) {
     file.current = event.target.files[0];
-    // console.log("current file: ", file.current)
   }
 
   function renameFile(originalFile, newName) {
@@ -70,12 +69,12 @@ export default function NewProfile() {
         }
       )).profileId;
 
-      console.log("generated profile ID----: ", generatedProfileId);
+      
 
       createReview(generatedProfileId);
       file.current = renameFile(file, generatedProfileId + ".png")
 
-      console.log("profile picture----", file.current);
+      
       const attachment = file.current ? await s3Upload(file.current) : null;
 
 

@@ -33,19 +33,21 @@
 }
 
 .member-since{
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .num-likes{
   text-align: right;
   justify-content: right;
   flex: 1;
+  font-size: 20px;
 }
 
 .review-preview{
   text-align: right;
   flex: 1;
   justify-content: left;
+  font-size: 20px;
 }
 
 .review-preview-container{
