@@ -30,14 +30,14 @@ Amplify.configure({
   API: {
     endpoints: [
       {
-        name: "profiles",
-        endpoint: config.apiGateway.profiles.URL,
-        region: config.apiGateway.profiles.REGION,
-      },
-      {
         name: "reviews",
         endpoint: config.apiGateway.reviews.URL,
         region: config.apiGateway.reviews.REGION,
+      },
+      {
+        name: "profiles",
+        endpoint: config.apiGateway.profiles.URL,
+        region: config.apiGateway.profiles.REGION,
       },
     ],
   },

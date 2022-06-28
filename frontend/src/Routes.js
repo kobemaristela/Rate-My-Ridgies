@@ -4,7 +4,7 @@ import Home from "./containers/Home";
 import Login from "./containers/Login";
 import Notes from "./containers/Notes";
 import Signup from "./containers/Signup";
-import NewNote from "./containers/NewNote";
+import NewProfile from "./containers/NewProfile";
 import Settings from "./containers/Settings";
 import NotFound from "./containers/NotFound";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
@@ -39,10 +39,10 @@ export default function Links() {
         }
       />
       <Route
-        path="/notes/new"
+        path="/profiles/new"
         element={
           <AuthenticatedRoute>
-            <NewNote />
+            <NewProfile />
           </AuthenticatedRoute>
         }
       />
