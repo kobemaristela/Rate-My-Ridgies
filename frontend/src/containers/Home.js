@@ -4,16 +4,23 @@ import ListGroup from "react-bootstrap/ListGroup";
 import { LinkContainer } from "react-router-bootstrap";
 import { useAppContext } from "../lib/contextLib";
 import { onError } from "../lib/errorLib";
-import { API, Storage} from "aws-amplify";
+import { Auth, API, Storage} from "aws-amplify";
 import "./Home.css";
 import BootstrapCarouselComponent from "../components/BootstrapCarousel";
 import ParticlesBg from 'particles-bg';
-import Fade from "react-reveal"
+import Fade from "react-reveal";
+import Button from 'react-bootstrap/Button';
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { useNavigate } from "react-router-dom";
+
+
 
 export default function Home() {
+  const nav = useNavigate();
   const [profiles, setprofiles] = useState([]);
   const [reviews, setReviews] = useState([]);
-  const { isAuthenticated } = useAppContext();
+  const { isAuthenticated, userHasAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(true);
   let DATESTRING_OPTIONS = { year: 'numeric', month: 'numeric', day: 'numeric' };
   const BUCKETURL = "https://dev-rmr-storagestack-photosbucket4131342a-1ik1ict6zmone.s3.us-west-2.amazonaws.com/private/us-west-2%3A84c264a5-fc9f-4988-adeb-0c97eb72beaf/"
@@ -156,51 +163,7 @@ export default function Home() {
 
   function renderLander() {
     return (
-      
-      <div className="lander">
-        <ParticlesBg type="circle" bg={true} />
-
-        <nav id="nav-wrap">
-          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-            Show navigation
-          </a>
-          <a className="mobile-btn" href="#home" title="Hide navigation">
-            Hide navigation
-          </a>
-
-          <ul id="nav" className="nav">
-            <li className="current">
-              <a className="smoothscroll" href="#home">
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#about">
-                About
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#resume">
-                Resume
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#portfolio">
-                Works
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#contact">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-
+      <header id="home">
         <div className="row banner">
           <div className="banner-text">
             <Fade bottom>
@@ -212,32 +175,73 @@ export default function Home() {
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
-                </a>
-                <a className="button btn github-btn">
-                  <i className="fa fa-github"></i>Github
-                </a>
+              <Button block='true' href="/signup" variant="primary" size="lg" active>Signup</Button>
+              <Button block='true' href="/login" variant="primary" size="lg" active>Login</Button>
               </ul>
             </Fade>    
           </div>
         </div>
-      </div>
-
+        </header>
     );
   }
 
+  async function handleLogout() {
+    await Auth.signOut();
+    userHasAuthenticated(false);
+
+    nav("/");
+  }
+
+
+
   function renderProfiles() {
     return (
+      <>
+      <div className="banner-text">
+        <Navbar collapseOnSelect bg="light" expand="lg" className="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top">
+          <LinkContainer to="/">
+            <Navbar.Brand className="font-weight-bold">
+              {' '}
+              <img
+                  src="./ridgeline-icon.svg"
+                  width="30"
+                  height="30"
+                  className="d-inline-block align-top"
+              />{' '}
+              Rate My Ridgies
+            </Navbar.Brand>
+          </LinkContainer>
+
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end">
+            <Nav activeKey={window.location.pathname}>
+              {isAuthenticated ? (
+                <>
+                  <LinkContainer to="/">
+                    <Nav.Link>Home</Nav.Link>
+                  </LinkContainer>
+                  <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+                </>
+              ) : (
+                <>
+                  <LinkContainer to="/signup">
+                    <Nav.Link>Signup</Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to="/login">
+                    <Nav.Link>Login</Nav.Link>
+                  </LinkContainer>
+                </>
+              )}
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </div>
+
       <div className="notes">
-<<<<<<< HEAD
-        <h2 className="pb-3 mt-4 mb-3 border-bottom">Our Ridgies</h2>
-        <ListGroup>{!isLoading && renderProfilesList(profiles)}</ListGroup>
-=======
         <h2 className="pb-3 mt-4 mb-3 border-bottom">Review The Ridgies</h2>
         <ListGroup>{!isLoading && renderProfilesList(profiles, reviews)}</ListGroup>
->>>>>>> e7c37f565ab2a145734c430cfeb526d9723405db
       </div>
+      </>
     );
   }
 

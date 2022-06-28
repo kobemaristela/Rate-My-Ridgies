@@ -51,8 +51,22 @@ export function ApiStack({ stack, app }) {
     },
   });
 
+  const testApi = new Api(stack, "Test", {
+    defaults: {
+      authorizer: "iam",
+    },
+    routes: {
+      "GET /private": "functions/private.handler",
+      "GET /public": {
+        function: "functions/public.handler",
+        authorizer: "none",
+      },
+    },
+  });
+
   // Show the API endpoint in the output
   stack.addOutputs({
+    testApiEndpoint: testApi.url,
     ProfilesApiEndpoint: profilesApi.url,
     ReviewsApiEndpoint: reviewsApi.url,
   });
@@ -61,5 +75,6 @@ export function ApiStack({ stack, app }) {
   return {
     profilesApi,
     reviewsApi,
+    testApi,
   };
 }

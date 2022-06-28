@@ -5,6 +5,7 @@ import LoaderButton from "../components/LoaderButton";
 import { useAppContext } from "../lib/contextLib";
 import { useFormFields } from "../lib/hooksLib";
 import { onError } from "../lib/errorLib";
+import ParticlesBg from 'particles-bg';
 import "./Login.css";
 
 export default function Login() {
@@ -35,6 +36,9 @@ export default function Login() {
 
   return (
     <div className="Login">
+      
+      <ParticlesBg type="circles" bg={true} />
+
       <Form onSubmit={handleSubmit}>
         <Form.Group size="lg" controlId="username">
           <Form.Label>Username</Form.Label>
@@ -43,16 +47,20 @@ export default function Login() {
             type="username"
             value={fields.username}
             onChange={handleFieldChange}
+            placeholder="daveduffield"
           />
         </Form.Group>
+
         <Form.Group size="lg" controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
             value={fields.password}
             onChange={handleFieldChange}
+            // as="textarea" rows={1}
           />
         </Form.Group>
+        
         <LoaderButton
           block="true"
           size="lg"

@@ -5,7 +5,6 @@ import Login from "./containers/Login";
 import Notes from "./containers/Notes";
 import Signup from "./containers/Signup";
 import NewProfile from "./containers/NewProfile";
-import Settings from "./containers/Settings";
 import NotFound from "./containers/NotFound";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
@@ -28,14 +27,6 @@ export default function Links() {
           <UnauthenticatedRoute>
             <Signup />
           </UnauthenticatedRoute>
-        }
-      />
-      <Route
-        path="/settings"
-        element={
-          <AuthenticatedRoute>
-            <Settings />
-          </AuthenticatedRoute>
         }
       />
       <Route
