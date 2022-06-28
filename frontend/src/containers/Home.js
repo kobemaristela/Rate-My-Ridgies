@@ -6,6 +6,7 @@ import { useAppContext } from "../lib/contextLib";
 import { onError } from "../lib/errorLib";
 import { API, Storage} from "aws-amplify";
 import "./Home.css";
+import BootstrapCarouselComponent from "../components/BootstrapCarousel";
 
 export default function Home() {
   const [profiles, setprofiles] = useState([]);
@@ -154,7 +155,7 @@ export default function Home() {
   function renderLander() {
     return (
       <div className="lander">
-        <h1>Review The Ridgies</h1>
+        <BootstrapCarouselComponent></BootstrapCarouselComponent>
       </div>
     );
   }

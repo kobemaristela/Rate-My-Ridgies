@@ -21,7 +21,6 @@ export function ApiStack({ stack, app }) {
       "GET /profiles": "profiles/getProfileList.main",
       "DELETE /profiles": "profiles/deleteProfileList.main",
 
-
       "GET /profiles/{id}": "profiles/getProfile.main",
       "PUT /profiles/{id}": "profiles/updateProfile.main",
       "DELETE /profiles/{id}": "profiles/deleteProfile.main",
@@ -45,7 +44,6 @@ export function ApiStack({ stack, app }) {
       "DELETE /reviews": "reviews/deleteReviewList.main",
       "GET /reviews": "reviews/getReviewList.main",
       // "GET /reviews": "profiles/getProfileList.main",
-      
       
       "GET /reviews/{id}": "reviews/getReview.main",
       "PUT /reviews/{id}": "reviews/updateReview.main",
