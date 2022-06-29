@@ -132,20 +132,23 @@ export default function Reviews() {
   }
 
   const renderReviews = () => {
-    return reviews.length !== 0 ? reviews.map(({ reviewId, revieweeProfileId, reviewBody, createdAt}, index) =>
-    (
+    return reviews.length !== 0 ? reviews.map(({ reviewId, revieweeProfileId, reviewBody, createdAt}, index) =>{
 
-      <div class="toast fade show">
-        <div class="toast-header">
-          <strong class="me-auto"><i class="bi-globe"></i> Review {index + 1}</strong>
-          <small> {new Date(createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}</small>
-          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-        </div>
-        <div class="toast-body ">
-          {reviewBody}
+      return (
+        <div class="col-6"> 
+        <div class="toast fade show ">
+          <div class="toast-header">
+            <strong class="me-auto"><i class="bi-globe"></i> Review {index + 1}</strong>
+            <small> {new Date(createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+          </div>
+          <div class="toast-body ">
+            {reviewBody}
+          </div>
         </div>
       </div>
-    ))
+    )})
+  
 
       :
 
@@ -205,45 +208,58 @@ export default function Reviews() {
           </Navbar>
         </div>
     
-    <div className="Profile">
+      <div className="Profile">
       
-      
-      <span className="flexbox-container-rv flex-items">
+      <div>
 
-        {/* <div className="flex-items profile-image">{matchProfileIdWithPhoto(profile.profileId)}</div> */}
-        <div className="flex-items profile-image">place holder</div>
-        <div className="flex-items" >
-          {/* {content.trim().split("\n")[0]}
-                    */}
-          <p className="profile-name">
-            {profile.profileName}
-          </p>
-          
-          <p className="profile-role">
-          Role: {profile.profileRole}
-          </p>
+          <div className="flexbox-container-rv flex-items">
 
-          <p className="member-since">
-            Member Since: {new Date(profile.createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}
-          </p>
+            {/* <div className="flex-items profile-image">{matchProfileIdWithPhoto(profile.profileId)}</div> */}
+            <div className="flex-items profile-image">place holder</div>
+            <div className="flex-items" >
+              {/* {content.trim().split("\n")[0]}
+                        */}
+              <p className="profile-name">
+                {profile.profileName}
+              </p>
+              
+              <p className="profile-role">
+              Role: {profile.profileRole}
+              </p>
 
-          <p className="num-likes-rv">
-            Likes: {profile.profileLikes}
-          </p>
-        </div>
-        <div className="flex-items reviews">
+              <p className="member-since">
+                Member Since: {new Date(profile.createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}
+              </p>
 
-          <div class="m-4">
-            <div class="toast-container container-right">
-              {renderReviews()}
+              <p className="num-likes-rv">
+                Likes: {profile.profileLikes}
+              </p>
             </div>
+
+
+            
           </div>
+          <div class="container-fluid">
+              <div className="row" >
+
+                {/* <div class="m-4 container-right "> */}
+                    {/* <div class="toast-container box row">
+                    </div> */}
+
+
+                {/* </div> */}
+                  {/* <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+                  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+                  
+                  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+                <div class="col-6 col-sm-3">.col-6 .col-sm-3</div> */}
+
+                {renderReviews()}
+                  
+                </div>
+              </div>  
 
         </div>
-
-        
-      </span>
-
       
       <br></br>
       <br></br>
