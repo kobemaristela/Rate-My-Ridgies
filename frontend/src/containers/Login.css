@@ -1,10 +1,15 @@
 @media all and (min-width: 480px){
   .Login {
-    padding: 60px 0;
+    padding: 220px 0;
   }
 
   .Login form {
     margin: 0 auto;
     max-width: 320px;
   }
+}
+
+.navbar-brand
+{
+  font-size: 20px;
 }

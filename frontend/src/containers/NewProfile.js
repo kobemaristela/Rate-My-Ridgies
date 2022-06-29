@@ -7,6 +7,10 @@ import { onError } from "../lib/errorLib";
 import { s3Upload } from "../lib/awsLib";
 import config from "../config";
 import "./NewProfile.css";
+import Nav from "react-bootstrap/Nav";
+import ParticlesBg from 'particles-bg';
+import Navbar from "react-bootstrap/Navbar";
+import Container from 'react-bootstrap/Container';
 
 // TODO: get picture to work in all profiles view
 // TODO: make call to review api to add review after profile created
@@ -93,6 +97,29 @@ export default function NewProfile() {
 
   return (
     <div className="NewProfile">
+      <ParticlesBg type="cobweb" bg={true} />
+
+      <Navbar collapseOnSelect bg="light" expand="lg" fixed="top" >
+        <Container>
+          <Navbar.Brand href="/">
+            <img
+              src="/ridgeline-icon.svg"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+              alt="ridgeline-icon"
+            />
+            Rate My Ridgies
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="justify-content-end" style={{ width: "100%" }} >
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/signup">Signup</Nav.Link>
+            </Nav>
+        </Navbar.Collapse>
+        </Container>
+      </Navbar>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="name">
           <Form.Label>Name</Form.Label>

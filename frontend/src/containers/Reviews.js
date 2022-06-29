@@ -1,12 +1,18 @@
 import React, { useRef, useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
-import { API, Storage } from "aws-amplify";
+import { Auth, API, Storage } from "aws-amplify";
 import { useParams, useNavigate } from "react-router-dom";
 import LoaderButton from "../components/LoaderButton";
 import { onError } from "../lib/errorLib";
+import { useAppContext } from "../lib/contextLib";
 import { s3Upload } from "../lib/awsLib";
 import config from "../config";
 import "./Reviews.css";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import ParticlesBg from 'particles-bg';
+import { LinkContainer } from "react-router-bootstrap";
+import Container from 'react-bootstrap/Container';
 
 import ListGroup from "react-bootstrap/ListGroup";
 
@@ -14,6 +20,7 @@ export default function Reviews() {
   const file = useRef(null);
   const { id } = useParams();
   const nav = useNavigate();
+  const { isAuthenticated, userHasAuthenticated } = useAppContext();
   const [note, setNote] = useState(null);
   // const id = useParams();
   const [reviewBody, setReviewBody] = useState("");
@@ -125,8 +132,6 @@ export default function Reviews() {
   }
 
   const renderReviews = () => {
-    
-    
     return reviews.length !== 0 ? reviews.map(({ reviewId, revieweeProfileId, reviewBody, createdAt}, index) =>
     (
 
@@ -147,9 +152,61 @@ export default function Reviews() {
       <div className="review-preview">No Reviews Yet </div>
   };
 
+  async function handleLogout() {
+    await Auth.signOut();
+    userHasAuthenticated(false);
+
+    nav("/");
+  }
+
   return (
     
-    <div>
+    <>
+    <ParticlesBg type="cobweb" bg={true} />
+
+    <div className="banner-text">
+          <Navbar collapseOnSelect bg="light" expand="lg" className="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top">
+            <LinkContainer to="/">
+              <Navbar.Brand className="font-weight-bold">
+                {' '}
+                <img
+                  src="/ridgeline-icon.svg"
+                  width="30"
+                  height="30"
+                  className="d-inline-block align-top"
+                  alt="ridgeline-icon"
+                />{' '}
+                Rate My Ridgies
+              </Navbar.Brand>
+            </LinkContainer>
+
+            <Navbar.Toggle />
+            <Navbar.Collapse className="justify-content-end">
+              <Nav activeKey={window.location.pathname}>
+                {isAuthenticated ? (
+                  <>
+                    <LinkContainer to="/">
+                      <Nav.Link>Home</Nav.Link>
+                    </LinkContainer>
+                    <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+                  </>
+                ) : (
+                  <>
+                    <LinkContainer to="/signup">
+                      <Nav.Link>Signup</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/login">
+                      <Nav.Link>Login</Nav.Link>
+                    </LinkContainer>
+                  </>
+                )}
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
+    
+    <div className="Profile">
+      
       
       <span className="flexbox-container-rv flex-items">
 
@@ -241,7 +298,7 @@ export default function Reviews() {
             
 
     </div>
-    
+    </>
     
   );
 }

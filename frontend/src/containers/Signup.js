@@ -9,6 +9,7 @@ import { onError } from "../lib/errorLib";
 import ParticlesBg from 'particles-bg';
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Container from 'react-bootstrap/Container';
 import { LinkContainer } from "react-router-bootstrap";
 import "./Signup.css";
 
@@ -141,41 +142,32 @@ export default function Signup() {
   }
 
   return (
-    <>
-      <div className="banner-text">
-        <Navbar collapseOnSelect bg="light" expand="lg" className="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top">
-          <LinkContainer to="/">
-            <Navbar.Brand className="font-weight-bold">
-              {' '}
-              <img
-                  src="./ridgeline-icon.svg"
-                  width="30"
-                  height="30"
-                  className="d-inline-block align-top"
-                  alt="ridgeline-icon"
-              />{' '}
-              Rate My Ridgies
-            </Navbar.Brand>
-          </LinkContainer>
-
-          <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
-            <Nav activeKey={window.location.pathname}>
-              <LinkContainer to="/">
-                <Nav.Link>Home</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/login">
-                <Nav.Link>Login</Nav.Link>
-              </LinkContainer>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
-
       <div className="Signup">
+      <Navbar collapseOnSelect bg="light" expand="lg" fixed="top">
+        <Container>
+          <Navbar.Brand href="/">
+            <img
+              src="./ridgeline-icon.svg"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+              alt="ridgeline-icon"
+            />{'   '}
+            Rate My Ridgies
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="justify-content-end" style={{ width: "100%" }}>
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/login">Login</Nav.Link>
+            </Nav>
+        </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
         <ParticlesBg type="cobweb" bg={true} />
         {newUser === null ? renderForm() : renderConfirmationForm()}
       </div>
-    </>
+    // </>
   );
 }
