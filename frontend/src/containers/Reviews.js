@@ -12,9 +12,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import ParticlesBg from 'particles-bg';
 import { LinkContainer } from "react-router-bootstrap";
-import Container from 'react-bootstrap/Container';
-
-import ListGroup from "react-bootstrap/ListGroup";
+import Button from 'react-bootstrap/Button';
 
 export default function Reviews() {
   const file = useRef(null);
@@ -60,7 +58,7 @@ export default function Reviews() {
     }
 
     onLoad();
-  }, [id]);
+  }, [id, reviews]);
 
   function validateForm() {
     return reviewBody.length > 0;
@@ -131,6 +129,12 @@ export default function Reviews() {
     }
   }
 
+  const deleteReview = (revId) => {
+    console.log("deleting");
+    return API.del("reviews", `/reviews/${revId}`);
+    
+  }
+
   const renderReviews = () => {
     return reviews.length !== 0 ? reviews.map(({ reviewId, revieweeProfileId, reviewBody, createdAt}, index) =>{
 
@@ -140,7 +144,9 @@ export default function Reviews() {
           <div class="toast-header">
             <strong class="me-auto"><i class="bi-globe"></i> Review {index + 1}</strong>
             <small> {new Date(createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" onClick={() => deleteReview(reviewId)}></button>
+            {/* <button type="button" class="btn-edit" data-bs-dismiss="toast" onClick={() => deleteReview(reviewId)}></button> */}
+            {/* <button style='font-size:24px'>Button <i class='far fa-edit'></i></button> */}
           </div>
           <div class="toast-body ">
             {reviewBody}
@@ -161,6 +167,8 @@ export default function Reviews() {
 
     nav("/");
   }
+
+ 
 
   return (
     
@@ -231,9 +239,6 @@ export default function Reviews() {
                 Member Since: {new Date(profile.createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}
               </p>
 
-              <p className="num-likes-rv">
-                Likes: {profile.profileLikes}
-              </p>
             </div>
 
 
@@ -299,15 +304,6 @@ export default function Reviews() {
             disabled={!validateForm()}
           >
             Save
-          </LoaderButton>
-          <LoaderButton
-            block="true"
-            size="lg"
-            variant="danger"
-            onClick={handleDelete}
-            isLoading={isDeleting}
-          >
-            Delete
           </LoaderButton>
         </Form>
       </div>

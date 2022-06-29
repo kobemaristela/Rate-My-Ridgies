@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const nav = useNavigate();
-  const [profiles, setprofiles] = useState([]);
+  const [profiles, setProfiles] = useState([]);
   const [reviews, setReviews] = useState([]);
   const { isAuthenticated, userHasAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(true);
@@ -35,13 +35,14 @@ export default function Home() {
       try {
         const profiles = await loadProfiles();
         console.log(profiles)
-        setprofiles(profiles);
+        setProfiles(profiles);
 
         const reviews = await loadReviews();
         console.log(reviews)
         setReviews(reviews);
       } catch (e) {
-        onError(e);
+        console.log(e)
+        // onError(e);
       }
 
       setIsLoading(false);
@@ -111,6 +112,17 @@ export default function Home() {
       )
 
   };
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
+  const deleteProfile = async (profId) => {
+    console.log("deleting")
+    await API.del("profiles", `/profiles/${profId}`)
+    // setProfiles(profiles.filter((p) => p.profileId === profId))
+    refreshPage();
+  }
   
   function renderProfilesList(profiles, reviews) {
     return (
@@ -125,6 +137,10 @@ export default function Home() {
         {/* create the list of profiles */}
         {profiles? profiles.map(({ profileLikes, profileName, profileRole, profilePhoto,
         profileId, createdAt}) => (
+          <div>
+
+          
+            <Button variant="danger" className="del-profile-button" onClick={() => deleteProfile(profileId)}>DELETE PROFILE</Button>
           <LinkContainer key={profileId} to={`/profile/${profileId}`}>
           
           <ListGroup.Item action key={profileId}>
@@ -135,16 +151,21 @@ export default function Home() {
                 <div className="flex-items" >
                     {/* {content.trim().split("\n")[0]}
                     */}
-                  {profileName}
-                  <br></br>
-                  <p className="member-since">
+
+                  <p className="profile-name-h">
+                    {profileName}
+                  </p>
+                
+
+                  <p className="flex-items">
+                    Role: {profileRole}
+                  </p>
+
+                  <p className="member-since-h">
                     Member Since: {new Date(createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}
                   </p>
                 </div>
 
-                <div className="flex-items">
-                    Role: {profileRole}
-                </div>
                 
                 <div className="review-preview-container">
 
@@ -160,6 +181,7 @@ export default function Home() {
               </div>
             </ListGroup.Item>
           </LinkContainer>
+        </div>
 
           // <div> This is a new profile</div>
         )) : 
