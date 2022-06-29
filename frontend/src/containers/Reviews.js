@@ -12,9 +12,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import ParticlesBg from 'particles-bg';
 import { LinkContainer } from "react-router-bootstrap";
-import Container from 'react-bootstrap/Container';
-
-import ListGroup from "react-bootstrap/ListGroup";
+import Button from 'react-bootstrap/Button';
 
 export default function Reviews() {
   const file = useRef(null);
@@ -29,6 +27,8 @@ export default function Reviews() {
   const [isLoading, setIsLoading] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   let DATESTRING_OPTIONS = { year: 'numeric', month: 'numeric', day: 'numeric',  };
+  const BUCKETURL = "https://dev-rmr-storagestack-photosbucket4131342a-1hl6bc03sa6kc.s3.us-west-2.amazonaws.com/"
+  const DEFAULTPROFILEURL = "https://dev-rmr-storagestack-photosbucket4131342a-1hl6bc03sa6kc.s3.us-west-2.amazonaws.com/default.svg"
 
   useEffect(() => {
     function loadNote() {
@@ -60,7 +60,7 @@ export default function Reviews() {
     }
 
     onLoad();
-  }, [id]);
+  }, [id, reviews]);
 
   function validateForm() {
     return reviewBody.length > 0;
@@ -82,6 +82,10 @@ export default function Reviews() {
 
   function refreshPage() {
     window.location.reload(false);
+  }
+
+  function randomIntFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
   }
 
   async function handleSubmit(event) {
@@ -131,21 +135,32 @@ export default function Reviews() {
     }
   }
 
-  const renderReviews = () => {
-    return reviews.length !== 0 ? reviews.map(({ reviewId, revieweeProfileId, reviewBody, createdAt}, index) =>
-    (
+  const deleteReview = (revId) => {
+    console.log("deleting");
+    return API.del("reviews", `/reviews/${revId}`);
+    
+  }
 
-      <div class="toast fade show">
-        <div class="toast-header">
-          <strong class="me-auto"><i class="bi-globe"></i> Review {index + 1}</strong>
-          <small> {new Date(createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}</small>
-          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-        </div>
-        <div class="toast-body ">
-          {reviewBody}
+  const renderReviews = () => {
+    return reviews.length !== 0 ? reviews.map(({ reviewId, revieweeProfileId, reviewBody, createdAt}, index) =>{
+
+      return (
+        <div class="col-6"> 
+        <div class="toast fade show ">
+          <div class="toast-header">
+            <strong class="me-auto"><i class="bi-globe"></i> Review {index + 1}</strong>
+            <small> {new Date(createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" onClick={() => deleteReview(reviewId)}></button>
+            {/* <button type="button" class="btn-edit" data-bs-dismiss="toast" onClick={() => deleteReview(reviewId)}></button> */}
+            {/* <button style='font-size:24px'>Button <i class='far fa-edit'></i></button> */}
+          </div>
+          <div class="toast-body ">
+            {reviewBody}
+          </div>
         </div>
       </div>
-    ))
+    )})
+  
 
       :
 
@@ -158,6 +173,8 @@ export default function Reviews() {
 
     nav("/");
   }
+
+ 
 
   return (
     
@@ -176,7 +193,7 @@ export default function Reviews() {
                   className="d-inline-block align-top"
                   alt="ridgeline-icon"
                 />{' '}
-                Rate My Ridgies
+              Review the Ridgies
               </Navbar.Brand>
             </LinkContainer>
 
@@ -205,45 +222,67 @@ export default function Reviews() {
           </Navbar>
         </div>
     
-    <div className="Profile">
+      <div className="Profile">
       
-      
-      <span className="flexbox-container-rv flex-items">
+      <div>
 
-        {/* <div className="flex-items profile-image">{matchProfileIdWithPhoto(profile.profileId)}</div> */}
-        <div className="flex-items profile-image">place holder</div>
-        <div className="flex-items" >
-          {/* {content.trim().split("\n")[0]}
-                    */}
-          <p className="profile-name">
-            {profile.profileName}
-          </p>
-          
-          <p className="profile-role">
-          Role: {profile.profileRole}
-          </p>
+          <div className="flexbox-container-rv flex-items">
 
-          <p className="member-since">
-            Member Since: {new Date(profile.createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}
-          </p>
+            {/* <div className="flex-items profile-image">{matchProfileIdWithPhoto(profile.profileId)}</div> */}
+            <div className="flex-items profile-image">
+              <img
+                className="profile-image" alt="headshot"
+                fake={console.log(BUCKETURL + profile.profileId + ".png")}
+                src={BUCKETURL + profile.profileId + ".jpg"}
+                onError={(e) => {
+                  const rndInt = randomIntFromInterval(1, 10)
+                  e.target.src = BUCKETURL + "default" + rndInt + ".svg" //replacement image imported above
 
-          <p className="num-likes-rv">
-            Likes: {profile.profileLikes}
-          </p>
-        </div>
-        <div className="flex-items reviews">
+                  // e.target.style = 'padding: 8px; margin: 16px' // inline styles in html format
+                }}></img>
 
-          <div class="m-4">
-            <div class="toast-container container-right">
-              {renderReviews()}
             </div>
+            <div className="flex-items" >
+              {/* {content.trim().split("\n")[0]}
+                        */}
+              <p className="profile-name">
+                {profile.profileName}
+              </p>
+              
+              <p className="profile-role">
+              Role: {profile.profileRole}
+              </p>
+
+              <p className="member-since">
+                Member Since: {new Date(profile.createdAt).toLocaleString('en-US', DATESTRING_OPTIONS)}
+              </p>
+
+            </div>
+
+
+            
           </div>
+          <div class="container-fluid">
+              <div className="row" >
+
+                {/* <div class="m-4 container-right "> */}
+                    {/* <div class="toast-container box row">
+                    </div> */}
+
+
+                {/* </div> */}
+                  {/* <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+                  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+                  
+                  <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+                <div class="col-6 col-sm-3">.col-6 .col-sm-3</div> */}
+
+                {renderReviews()}
+                  
+                </div>
+              </div>  
 
         </div>
-
-        
-      </span>
-
       
       <br></br>
       <br></br>
@@ -283,15 +322,6 @@ export default function Reviews() {
             disabled={!validateForm()}
           >
             Save
-          </LoaderButton>
-          <LoaderButton
-            block="true"
-            size="lg"
-            variant="danger"
-            onClick={handleDelete}
-            isLoading={isDeleting}
-          >
-            Delete
           </LoaderButton>
         </Form>
       </div>
