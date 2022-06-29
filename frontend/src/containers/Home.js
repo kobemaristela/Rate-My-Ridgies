@@ -88,7 +88,7 @@ export default function Home() {
   let matchProfileIdWithPhoto = (profileId) => {
 
     let photo = (async() => {
-      const photo = await Storage.vault.get(profileId + ".png");
+      const photo = await Storage.vault.get(profileId + ".jpg");
       console.log("photo: ", photo);
       return 
     })()
@@ -99,7 +99,7 @@ export default function Home() {
         <img 
             className="profile-image"alt="headshot" 
             fake={console.log(BUCKETURL + profileId + ".png")}
-            src={BUCKETURL + profileId + ".png"}
+            src={BUCKETURL + profileId + ".jpg"}
           onError={(e) => {
             const rndInt = randomIntFromInterval(1, 10)
             e.target.src = BUCKETURL + "default" + rndInt + ".svg" //replacement image imported above
@@ -241,7 +241,7 @@ export default function Home() {
                   className="d-inline-block align-top"
                   alt="ridgeline-icon"
               />{' '}
-              Rate My Ridgies
+                Review the Ridgies
             </Navbar.Brand>
           </LinkContainer>
 

@@ -109,7 +109,7 @@ export default function NewProfile() {
               className="d-inline-block align-top"
               alt="ridgeline-icon"
             />
-            Rate My Ridgies
+            Review the Ridgies
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

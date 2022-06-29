@@ -27,6 +27,8 @@ export default function Reviews() {
   const [isLoading, setIsLoading] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   let DATESTRING_OPTIONS = { year: 'numeric', month: 'numeric', day: 'numeric',  };
+  const BUCKETURL = "https://dev-rmr-storagestack-photosbucket4131342a-1hl6bc03sa6kc.s3.us-west-2.amazonaws.com/"
+  const DEFAULTPROFILEURL = "https://dev-rmr-storagestack-photosbucket4131342a-1hl6bc03sa6kc.s3.us-west-2.amazonaws.com/default.svg"
 
   useEffect(() => {
     function loadNote() {
@@ -80,6 +82,10 @@ export default function Reviews() {
 
   function refreshPage() {
     window.location.reload(false);
+  }
+
+  function randomIntFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
   }
 
   async function handleSubmit(event) {
@@ -187,7 +193,7 @@ export default function Reviews() {
                   className="d-inline-block align-top"
                   alt="ridgeline-icon"
                 />{' '}
-                Rate My Ridgies
+              Review the Ridgies
               </Navbar.Brand>
             </LinkContainer>
 
@@ -223,7 +229,19 @@ export default function Reviews() {
           <div className="flexbox-container-rv flex-items">
 
             {/* <div className="flex-items profile-image">{matchProfileIdWithPhoto(profile.profileId)}</div> */}
-            <div className="flex-items profile-image">place holder</div>
+            <div className="flex-items profile-image">
+              <img
+                className="profile-image" alt="headshot"
+                fake={console.log(BUCKETURL + profile.profileId + ".png")}
+                src={BUCKETURL + profile.profileId + ".jpg"}
+                onError={(e) => {
+                  const rndInt = randomIntFromInterval(1, 10)
+                  e.target.src = BUCKETURL + "default" + rndInt + ".svg" //replacement image imported above
+
+                  // e.target.style = 'padding: 8px; margin: 16px' // inline styles in html format
+                }}></img>
+
+            </div>
             <div className="flex-items" >
               {/* {content.trim().split("\n")[0]}
                         */}

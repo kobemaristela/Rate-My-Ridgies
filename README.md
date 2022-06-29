@@ -1,4 +1,4 @@
-# Rate My Ridgies
+# Review the Ridgies
 
 - The `stacks/` directory defines our AWS infrastructure using AWS CDK.
 - The `backend/` directory contains the Lambda functions that power the CRUD API.
