@@ -199,10 +199,10 @@ export default function Home() {
         <div className="row banner">
           <div className="banner-text">
             <Fade bottom>
-                  <h1 className="responsive-headline" >Rate My Ridgies</h1>
+                  <h1 className="responsive-headline" >Review the Ridgies</h1>
                 </Fade>
             <Fade bottom duration={1200}>
-              <h3>A site where you can rate your ridgies.</h3>
+              <h3>"Ridgline's internal yelp tool for coworkers"</h3>
             </Fade>
             <hr />
             <Fade bottom duration={2000}>
